@@ -27,7 +27,7 @@ namespace App1.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string _text = String.Empty; 
+        private string _text = String.Empty;
         public string Text
         {
             get => _text;
