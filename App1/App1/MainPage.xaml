@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels ="clr-namespace:App1.ViewModels"
+             mc:Ignorable="d"
+             x:Class="App1.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.ColumnSpan="2" Grid.Row="0" Text="{Binding Image}" HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" FontSize="109"></Label>
+        <Editor  Grid.ColumnSpan="2" Grid.Row="1" Text="{Binding Text}" FontSize="26" IsEnabled="False" TextColor="Black" Margin="10"></Editor>
+        <Button Grid.ColumnSpan="2" Grid.Row="2" Command="{Binding ContinueFaryTale}"  Text="Fortsätt sagan" BackgroundColor="LightBlue"></Button>
+
+    </Grid>
+    
+</ContentPage>
