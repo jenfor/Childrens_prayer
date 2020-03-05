@@ -45,6 +45,16 @@ namespace App1.FairyTale
             TurnThePage();
         }
 
+        public void ViewLastPage()
+        {
+            if (pageNr > 1)
+            {
+                pageNr = pageNr-2;
+                presentPage = pageList[pageNr];
+                pageNr++;
+            }
+        }
+
         public void TurnThePage()
         {
             if (pageNr < pageList.Count)

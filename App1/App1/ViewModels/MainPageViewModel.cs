@@ -19,13 +19,22 @@ namespace App1.ViewModels
 
             ContinueFaryTale = new Command(() =>
             {
+                fairyTale.presentPage.Text = Text;
                 fairyTale.TurnThePage();
+                Text = fairyTale.presentPage.Text;
+                Image = fairyTale.presentPage.Emoji;
+            });
+
+            Back = new Command(() =>
+            {
+                fairyTale.presentPage.Text = Text;
+                fairyTale.ViewLastPage();
                 Text = fairyTale.presentPage.Text;
                 Image = fairyTale.presentPage.Emoji;
             });
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler PropertyChanged;
 
         private string _text = String.Empty;
         public string Text
@@ -54,6 +63,8 @@ namespace App1.ViewModels
         }
 
         public Command ContinueFaryTale { get;  }
+        public Command Back { get; }
+
 
     }
 }
