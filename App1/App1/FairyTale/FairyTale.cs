@@ -7,18 +7,19 @@ namespace App1.FairyTale
     public class TheFairyTale
     {
         private List<String> animals = new List<String>();
-        private Dictionary<String, String> emojis = new Dictionary<String, String>();
-
+        private Dictionary<String, String> characterEmojis = new Dictionary<String, String>();
         private List<String> relationships = new List<String>();
         private List<String> adjectives = new List<String>();
         private List<String> actions = new List<String>();
         private List<String> conditions = new List<String>();
         private List<String> places = new List<String>();
-        private List<String> verb = new List<String>();
+        private Dictionary<String, String> placeEmojis = new Dictionary<String, String>();
+        private List<String> verb = new List<String>(); 
         private List<String> circumstances = new List<String>();
         private List<String> gender = new List<String>();
         private List<String> conversions = new List<String>();
         private List<String> events = new List<String>();
+        private Dictionary<String, String> eventEmojis = new Dictionary<String, String>();
         private List<String> continuations = new List<String>();
         private List<String> fairyTaleStarts = new List<String>();
         private List<Page> pageList = new List<Page>();
@@ -30,6 +31,8 @@ namespace App1.FairyTale
 
         FairyTaleCharacter fairyTaleCharacter1 = null;
         FairyTaleCharacter fairyTaleCharacter2 = null;
+        FairyTalePlace fairyTalePalce = null;
+        FairyTaleEvent fairyTaleEvent = null;
 
         public Page presentPage = new Page();
         public int pageNr = 0;
@@ -40,6 +43,8 @@ namespace App1.FairyTale
             
             fairyTaleCharacter1 = GetFairyTaleCharacter();
             fairyTaleCharacter2 = GetFairyTaleCharacter();
+            fairyTalePalce = GetFairyTalePlace();
+            fairyTaleEvent = GetFairyTaleEvent();
 
             WriteFairyTale();
             TurnThePage();
@@ -49,7 +54,7 @@ namespace App1.FairyTale
         {
             if (pageNr > 1)
             {
-                pageNr = pageNr-2;
+                pageNr -= 2;
                 presentPage = pageList[pageNr];
                 pageNr++;
             }
@@ -64,46 +69,62 @@ namespace App1.FairyTale
             }
             else
             {
-                pageList.Add(CreatePage("Radera detta och skriv fortsättingen på sagan här.", GetRandomFairytaleEmoji()));
+                pageList.Add(CreatePage("Radera detta och skriv fortsättingen på sagan här.", GetRandomFairytaleEmojis()));
                 presentPage = pageList[pageNr];
                 pageNr++;
             }
         }
 
-        public string GetRandomFairytaleEmoji()
+        public string GetRandomFairytaleEmojis()
         {
             var random = new Random();
-            var emoji = thisFairytaleEmojis[random.Next(thisFairytaleEmojis.Count)];
-            return emoji;
+            var emoji1 = thisFairytaleEmojis[random.Next(thisFairytaleEmojis.Count)];
+            var emoji2 = thisFairytaleEmojis[random.Next(thisFairytaleEmojis.Count)];
+
+            while(emoji1.Equals(emoji2))
+            {
+                emoji2 = thisFairytaleEmojis[random.Next(thisFairytaleEmojis.Count)];
+            }
+
+            return emoji1 + emoji2;
         }
 
         public FairyTaleCharacter GetFairyTaleCharacter()
         {
-            var fairyTaleCharacter = new FairyTaleCharacter();
-            fairyTaleCharacter.animal = GetWords(animals);
-            fairyTaleCharacter.adjective = GetWords(adjectives);
-            fairyTaleCharacter.name = fairyTaleCharacter.GetFairyTaleName();
-            fairyTaleCharacter.gender = GetWords(gender);
-            fairyTaleCharacter.relationShip = GetWords(relationships);
-            fairyTaleCharacter.emoji = emojis[fairyTaleCharacter.animal];
+            var animal = GetWords(animals);
+            return new FairyTaleCharacter(animal, GetWords(adjectives), GetWords(gender), GetWords(relationships), characterEmojis[animal]);
+        }
 
-            return fairyTaleCharacter;
+        public FairyTalePlace GetFairyTalePlace()
+        {
+            var place = GetWords(places);
+            return new FairyTalePlace(GetWords(verb), GetWords(conditions), place, GetWords(circumstances), GetWords(actions), placeEmojis[place]);
+        }
+
+        public FairyTaleEvent GetFairyTaleEvent()
+        {
+            var e = GetWords(events);
+            return new FairyTaleEvent(e, GetWords(conversions), eventEmojis[e]);
         }
 
         public void WriteFairyTale()
         {
             thisFairytaleEmojis.Clear();
-            pageList.Add(CreatePage(PresentFairyTaleCharacter1(), fairyTaleCharacter1.emoji));
-            thisFairytaleEmojis.Add(fairyTaleCharacter1.emoji);
-            pageList.Add(CreatePage(PresentFairyTaleCharacter2(), fairyTaleCharacter2.emoji));
-            thisFairytaleEmojis.Add(fairyTaleCharacter2.emoji);
-            pageList.Add(CreatePage(PresentFairyTalePlace(), fairyTaleCharacter1.emoji));
-            thisFairytaleEmojis.Add(fairyTaleCharacter1.emoji);
-            pageList.Add(CreatePage(PresentFairyTaleEvent(), fairyTaleCharacter2.emoji));
-            thisFairytaleEmojis.Add(fairyTaleCharacter2.emoji);
-            pageList.Add(CreatePage(PresentFairyTalecontinuation(), fairyTaleCharacter1.emoji));
-            thisFairytaleEmojis.Add(fairyTaleCharacter1.emoji);
 
+            pageList.Add(CreatePage(PresentFairyTaleCharacter1(), fairyTaleCharacter1.Emoji));
+            thisFairytaleEmojis.Add(fairyTaleCharacter1.Emoji);
+
+            pageList.Add(CreatePage(PresentFairyTaleCharacter2(), fairyTaleCharacter2.Emoji));
+            thisFairytaleEmojis.Add(fairyTaleCharacter2.Emoji);
+
+            pageList.Add(CreatePage(PresentFairyTalePlace(), fairyTalePalce.Emoji));
+            thisFairytaleEmojis.Add(fairyTalePalce.Emoji);
+
+            pageList.Add(CreatePage(PresentFairyTaleEvent(), fairyTaleEvent.Emoji));
+            thisFairytaleEmojis.Add(fairyTaleEvent.Emoji);
+
+            pageList.Add(CreatePage(PresentFairyTaleContinuation(), fairyTaleCharacter2.Emoji));
+            thisFairytaleEmojis.Add(fairyTaleCharacter1.Emoji);
         }
 
         public Page CreatePage(String text, String emoji)
@@ -120,8 +141,8 @@ namespace App1.FairyTale
 
             sb.Append(GetWords(fairyTaleStarts) + space);
             sb.Append(
-                fairyTaleCharacter1?.adjective + space + fairyTaleCharacter1?.animal + space + "som hette "
-                        + fairyTaleCharacter1?.name + dot
+                fairyTaleCharacter1.Adjective + space + fairyTaleCharacter1?.Animal + space + "som hette "
+                        + fairyTaleCharacter1?.Name + dot
             );
             return sb.ToString();
         }
@@ -131,8 +152,8 @@ namespace App1.FairyTale
             var sb = new StringBuilder();
 
             sb.Append(
-                fairyTaleCharacter1?.gender + " hade en " + fairyTaleCharacter2?.adjective
-                        + space + fairyTaleCharacter2?.relationShip + comma + "en " + fairyTaleCharacter2?.animal + " som kallades för " + fairyTaleCharacter2?.name + dot
+                fairyTaleCharacter1?.Gender + " hade en " + fairyTaleCharacter2?.Adjective
+                        + space + fairyTaleCharacter2.RelationShip + comma + "en " + fairyTaleCharacter2?.Animal + " som kallades för " + fairyTaleCharacter2?.Name + dot
             );
 
             return sb.ToString();
@@ -143,9 +164,8 @@ namespace App1.FairyTale
             var sb = new StringBuilder();
 
             sb.Append(
-                "De två " + GetWords(verb) + space + GetWords(actions) + " att allt " + GetWords(
-                    places
-                ) + " var " + GetWords(conditions) + dot
+                "De två " + fairyTalePalce.Verb + space + fairyTalePalce.Action + " att allt " + fairyTalePalce.Place
+                 + " var " + fairyTalePalce.Condition + dot
             );
 
             sb.Append("Det " + GetWords(circumstances) + dot);
@@ -157,17 +177,17 @@ namespace App1.FairyTale
         {
             var sb = new StringBuilder();
 
-            sb.Append(fairyTaleCharacter1?.name + space + GetWords(conversions) + dot);
-            sb.Append(fairyTaleCharacter1?.gender + space + GetWords(events) + dot);
+            sb.Append(fairyTaleCharacter1?.Name + space + fairyTaleEvent.Conversion + dot);
+            sb.Append(fairyTaleCharacter1?.Gender + space + fairyTaleEvent.Event + dot);
 
             return sb.ToString();
         }
 
-        public String PresentFairyTalecontinuation()
+        public String PresentFairyTaleContinuation()
         {
             var sb = new StringBuilder();
 
-            sb.Append(GetWords(continuations) + space + fairyTaleCharacter2?.name + "..." + "\n \n Radera detta och skriv fortättningen av sagan här.");
+            sb.Append(GetWords(continuations) + space + fairyTaleCharacter2?.Name + "..." + "\n \nRadera detta och skriv fortättningen av sagan här.");
 
             return sb.ToString();
         }
@@ -204,68 +224,110 @@ namespace App1.FairyTale
             gender.Add("Hon");
             gender.Add("Han");
 
+            animals.Add("ekorre");
+            characterEmojis.Add("ekorre", "\U0001F43F");
+
+            animals.Add("igelkott");
+            characterEmojis.Add("igelkott", "\U0001F994");
+
+            animals.Add("fladdermus");
+            characterEmojis.Add("fladdermus", "\U0001F987");
+
+            animals.Add("skunk");
+            characterEmojis.Add("skunk", "\U0001F9A8");
+
+            animals.Add("grävling");
+            characterEmojis.Add("grävling", "\U0001F9A1");
+
+            animals.Add("duva");
+            characterEmojis.Add("duva", "\U0001F54A");
+
+            animals.Add("örn");
+            characterEmojis.Add("örn", "\U0001F985");
+
+            animals.Add("gräsand");
+            characterEmojis.Add("gräsand", "\U0001F986");
+
+            animals.Add("svan");
+            characterEmojis.Add("svan", "\U0001F9A2");
+
+            animals.Add("påfågel");
+            characterEmojis.Add("påfågel", "\U0001F99A");
+
+            animals.Add("papegoja");
+            characterEmojis.Add("papegoja", "\U0001F99C");
+
+            animals.Add("uggla");
+            characterEmojis.Add("uggla", "\U0001F989");
+
+            animals.Add("spindel");
+            characterEmojis.Add("spindel", "\U0001F577");
+
+            animals.Add("skorpion");
+            characterEmojis.Add("skorpion", "\U0001F982");
+
             animals.Add("larv");
-            emojis.Add("larv", "\U0001F41B");
+            characterEmojis.Add("larv", "\U0001F41B");
 
             animals.Add("orm");
-            emojis.Add("orm", "\U0001F40D");
+            characterEmojis.Add("orm", "\U0001F40D");
 
             animals.Add("hamster");
-            emojis.Add("hamster", "\U0001F439");
+            characterEmojis.Add("hamster", "\U0001F439");
 
             animals.Add("sköldpadda");
-            emojis.Add("sköldpadda", "\U0001F422");
+            characterEmojis.Add("sköldpadda", "\U0001F422");
 
             animals.Add("katt");
-            emojis.Add("katt", "\U0001F431");
+            characterEmojis.Add("katt", "\U0001F431");
 
             animals.Add("snigel");
-            emojis.Add("snigel", "\U0001F40C");
+            characterEmojis.Add("snigel", "\U0001F40C");
 
             animals.Add("groda");
-            emojis.Add("groda", "\U0001F438");
+            characterEmojis.Add("groda", "\U0001F438");
 
             animals.Add("nyckelpiga");
-            emojis.Add("nyckelpiga", "\U0001F41E");
+            characterEmojis.Add("nyckelpiga", "\U0001F41E");
 
             animals.Add("fågel");
-            emojis.Add("fågel", "\U0001F426");
+            characterEmojis.Add("fågel", "\U0001F426");
 
             animals.Add("myra");
-            emojis.Add("myra", "\U0001F41C");
+            characterEmojis.Add("myra", "\U0001F41C");
 
             animals.Add("näbbmus");
-            emojis.Add("näbbmus", "\U0001F42D");
+            characterEmojis.Add("näbbmus", "\U0001F42D");
 
             animals.Add("kyckling");
-            emojis.Add("kyckling", "\U0001F425");
+            characterEmojis.Add("kyckling", "\U0001F425");
 
             animals.Add("pingvin");
-            emojis.Add("pingvin", "\U0001F427");
+            characterEmojis.Add("pingvin", "\U0001F427");
 
             animals.Add("koala");
-            emojis.Add("koala", "\U0001F428");
+            characterEmojis.Add("koala", "\U0001F428");
 
             /*animals?.Add("höna")
-            emojis.Add("höna", "\U0001F414")*/
+            characterEmojis.Add("höna", "\U0001F414")*/
 
             animals.Add("apa");
-            emojis.Add("apa", "\U0001F412");
+            characterEmojis.Add("apa", "\U0001F412");
 
             animals.Add("hund");
-            emojis.Add("hund", "\U0001F436");
+            characterEmojis.Add("hund", "\U0001F436");
 
             animals.Add("panda");
-            emojis.Add("panda", "\U0001F43C");
+            characterEmojis.Add("panda", "\U0001F43C");
 
             animals.Add("kanin");
-            emojis.Add("kanin", "\U0001F407");
+            characterEmojis.Add("kanin", "\U0001F407");
 
             animals.Add("råtta");
-            emojis.Add("råtta", "\U0001F401");
+            characterEmojis.Add("råtta", "\U0001F401");
 
             animals.Add("get");
-            emojis.Add("get", "\U0001F410");
+            characterEmojis.Add("get", "\U0001F410");
 
             adjectives.Add("glad");
             adjectives.Add("fin");
@@ -304,12 +366,25 @@ namespace App1.FairyTale
             conditions.Add("lite knasigt");
 
             places.Add("på jorden");
+            placeEmojis.Add("på jorden", "\U0001F30D");
+
             places.Add("på deras planet");
+            placeEmojis.Add("på deras planet", "\U0001FA90");
+
             places.Add("i deras stad");
+            placeEmojis.Add("i deras stad", "\U0001F306");
+
             places.Add("i deras land");
+            placeEmojis.Add("i deras land", "\U0001F304");
+
             places.Add("i deras hembygd");
+            placeEmojis.Add("i deras hembygd", "\U0001F3DEU");
+
             places.Add("i deras by");
+            placeEmojis.Add("i deras by", "\U0001F3D8");
+
             places.Add("i skogen, där de bodde,");
+            placeEmojis.Add("i skogen", "\U0001F333");
 
             verb.Add("brukade");
             verb.Add("verkade tycka om att");
@@ -335,22 +410,56 @@ namespace App1.FairyTale
             conversions.Add("ville ge alla en stor överraskning");
 
             events.Add("hade bestämt sig för att ordna en stor låtsasfest dit alla skulle vara bjudna");
+            eventEmojis.Add("hade bestämt sig för att ordna en stor låtsasfest dit alla skulle vara bjudna", "\U0001F382");
+
             events.Add("började packa en väska för att det skulle se ut som att det var dags att ge sig ut på en längre resa");
+            eventEmojis.Add("började packa en väska för att det skulle se ut som att det var dags att ge sig ut på en längre resa", "\U0001F45C");
+
             events.Add("började med att säga till alla att det var en mycket viktig dag idag");
+            eventEmojis.Add("började med att säga till alla att det var en mycket viktig dag idag", "\U0001F338	");
+
             events.Add("påstod att om alla samarbetade kunde de tilsammans bygga en rymdraket");// toDo: Byt till olika substantiv
+            eventEmojis.Add("påstod att om alla samarbetade kunde de tilsammans bygga en rymdraket", "\U0001F6F8");
+
             events.Add("trodde att det var lätt som en plätt att bygga en egen bil");// toDo: Byt till olika substantiv
+            eventEmojis.Add("trodde att det var lätt som en plätt att bygga en egen bil", "\U0001F698");
+
             events.Add("menade att det var möjligt att bygga städer på havsbotten");
+            eventEmojis.Add("menade att det var möjligt att bygga städer på havsbotten", "\U0001F30A");
+
             events.Add("ville starta en ny sorts godisfabrik");
+            eventEmojis.Add("ville starta en ny sorts godisfabrik", "\U0001F36C" + "\U0001F36D");
+
             events.Add("låtsades att han var stor nog att börja i skolan redan nu");// toDo: ändra han till gender
+            eventEmojis.Add("låtsades att han var stor nog att börja i skolan redan nu", "\U0001F3EB");
+
             events.Add("hade kommit på iden att sätta segel på ryggen");
+            eventEmojis.Add("hade kommit på iden att sätta segel på ryggen", "\U0001F32C");
+
             events.Add("hade bestämt sig för att uppfinna vingar som fungerade för alla");
+            eventEmojis.Add("hade bestämt sig för att uppfinna vingar som fungerade för alla", "\U0001F4B8");
+
             events.Add("ville ordna en flygkurs för alla");
+            eventEmojis.Add("ville ordna en flygkurs för alla", "\U0001F6E9");
+
             events.Add("tänkte klä ut sig till en god fe och dela ut tre önskningar");
+            eventEmojis.Add("tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84");
+
             events.Add("trodde det var enkelt att bygga ett stort slott av sandkorn");
+            eventEmojis.Add("trodde det var enkelt att bygga ett stort slott av sandkorn", "\U0001F3F0");
+
             events.Add("ville bevisa att det fortfarande fanns levande drakar");
-            events.Add("hade hittat en flaska som det kunde vara en ande i");
+            eventEmojis.Add("ville bevisa att det fortfarande fanns levande drakar", "\U0001F409	");
+
+            events.Add("hade hittat en lampa som det kunde vara en ande i");
+            eventEmojis.Add("hade hittat en lampa som det kunde vara en ande i", "\U0001FA94");
+
             events.Add("trodde sig ha hittat en ny väg till månen");
+            eventEmojis.Add("trodde sig ha hittat en ny väg till månen", "\U0001F314");
+
             events.Add("hade hittat platsen där regnbågen börjar");
+            eventEmojis.Add("hade hittat platsen där regnbågen börjar", "\U0001F308");
+
 
             continuations.Add("Då visade det sig att");
             continuations.Add("Då började");

@@ -6,29 +6,34 @@ namespace App1.FairyTale
 {
     public class FairyTaleCharacter
     {
-        public String animal = String.Empty;
-        public String adjective = String.Empty;
-        public String name = String.Empty;
-        public String gender = String.Empty;
-        public String relationShip = String.Empty;
-        public String emoji = String.Empty;
+        public String Animal = String.Empty;
+        public String Adjective = String.Empty;
+        public String Name = String.Empty;
+        public String Gender = String.Empty;
+        public String RelationShip = String.Empty;
+        public String Emoji = String.Empty;
 
         private List<char> uppercaseConsonants = new List<char>(){'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'V'};
         private List<char> lowercaseConsonants = new List<char>() { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v' };
         private List<char> vowels = new List<char>() { 'a', 'e', 'i', 'o', 'u', 'y' };
 
-        public FairyTaleCharacter()
+        public FairyTaleCharacter(String animal, String adjective,  String gender, String relationShip, string emoji)
         {
-
+            Animal = animal;
+            Adjective = adjective;
+            Name = GetFairyTaleName();
+            Gender = gender;
+            RelationShip = relationShip;
+            Emoji = emoji;
         }
 
         public String GetPronoun()
         {
-            if (gender != String.Empty && gender.Equals("Hon"))
+            if (Gender != String.Empty && Gender.Equals("Hon"))
             {
                 return "Hennes";
             }
-            else if (gender != String.Empty && gender.Equals("Han"))
+            else if (Gender != String.Empty && Gender.Equals("Han"))
             {
                 return "Hans";
             }
