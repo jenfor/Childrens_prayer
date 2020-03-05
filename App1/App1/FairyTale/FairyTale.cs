@@ -22,6 +22,7 @@ namespace App1.FairyTale
         private List<String> continuations = new List<String>();
         private List<String> fairyTaleStarts = new List<String>();
         private List<Page> pageList = new List<Page>();
+        private List<String> thisFairytaleEmojis = new List<string>();
 
         private String dot = ". ";
         private String space = " ";
@@ -49,8 +50,21 @@ namespace App1.FairyTale
             if (pageNr < pageList.Count)
             {
                 presentPage = pageList[pageNr];
+                pageNr++;
             }
-            pageNr++;
+            else
+            {
+                pageList.Add(CreatePage("Radera detta och skriv fortsättingen på sagan här.", GetRandomFairytaleEmoji()));
+                presentPage = pageList[pageNr];
+                pageNr++;
+            }
+        }
+
+        public string GetRandomFairytaleEmoji()
+        {
+            var random = new Random();
+            var emoji = thisFairytaleEmojis[random.Next(thisFairytaleEmojis.Count)];
+            return emoji;
         }
 
         public FairyTaleCharacter GetFairyTaleCharacter()
@@ -68,11 +82,18 @@ namespace App1.FairyTale
 
         public void WriteFairyTale()
         {
+            thisFairytaleEmojis.Clear();
             pageList.Add(CreatePage(PresentFairyTaleCharacter1(), fairyTaleCharacter1.emoji));
+            thisFairytaleEmojis.Add(fairyTaleCharacter1.emoji);
             pageList.Add(CreatePage(PresentFairyTaleCharacter2(), fairyTaleCharacter2.emoji));
+            thisFairytaleEmojis.Add(fairyTaleCharacter2.emoji);
             pageList.Add(CreatePage(PresentFairyTalePlace(), fairyTaleCharacter1.emoji));
+            thisFairytaleEmojis.Add(fairyTaleCharacter1.emoji);
             pageList.Add(CreatePage(PresentFairyTaleEvent(), fairyTaleCharacter2.emoji));
+            thisFairytaleEmojis.Add(fairyTaleCharacter2.emoji);
             pageList.Add(CreatePage(PresentFairyTalecontinuation(), fairyTaleCharacter1.emoji));
+            thisFairytaleEmojis.Add(fairyTaleCharacter1.emoji);
+
         }
 
         public Page CreatePage(String text, String emoji)
@@ -136,11 +157,10 @@ namespace App1.FairyTale
         {
             var sb = new StringBuilder();
 
-            sb.Append(GetWords(continuations) + space + fairyTaleCharacter2?.name + "...");
+            sb.Append(GetWords(continuations) + space + fairyTaleCharacter2?.name + "..." + "\n \n Radera detta och skriv fortättningen av sagan här.");
 
             return sb.ToString();
         }
-
 
         public string GetWords(List<String> wordList)
         {
