@@ -32,7 +32,7 @@ namespace App1.FairyTale
         FairyTaleCharacter fairyTaleCharacter2 = null;
 
         public Page presentPage = new Page();
-        private int pageNr = 0;
+        public int pageNr = 0;
 
         public TheFairyTale()
         {
@@ -45,7 +45,7 @@ namespace App1.FairyTale
             TurnThePage();
         }
 
-        public void ViewLastPage()
+        public void ViewPreviousPage()
         {
             if (pageNr > 1)
             {
