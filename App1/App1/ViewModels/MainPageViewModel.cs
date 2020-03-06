@@ -4,6 +4,7 @@ using System.Text;
 using System.ComponentModel;
 using Xamarin.Forms;
 using App1.FairyTale;
+using App1.Languages;
 
 namespace App1.ViewModels
 {
@@ -11,27 +12,30 @@ namespace App1.ViewModels
     {
         private TheFairyTale fairyTale;
 
+        public Language language;
+
         public MainPageViewModel()
         {
-            fairyTale = new TheFairyTale();
-            Text = fairyTale.presentPage.Text;
-            Image = fairyTale.presentPage.Emoji;
+            language = new Swedish();
+            fairyTale = new TheFairyTale(language);
+            Text = fairyTale.PresentPage.Text;
+            Image = fairyTale.PresentPage.Emoji;
 
             ContinueFaryTale = new Command(() =>
             {
-                fairyTale.presentPage.Text = Text;
-                fairyTale.TurnThePage();
-                Text = fairyTale.presentPage.Text;
-                Image = fairyTale.presentPage.Emoji;
+                fairyTale.PresentPage.Text = Text;
+                fairyTale.TurnThePage(language);
+                Text = fairyTale.PresentPage.Text;
+                Image = fairyTale.PresentPage.Emoji;
                 SetButtonVisibilitys();
             });
 
             Back = new Command(() =>
             {
-                fairyTale.presentPage.Text = Text;
+                fairyTale.PresentPage.Text = Text;
                 fairyTale.ViewPreviousPage();
-                Text = fairyTale.presentPage.Text;
-                Image = fairyTale.presentPage.Emoji;
+                Text = fairyTale.PresentPage.Text;
+                Image = fairyTale.PresentPage.Emoji;
                 SetButtonVisibilitys();
             });
         }
@@ -79,7 +83,7 @@ namespace App1.ViewModels
 
         public void SetButtonVisibilitys()
         {
-            if(fairyTale.pageNr>1)
+            if(fairyTale.PageNr>1)
             {
                 BackButtonVisibility = true;
             }
