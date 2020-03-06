@@ -11,7 +11,6 @@ namespace App1.FairyTale
         public int PageNr = 0;
         private List<Page> pageList = new List<Page>();
         
-
         private FairyTaleCharacter fairyTaleCharacter1 = null;
         private FairyTaleCharacter fairyTaleCharacter2 = null;
         private FairyTalePlace fairyTalePalce = null;
@@ -27,8 +26,10 @@ namespace App1.FairyTale
 
         public void WriteFairyTale(Language language)
         {
+            PageNr = 0;
+            pageList.Clear();
             thisFairytaleEmojis.Clear();
-            
+
             fairyTaleCharacter1 = GetFairyTaleCharacter(language);
             fairyTaleCharacter2 = GetFairyTaleCharacter(language);
             fairyTalePalce = GetFairyTalePlace(language);

@@ -26,7 +26,7 @@ namespace App1.Languages
             {"igelkott", "\U0001F994"},
             {"fladdermus", "\U0001F987"},
             //{"skunk", "\U0001F9A8"},
-            {"grävling", "\U0001F9A1"},
+            //{"grävling", "\U0001F9A1"},
             {"duva", "\U0001F54A"},
             {"örn", "\U0001F985"},
             {"gräsand", "\U0001F986"},
@@ -208,7 +208,5 @@ namespace App1.Languages
             "Då kom",
             "Då visade"
         };
-
-
     }
 }
