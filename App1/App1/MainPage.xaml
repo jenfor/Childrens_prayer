@@ -13,22 +13,28 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"></RowDefinition>
-
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="{Binding StartColumnWidth}"/>
+            <ColumnDefinition Width="{Binding FairyTaleColumnWidth1}"/>
+            <ColumnDefinition Width="{Binding FairyTaleColumnWidth2}"/>
         </Grid.ColumnDefinitions>
-        <Button Text="Ny saga" Command="{Binding NewFairyTale}" BackgroundColor="LightBlue"></Button>
-        <Label Grid.ColumnSpan="2" Grid.Row="1" Text="{Binding Image}" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" FontSize="109"></Label>
-        <Editor  Grid.ColumnSpan="2" Grid.Row="2" Text="{Binding Text}" FontSize="22" IsEnabled="True" TextColor="Black" Margin="10" IsSpellCheckEnabled="False"></Editor>
-        <Button  Command="{Binding Back}" Grid.Row="3" Grid.Column="0" Text="Bläddra bakåt" BackgroundColor="LightBlue" IsVisible="{Binding BackButtonVisibility}"></Button>
-        <Button Command="{Binding ContinueFairyTale}" Grid.Row="3" Grid.Column="1" Text="Fortsätt sagan" BackgroundColor="LightBlue" ></Button>
+
+        <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical" VerticalOptions="Center">
+            <Button Text="Skriv en ny saga på svenska" Command="{Binding SwedishFairyTale}" BackgroundColor="LightBlue"></Button>
+            <Button Text="Write a new fairytale in English" Command="{Binding EnglishFairyTale}" BackgroundColor="LightBlue"></Button>
+        </StackLayout>
+        
+        <Button Grid.Column="1" Text="Ny saga" Command="{Binding NewFairyTale}" BackgroundColor="LightBlue"></Button>
+        <Label Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1"  Text="{Binding Image}" HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" FontSize="150"></Label>
+        <Editor  Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="1" Text="{Binding Text}" FontSize="20" IsEnabled="True" TextColor="Black" Margin="10" IsSpellCheckEnabled="False"></Editor>
+        <Button  Command="{Binding Back}" Grid.Row="3" Grid.Column="1" Text="Bläddra bakåt" BackgroundColor="LightBlue" IsVisible="{Binding BackButtonVisibility}"></Button>
+        <Button Command="{Binding ContinueFairyTale}" Grid.Row="3" Grid.Column="2" Text="Fortsätt sagan" BackgroundColor="LightBlue" ></Button>
     </Grid>
 
 </ContentPage>
