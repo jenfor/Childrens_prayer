@@ -63,17 +63,13 @@ namespace App1.FairyTale
 
         public void TurnThePage(Language language)
         {
-            if (PageNr < pageList.Count)
-            {
-                PresentPage = pageList[PageNr];
-                PageNr++;
-            }
-            else
+            if (PageNr >= pageList.Count)
             {
                 pageList.Add(CreatePage(language.ExchangeString, GetRandomFairyTaleEmojis()));
-                PresentPage = pageList[PageNr];
-                PageNr++;
             }
+
+            PresentPage = pageList[PageNr];
+            PageNr++;
         }
 
         public FairyTaleCharacter GetFairyTaleCharacter(Language language)
@@ -99,16 +95,37 @@ namespace App1.FairyTale
 
         public string GetRandomFairyTaleEmojis()
         {
-            var random = new Random();
-            var emoji1 = thisFairytaleEmojis[random.Next(thisFairytaleEmojis.Count)];
-            var emoji2 = thisFairytaleEmojis[random.Next(thisFairytaleEmojis.Count)];
-
-            while (emoji1.Equals(emoji2))
-            {
-                emoji2 = thisFairytaleEmojis[random.Next(thisFairytaleEmojis.Count)];
-            }
+            var emoji1 = CreateAndSkipEqualEmojis(null, thisFairytaleEmojis); 
+            var emoji2 = CreateAndSkipEqualEmojis(emoji1, thisFairytaleEmojis); 
 
             return emoji1 + emoji2;
+        }
+
+        public string GetRandomEmojis(Language language)
+        {            
+            var allEmojis = new List<String>();
+            allEmojis.AddRange(new List<string>(language.Animals.Values));
+            allEmojis.AddRange(new List<string>(language.Places.Values));
+            allEmojis.AddRange(new List<string>(language.Events.Values));
+
+            var emoji1 = CreateAndSkipEqualEmojis(null, allEmojis);
+            var emoji2 = CreateAndSkipEqualEmojis(emoji1, allEmojis); 
+            var emoji3 = CreateAndSkipEqualEmojis(emoji2, allEmojis);
+
+            return emoji1 + emoji2 + emoji3;
+        } 
+
+        private String CreateAndSkipEqualEmojis(string emoji1, List<String> allEmojis)
+        {
+            var random = new Random();
+            var emoji2 = allEmojis[random.Next(allEmojis.Count)];
+
+            while (emoji2.Equals(emoji1))
+            {
+                emoji2 = allEmojis[random.Next(allEmojis.Count)];
+            }
+
+            return emoji2;
         }
 
         public Page CreatePage(String text, String emoji)

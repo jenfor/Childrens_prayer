@@ -10,8 +10,8 @@ namespace App1.ViewModels
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
-        private TheFairyTale fairyTale;
-        private Language language;
+        private static Language language = new English();
+        private TheFairyTale fairyTale = new TheFairyTale(language);
 
         public MainPageViewModel()
         {
@@ -79,6 +79,14 @@ namespace App1.ViewModels
             }
         }
 
+        public string StartImage
+        {
+            get
+            {
+                return fairyTale.GetRandomEmojis(language);
+            }
+        }
+
         private bool _backButtonVisibility = false;
         public bool BackButtonVisibility
         {
@@ -88,6 +96,19 @@ namespace App1.ViewModels
                 _backButtonVisibility = value;
 
                 var args = new PropertyChangedEventArgs(nameof(BackButtonVisibility));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private bool _startButtonVisibility = true;
+        public bool StartButtonVisibility
+        {
+            get => _startButtonVisibility;
+            set
+            {
+                _startButtonVisibility = value;
+
+                var args = new PropertyChangedEventArgs(nameof(StartButtonVisibility));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -144,7 +165,7 @@ namespace App1.ViewModels
             Text = fairyTale.PresentPage.Text;
             Image = fairyTale.PresentPage.Emoji;
 
-            StartColumnWidth = new GridLength(1);
+            StartColumnWidth = new GridLength(0);
             FairyTaleColumnWidth1 = new GridLength(1, GridUnitType.Star);
             FairyTaleColumnWidth2 = new GridLength(1, GridUnitType.Star);
 
@@ -153,6 +174,7 @@ namespace App1.ViewModels
 
         private void SetButtonVisibilitys()
         {
+            StartButtonVisibility = false;
             if (fairyTale.PageNr > 1)
             {
                 BackButtonVisibility = true;
