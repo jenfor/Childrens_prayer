@@ -6,7 +6,7 @@ namespace App1.Languages
 {
     public class Swedish : Language
     {
-        public string ExchangeString => "\n \nRadera detta och skriv fortättningen av sagan här.";
+        public string ExchangeString => "\n \nNu är det din tur att använda din fantasi och skriva din fortättning på sagan här.";
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
         public string A => "en ";
