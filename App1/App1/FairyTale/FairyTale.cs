@@ -41,13 +41,13 @@ namespace App1.FairyTale
             pageList.Add(CreatePage(PresentFairyTaleCharacter2(language), fairyTaleCharacter2.Emoji));
             thisFairytaleEmojis.Add(fairyTaleCharacter2.Emoji);
 
-            pageList.Add(CreatePage(PresentFairyTalePlace(language), fairyTalePalce.Emoji));
+            pageList.Add(CreatePage(PresentFairyTalePlace(language), fairyTalePalce.Emoji)); 
             thisFairytaleEmojis.Add(fairyTalePalce.Emoji);
 
             pageList.Add(CreatePage(PresentFairyTaleEvent(language), fairyTaleCharacter1.Emoji + fairyTaleEvent.Emoji));
             thisFairytaleEmojis.Add(fairyTaleEvent.Emoji);
 
-            pageList.Add(CreatePage(PresentFairyTaleContinuation(language), fairyTaleCharacter2.Emoji));
+            pageList.Add(CreatePage(PresentFairyTaleContinuation(language), fairyTaleEvent.Emoji + fairyTaleCharacter2.Emoji));
             thisFairytaleEmojis.Add(fairyTaleCharacter1.Emoji);
         }
 
@@ -169,7 +169,7 @@ namespace App1.FairyTale
                  + language.Was + fairyTalePalce.Condition + language.Dot
             );
 
-            sb.Append(language.It + fairyTalePalce.Circumstance + language.Dot);
+            sb.Append(language.It + fairyTalePalce.Circumstance.Replace("---", fairyTalePalce.Condition) + language.Dot);
 
             return sb.ToString();
         }
@@ -179,7 +179,7 @@ namespace App1.FairyTale
             var sb = new StringBuilder();
 
             sb.Append(fairyTaleCharacter1.Name + language.Space + fairyTaleEvent.Conversion + language.Dot);
-            sb.Append(fairyTaleCharacter1.Gender + language.Space + fairyTaleEvent.Event + language.Dot);
+            sb.Append(fairyTaleCharacter1.Gender + language.Space + fairyTaleEvent.Event.Replace("---", fairyTaleCharacter1.Gender) + language.Dot);
 
             return sb.ToString();
         }
@@ -188,7 +188,7 @@ namespace App1.FairyTale
         {
             var sb = new StringBuilder();
 
-            sb.Append(GetWords(language.Continuations) + language.Space + fairyTaleCharacter2.Name + language.Dots + language.ExchangeString);
+            sb.Append(GetWords(language.Continuations).Replace("---", fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots + language.ExchangeString);
 
             return sb.ToString();
         }

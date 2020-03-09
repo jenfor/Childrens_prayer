@@ -62,10 +62,10 @@ namespace App1.Languages
         public Dictionary<string, string> Places => new Dictionary<string, string>()
         {
             {"på jorden", "\U0001F30D"},
-            {"på deras planet", "\U0001FA90"},
+            //{"på deras planet", "\U0001FA90"},// ToDo: Fix this emoji
             {"i deras stad", "\U0001F306"},
             {"i deras land", "\U0001F304"},
-            {"i deras hembygd", "\U0001F3DEU"},
+            {"i deras hembygd", "\U0001F3DEU"},// ToDo: Fix this emoji
             {"i deras by", "\U0001F3D8"},
             {"i skogen, där de bodde,", "\U0001F333"}
         };
@@ -83,10 +83,10 @@ namespace App1.Languages
             {"hade kommit på iden att sätta segel på ryggen", "\U0001F32C"},
             {"hade bestämt sig för att uppfinna vingar som fungerade för alla", "\U0001F4B8"},
             {"ville ordna en flygkurs för alla", "\U0001F6E9"},
-            {"tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84"},
+            {"tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84"},// ToDo: Fix this emoji
             {"trodde det var enkelt att bygga ett stort slott av sandkorn", "\U0001F3F0"},
             {"ville bevisa att det fortfarande fanns levande drakar", "\U0001F409"},
-            {"hade hittat en lampa som det kunde vara en ande i", "\U0001FA94"},
+            {"hade hittat en lampa som det kunde vara en ande i", "\U0001FA94"},// ToDo: Fix this emoji
             {"trodde sig ha hittat en ny väg till månen", "\U0001F314"},
             {"hade hittat platsen där regnbågen börjar", "\U0001F308"}
         };
