@@ -49,7 +49,7 @@ namespace App1.FairyTale
             var consonant1 = uppercaseConsonants[random.Next(uppercaseConsonants.Count)];
             var vowel = vowels[random.Next(vowels.Count)];
             sb.Append(consonant1).Append(vowel);
-            for (int i = 0; i <= random.Next(3); i++)
+            for (int i = 0; i <= random.Next(1); i++)
             {
                 var consonant2 = lowercaseConsonants[random.Next(lowercaseConsonants.Count)];
                 var vowel2 = vowels[random.Next(vowels.Count)];

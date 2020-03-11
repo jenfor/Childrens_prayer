@@ -75,7 +75,7 @@ namespace App1.Languages
             {"hade bestämt sig för att ordna en stor låtsasfest dit alla skulle vara bjudna", "\U0001F382" },
             {"började packa en väska för att det skulle se ut som att det var dags att ge sig ut på en längre resa", "\U0001F45C"},
             {"började med att säga till alla att det var en mycket viktig dag idag", "\U0001F338"},
-            {"påstod att om alla samarbetade kunde de tilsammans bygga en rymdraket", "\U0001F6F8"},
+            {"påstod att om alla samarbetade kunde de tilsammans bygga ett rymdskepp", "\U0001F6F8"},
             {"trodde att det var lätt som en plätt att bygga en egen bil", "\U0001F698"},
             {"menade att det var möjligt att bygga städer på havsbotten", "\U0001F30A"},
             {"ville starta en ny sorts godisfabrik", "\U0001F36C" + "\U0001F36D"},

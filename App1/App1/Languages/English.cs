@@ -73,21 +73,21 @@ namespace App1.Languages
         public Dictionary<string, string> Events => new Dictionary<string, string>()
         {
             {"had decided to organize a big party where everyone should be invited", "\U0001F382" },
-            {"started to pack a bag. It looked like it was time to go for a long journey", "\U0001F45C"},
+            {"wanted it to look like it was time to go for a long journey. That's why --- started to pack a bag", "\U0001F45C"},
             {"started by telling everyone that this was a very important day", "\U0001F338"},
             {"said: \n- Let's build a space ship together", "\U0001F6F8"},
             {"thought it was easy to build a new car", "\U0001F698"},
-            {"thought it was possible to build cities on the seabed", "\U0001F30A"},
+            {"thought it was possible to build a citiy on the seabed", "\U0001F30A"},
             {"wanted to start a new sort of candy factory", "\U0001F36C" + "\U0001F36D"},
-            {"said --- was big enough to start school", "\U0001F3EB"},
+            {"said --- was big enough to start school", "\U0001F3EB"}, 
             {"wanted to put sails on everyone's backs", "\U0001F32C"},
             {"had decided to invent wings that could make everyone and everything fly", "\U0001F4B8"},
             {"wanted to arrange a flight course for everyone", "\U0001F6E9"},
             {"planned to dress up as a good fairy and hand out three wishes", "\U0001FA84"},// ToDo: Fix this emoji
-            {"thought it was easy to build a large castle out of sand", "\U0001F3F0"},
+            {"thought it was easy to build large castles out of sand", "\U0001F3F0"},
             {"wanted to prove that the dragons still were alive", "\U0001F409"},
-            {"had found a lamp. In there, there might be a genie", "\U0001FA94"},// ToDo: Fix this emoji
-            {"thought --- had found a new way to the moon", "\U0001F314"},
+            {"had found a lamp in where it might be a genie", "\U0001FA94"},// ToDo: Fix this emoji
+            {"thought --- had found a new way to the moon", "\U0001F314"}, 
             {"had found the place where the rainbow starts", "\U0001F308"}
         };
 
@@ -106,8 +106,8 @@ namespace App1.Languages
             "In an imaginable country there once lived a",
             "Not far from here, there once lived a",
             "Right under your bed, the bed you usually sleep in, there is a small hole. "
-                + "No human eye yet has seen it, but inside, there is a whole world."
-                + "There once lived a "
+                + "No human eye has seen it, but anyway, inside there is a whole world."
+                + "In there, there once lived a "
         };
 
         public List<string> Relationships => new List<string>()
@@ -159,12 +159,12 @@ namespace App1.Languages
             "used to",
             "seemed to",
             "liked to",
-            "thought they could"
+            "thought they should"
         };
 
         public List<string> Circumstances => new List<string>()
         {
-           "Right now life happend to be ---",
+           "Right now life actually happend to be ---",
             "Right now life was ---, but for someone who didn't know it, it was hard to believe",
 
             "But right now life certainly wasn't ---",
@@ -180,10 +180,10 @@ namespace App1.Languages
 
         public List<string> Conversions => new List<string>()
         {
-            "wanted to do something about it",
+            "wanted to do something",
             "had new plans",
-            "had found something",
-            "had got a really fun idea",
+            "had come up with something",
+            "had got a fun idea",
             "had got an exciting idea",
             "wanted to try something new",
             "wanted to try a new idea",

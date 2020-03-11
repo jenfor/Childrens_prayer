@@ -179,7 +179,7 @@ namespace App1.FairyTale
             var sb = new StringBuilder();
 
             sb.Append(fairyTaleCharacter1.Name + language.Space + fairyTaleEvent.Conversion + language.Dot);
-            sb.Append(fairyTaleCharacter1.Gender + language.Space + fairyTaleEvent.Event.Replace("---", fairyTaleCharacter1.Gender) + language.Dot);
+            sb.Append(fairyTaleCharacter1.Gender + language.Space + fairyTaleEvent.Event.Replace("---", fairyTaleCharacter1.Gender.ToLower()) + language.Dot);
 
             return sb.ToString();
         }
