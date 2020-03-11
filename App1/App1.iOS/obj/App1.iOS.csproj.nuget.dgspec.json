@@ -27,7 +27,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://api.nuget.org/v3/index.json": {}
+          "http://api.nuget.org/v3/index.json": {},
+          "http://packagesource": {}
         },
         "frameworks": {
           "xamarinios10": {
@@ -87,7 +88,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://api.nuget.org/v3/index.json": {}
+          "http://api.nuget.org/v3/index.json": {},
+          "http://packagesource": {}
         },
         "frameworks": {
           "netstandard2.0": {
