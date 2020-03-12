@@ -8,19 +8,20 @@ namespace App1.Languages
     {
         String ExchangeString { get; }
 
-        String WasNamed { get; }//"som hette "
-        String HadA { get; }//" hade en "
-        String A { get; }//"en "
-        String WhoWasCalled { get; }//" som kallades för "
-        String They { get; }//"De två "
-        String ThatEverything { get; }//" att allt "
-        String Was { get; }//" var "
-        String It { get; }//"Det "
-        String Dots { get; }// "..."
+        String WasNamed { get; }
+        String HadA { get; }
+        String A { get; }
+        String WhoWasCalled { get; }
+        String They { get; }
+        String ThatEverything { get; }
+        String Was { get; }
+        String It { get; }
+        String Dots { get; }
 
         String Dot { get; }
         String Space { get; }
         String Comma { get; }
+        String NewLine { get; }
 
         Dictionary<String, String> Animals { get; }
         Dictionary<String, String> Places { get; }

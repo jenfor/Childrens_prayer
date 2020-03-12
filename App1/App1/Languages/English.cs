@@ -6,7 +6,7 @@ namespace App1.Languages
 {
     public class English: Language
     {
-        public string ExchangeString => "\n \nNow its your time to use your imagination to write the rest of the fairytale.";
+        public string ExchangeString => "Now its your time to use your imagination to write the rest of the fairytale.";
         public string WasNamed => "called ";
         public string HadA => " had a ";
         public string A => "a ";
@@ -14,11 +14,12 @@ namespace App1.Languages
         public string They => "They ";
         public string ThatEverything => " that everything ";
         public string Was => " was ";
-        public string It => "\n \n";
+        public string It => "";
         public string Dots => "...";
         public String Dot => ". ";
         public String Space => " ";
         public String Comma => ", ";
+        public String NewLine => "\n ";
 
         public Dictionary<string, string> Animals => new Dictionary<string, string>()
         {
@@ -72,7 +73,7 @@ namespace App1.Languages
 
         public Dictionary<string, string> Events => new Dictionary<string, string>()
         {
-            {"had decided to organize a big party where everyone should be invited", "\U0001F382" },
+            {"had decided to organize a big party where everyone should be invited", "\U0001F382"},
             {"wanted it to look like it was time to go for a long journey. That's why --- started to pack a bag", "\U0001F45C"},
             {"started by telling everyone that this was a very important day", "\U0001F338"},
             {"said: \n- Let's build a space ship together", "\U0001F6F8"},

@@ -136,6 +136,21 @@ namespace App1.FairyTale
             return page;
         }
 
+        public string GetFairytaleString(Language language)
+        {
+            var sb = new StringBuilder();
+
+            foreach(var page in pageList)
+            {
+                sb.Append(page.Text);
+                sb.Append(page.Emoji);
+                sb.Append(language.NewLine);
+                sb.Append(language.NewLine);
+
+            }
+            return sb.ToString();
+        }
+
         public String PresentFairyTaleCharacter1(Language language)
         {
             var sb = new StringBuilder();
@@ -188,7 +203,7 @@ namespace App1.FairyTale
         {
             var sb = new StringBuilder();
 
-            sb.Append(GetWords(language.Continuations).Replace("---", fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots + language.ExchangeString);
+            sb.Append(GetWords(language.Continuations).Replace("---", fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots + language.Space +language.ExchangeString);
 
             return sb.ToString();
         }
