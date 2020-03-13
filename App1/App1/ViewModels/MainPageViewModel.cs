@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 using Xamarin.Forms;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 using App1.FairyTale;
 using App1.Languages;
 
@@ -19,26 +21,34 @@ namespace App1.ViewModels
             {
                 language = new Swedish();
                 ShowFairyTale(language);
+                SetButtonVisibilitys();
             });
 
             EnglishFairyTale = new Command(() =>
             {
                 language = new English();
                 ShowFairyTale(language);
+                SetButtonVisibilitys();
             });
 
             NewFairyTale = new Command(() =>
             {
                 ShowFairyTale(language);
+                SetButtonVisibilitys();
             });
 
             ContinueFairyTale = new Command(() =>
             {
                 fairyTale.PresentPage.Text = Text;
-                fairyTale.TurnThePage(language);
+                fairyTale.ViewNextPage(language);
                 Text = fairyTale.PresentPage.Text;
                 Image = fairyTale.PresentPage.Emoji;
                 SetButtonVisibilitys();
+            });
+
+            ShareFairyTale = new Command(() =>
+            {
+                ShareFuction();
             });
 
             Back = new Command(() =>
@@ -49,6 +59,7 @@ namespace App1.ViewModels
                 Image = fairyTale.PresentPage.Emoji;
                 SetButtonVisibilitys();
             });
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -75,6 +86,58 @@ namespace App1.ViewModels
                 _image = value;
 
                 var args = new PropertyChangedEventArgs(nameof(Image));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _newFairytale = language.NewFairytale;
+        public string NewFairytale
+        {
+            get => _newFairytale;
+            set
+            {
+                _newFairytale = value;
+
+                var args = new PropertyChangedEventArgs(nameof(NewFairytale));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _shareFairytale = language.ShareFairytale;
+        public string ShareFairytale
+        {
+            get => _shareFairytale;
+            set
+            {
+                _shareFairytale = value;
+
+                var args = new PropertyChangedEventArgs(nameof(ShareFairytale));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _backFairytale = language.BackFairytale;
+        public string BackFairytale
+        {
+            get => _backFairytale;
+            set
+            {
+                _backFairytale = value;
+
+                var args = new PropertyChangedEventArgs(nameof(BackFairytale));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _continueFairytale = language.ContinueFairytale;
+        public string ContinueFairytale
+        {
+            get => _continueFairytale;
+            set
+            {
+                _continueFairytale = value;
+
+                var args = new PropertyChangedEventArgs(nameof(ContinueFairytale));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -157,6 +220,7 @@ namespace App1.ViewModels
         public Command NewFairyTale { get; }
         public Command ContinueFairyTale { get; }
         public Command Back { get; }
+        public Command ShareFairyTale { get; }
 
         private void ShowFairyTale(Language language)
         {
@@ -174,6 +238,11 @@ namespace App1.ViewModels
 
         private void SetButtonVisibilitys()
         {
+            NewFairytale = language.NewFairytale;
+            ShareFairytale = language.ShareFairytale;
+            BackFairytale = language.BackFairytale;
+            ContinueFairytale = language.ContinueFairytale;
+
             StartButtonVisibility = false;
             if (fairyTale.PageNr > 1)
             {
@@ -183,6 +252,21 @@ namespace App1.ViewModels
             {
                 BackButtonVisibility = false;
             }
+        }
+
+        private async void ShareFuction()
+        {
+            fairyTale.PresentPage.Text = Text;
+            await ShareText(fairyTale.GetFairytaleString(language));
+        }
+
+        private async Task ShareText(string text)
+        {
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Text = text,
+                Title = "Fairytale"
+            });
         }
     }
 }

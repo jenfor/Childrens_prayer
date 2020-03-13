@@ -6,36 +6,41 @@ namespace App1.Languages
 {
     public interface Language
     {
-        String ExchangeString { get; }
+        string NewFairytale { get; }
+        string ShareFairytale { get; }
+        string BackFairytale { get; }
+        string ContinueFairytale { get; }
 
-        String WasNamed { get; }
-        String HadA { get; }
-        String A { get; }
-        String WhoWasCalled { get; }
-        String They { get; }
-        String ThatEverything { get; }
-        String Was { get; }
-        String It { get; }
-        String Dots { get; }
+        string ExchangeString { get; }
 
-        String Dot { get; }
-        String Space { get; }
-        String Comma { get; }
-        String NewLine { get; }
+        string WasNamed { get; }
+        string HadA { get; }
+        string A { get; }
+        string WhoWasCalled { get; }
+        string They { get; }
+        string ThatEverything { get; }
+        string Was { get; }
+        string It { get; }
+        string Dots { get; }
 
-        Dictionary<String, String> Animals { get; }
-        Dictionary<String, String> Places { get; }
-        Dictionary<String, String> Events { get; }
+        string Dot { get; }
+        string Space { get; }
+        string Comma { get; }
+        string NewLine { get; }
 
-        List<String> FairyTaleStarts { get; }
-        List<String> Relationships { get; }
-        List<String> Adjectives { get; }
-        List<String> Actions { get; }
-        List<String> Conditions { get; }
-        List<String> Verb { get; }
-        List<String> Circumstances { get; }
-        List<String> Gender { get; }
-        List<String> Conversions { get; }
-        List<String> Continuations { get; }
+        Dictionary<string, string> Animals { get; }
+        Dictionary<string, string> Places { get; }
+        Dictionary<string, string> Events { get; }
+
+        List<string> FairyTaleStarts { get; }
+        List<string> Relationships { get; }
+        List<string> Adjectives { get; }
+        List<string> Actions { get; }
+        List<string> Conditions { get; }
+        List<string> Verb { get; }
+        List<string> Circumstances { get; }
+        List<string> Gender { get; }
+        List<string> Conversions { get; }
+        List<string> Continuations { get; }
     }
 }

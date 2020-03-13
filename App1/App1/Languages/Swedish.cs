@@ -6,6 +6,11 @@ namespace App1.Languages
 {
     public class Swedish : Language
     {
+        public string NewFairytale => "Ny saga";
+        public string ShareFairytale => "Dela sagan";
+        public string BackFairytale => "Bläddra bakåt";
+        public string ContinueFairytale => "Fortsätt sagan";
+
         public string ExchangeString => "Nu är det din tur att använda din fantasi och skriva din fortättning på sagan här.";
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
@@ -80,7 +85,7 @@ namespace App1.Languages
             {"trodde att det var lätt som en plätt att bygga en egen bil", "\U0001F698"},
             {"menade att det var möjligt att bygga städer på havsbotten", "\U0001F30A"},
             {"ville starta en ny sorts godisfabrik", "\U0001F36C" + "\U0001F36D"},
-            {"låtsades att han var stor nog att börja i skolan redan nu", "\U0001F3EB"},
+            {"låtsades att --- var stor nog att börja i skolan redan nu", "\U0001F3EB"},
             {"hade kommit på iden att sätta segel på ryggen", "\U0001F32C"},
             {"hade bestämt sig för att uppfinna vingar som fungerade för alla", "\U0001F4B8"},
             {"ville ordna en flygkurs för alla", "\U0001F6E9"},

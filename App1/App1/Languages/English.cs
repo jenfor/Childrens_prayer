@@ -6,6 +6,11 @@ namespace App1.Languages
 {
     public class English: Language
     {
+        public string NewFairytale => "New Fairytale";
+        public string ShareFairytale => "Share Fairytale";
+        public string BackFairytale => "Back";
+        public string ContinueFairytale => "Continue";
+
         public string ExchangeString => "Now its your time to use your imagination to write the rest of the fairytale.";
         public string WasNamed => "called ";
         public string HadA => " had a ";

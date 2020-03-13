@@ -32,15 +32,15 @@
                VerticalTextAlignment="Center" FontSize="130" Grid.RowSpan="2"></Label>
         </StackLayout>
 
-        <Button Grid.Column="1" Text="Ny saga" Command="{Binding NewFairyTale}" BackgroundColor="LightBlue"></Button>
-        <Button Grid.Column="2" Grid.Row="0" x:Name="btnShare" Text="Dela sagan" Command="{Binding ShareFairytale}" BackgroundColor="LightBlue"/>
+        <Button Grid.Column="1" Text="{Binding NewFairytale}" Command="{Binding NewFairyTale}" BackgroundColor="LightBlue"></Button>
+        <Button Grid.Column="2" Grid.Row="0" x:Name="btnShare" Text="{Binding ShareFairytale}" Command="{Binding ShareFairyTale}" BackgroundColor="LightBlue"/>
         
         <Label Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1"  Text="{Binding Image}" HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center" FontSize="150"></Label>
         <Editor x:Name="txtText"  Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="1" Text="{Binding Text}" FontSize="20" IsEnabled="True" TextColor="Black" Margin="10" IsSpellCheckEnabled="False"></Editor>
-        
-        <Button  Command="{Binding Back}" Grid.Row="3" Grid.Column="1" Text="Bläddra bakåt" BackgroundColor="LightBlue" IsVisible="{Binding BackButtonVisibility}"></Button>
-        <Button Command="{Binding ContinueFairyTale}" Grid.Row="3" Grid.Column="2" Text="Fortsätt sagan" BackgroundColor="LightBlue" ></Button>
+
+        <Button  Command="{Binding Back}" Grid.Row="3" Grid.Column="1" Text="{Binding BackFairytale}" BackgroundColor="LightBlue" IsVisible="{Binding BackButtonVisibility}"></Button>
+        <Button Command="{Binding ContinueFairyTale}" Grid.Row="3" Grid.Column="2" Text="{Binding ContinueFairytale}" BackgroundColor="LightBlue" ></Button>
     </Grid>
 
 </ContentPage>

@@ -21,7 +21,7 @@ namespace App1.FairyTale
         public TheFairyTale(Language language)
         {
             WriteFairyTale(language);
-            TurnThePage(language);
+            ViewNextPage(language);
         }
 
         public void WriteFairyTale(Language language)
@@ -53,7 +53,7 @@ namespace App1.FairyTale
 
         public void ViewPreviousPage()
         {
-            if (PageNr > 1)
+            if (PageNr >= 2)
             {
                 PageNr -= 2;
                 PresentPage = pageList[PageNr];
@@ -61,7 +61,7 @@ namespace App1.FairyTale
             }
         }
 
-        public void TurnThePage(Language language)
+        public void ViewNextPage(Language language)
         {
             if (PageNr >= pageList.Count)
             {
