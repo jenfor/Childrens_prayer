@@ -43,6 +43,7 @@ namespace App1.ViewModels
                 fairyTale.ViewNextPage(language);
                 Text = fairyTale.PresentPage.Text;
                 Image = fairyTale.PresentPage.Emoji;
+                Placeholder = fairyTale.PresentPage.Palceholder;
                 SetButtonVisibilitys();
             });
 
@@ -57,9 +58,9 @@ namespace App1.ViewModels
                 fairyTale.ViewPreviousPage();
                 Text = fairyTale.PresentPage.Text;
                 Image = fairyTale.PresentPage.Emoji;
+                Placeholder = fairyTale.PresentPage.Palceholder;
                 SetButtonVisibilitys();
             });
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -86,6 +87,19 @@ namespace App1.ViewModels
                 _image = value;
 
                 var args = new PropertyChangedEventArgs(nameof(Image));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _placeholder = String.Empty;
+        public string Placeholder
+        {
+            get => _placeholder;
+            set
+            {
+                _placeholder = value;
+
+                var args = new PropertyChangedEventArgs(nameof(Placeholder));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -228,6 +242,7 @@ namespace App1.ViewModels
 
             Text = fairyTale.PresentPage.Text;
             Image = fairyTale.PresentPage.Emoji;
+            Placeholder = fairyTale.PresentPage.Palceholder;
 
             StartColumnWidth = new GridLength(0);
             FairyTaleColumnWidth1 = new GridLength(1, GridUnitType.Star);

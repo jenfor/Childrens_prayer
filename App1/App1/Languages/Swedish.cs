@@ -11,7 +11,7 @@ namespace App1.Languages
         public string BackFairytale => "Bläddra bakåt";
         public string ContinueFairytale => "Fortsätt sagan";
 
-        public string ExchangeString => "Nu är det din tur att använda din fantasi och skriva din fortättning på sagan här.";
+        public string ExchangeString => "Nu är det din tur att använda din fantasi för att skriva fortättningen på den här sagan.";
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
         public string A => "en ";
@@ -63,6 +63,7 @@ namespace App1.Languages
             {"kanin", "\U0001F407"},
             {"råtta", "\U0001F401"},
             {"get", "\U0001F410"},
+            {"fjäril", "\U0001F98B"},
         }; 
         
         public Dictionary<string, string> Places => new Dictionary<string, string>()
@@ -71,7 +72,7 @@ namespace App1.Languages
             //{"på deras planet", "\U0001FA90"},// ToDo: Fix this emoji
             {"i deras stad", "\U0001F306"},
             {"i deras land", "\U0001F304"},
-            {"i deras hembygd", "\U0001F3DEU"},// ToDo: Fix this emoji
+            {"i deras hembygd", "\U0001F3DE"},
             {"i deras by", "\U0001F3D8"},
             {"i skogen, där de bodde,", "\U0001F333"}
         };

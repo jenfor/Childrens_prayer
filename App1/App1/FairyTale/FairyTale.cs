@@ -35,19 +35,19 @@ namespace App1.FairyTale
             fairyTalePalce = GetFairyTalePlace(language);
             fairyTaleEvent = GetFairyTaleEvent(language);
 
-            pageList.Add(CreatePage(PresentFairyTaleCharacter1(language), fairyTaleCharacter1.Emoji));
+            pageList.Add(CreatePage(PresentFairyTaleCharacter1(language), fairyTaleCharacter1.Emoji, string.Empty));
             thisFairytaleEmojis.Add(fairyTaleCharacter1.Emoji);
 
-            pageList.Add(CreatePage(PresentFairyTaleCharacter2(language), fairyTaleCharacter2.Emoji));
+            pageList.Add(CreatePage(PresentFairyTaleCharacter2(language), fairyTaleCharacter2.Emoji, string.Empty));
             thisFairytaleEmojis.Add(fairyTaleCharacter2.Emoji);
 
-            pageList.Add(CreatePage(PresentFairyTalePlace(language), fairyTalePalce.Emoji)); 
+            pageList.Add(CreatePage(PresentFairyTalePlace(language), fairyTalePalce.Emoji, string.Empty)); 
             thisFairytaleEmojis.Add(fairyTalePalce.Emoji);
 
-            pageList.Add(CreatePage(PresentFairyTaleEvent(language), fairyTaleCharacter1.Emoji + fairyTaleEvent.Emoji));
+            pageList.Add(CreatePage(PresentFairyTaleEvent(language), fairyTaleCharacter1.Emoji + fairyTaleEvent.Emoji, string.Empty));
             thisFairytaleEmojis.Add(fairyTaleEvent.Emoji);
 
-            pageList.Add(CreatePage(PresentFairyTaleContinuation(language), fairyTaleEvent.Emoji + fairyTaleCharacter2.Emoji));
+            pageList.Add(CreatePage(String.Empty, fairyTaleEvent.Emoji + fairyTaleCharacter2.Emoji, PresentFairyTaleContinuation(language)));
             thisFairytaleEmojis.Add(fairyTaleCharacter1.Emoji);
         }
 
@@ -65,7 +65,7 @@ namespace App1.FairyTale
         {
             if (PageNr >= pageList.Count)
             {
-                pageList.Add(CreatePage(language.ExchangeString, GetRandomFairyTaleEmojis()));
+                pageList.Add(CreatePage(string.Empty, GetRandomFairyTaleEmojis(), language.ExchangeString));
             }
 
             PresentPage = pageList[PageNr];
@@ -115,7 +115,7 @@ namespace App1.FairyTale
             return emoji1 + emoji2 + emoji3;
         } 
 
-        private String CreateAndSkipEqualEmojis(string emoji1, List<String> allEmojis)
+        private string CreateAndSkipEqualEmojis(string emoji1, List<String> allEmojis)
         {
             var random = new Random();
             var emoji2 = allEmojis[random.Next(allEmojis.Count)];
@@ -128,11 +128,12 @@ namespace App1.FairyTale
             return emoji2;
         }
 
-        public Page CreatePage(String text, String emoji)
+        public Page CreatePage(string text, string emoji, string placeholder)
         {
             var page = new Page();
             page.Text = text;
             page.Emoji = emoji;
+            page.Palceholder = placeholder;
             return page;
         }
 
@@ -151,7 +152,7 @@ namespace App1.FairyTale
             return sb.ToString();
         }
 
-        public String PresentFairyTaleCharacter1(Language language)
+        public string PresentFairyTaleCharacter1(Language language)
         {
             var sb = new StringBuilder();
 
@@ -163,7 +164,7 @@ namespace App1.FairyTale
             return sb.ToString();
         }
 
-        public String PresentFairyTaleCharacter2(Language language)
+        public string PresentFairyTaleCharacter2(Language language)
         {
             var sb = new StringBuilder();
 
@@ -175,7 +176,7 @@ namespace App1.FairyTale
             return sb.ToString();
         }
 
-        public String PresentFairyTalePlace(Language language)
+        public string PresentFairyTalePlace(Language language)
         {
             var sb = new StringBuilder();
 
@@ -189,7 +190,7 @@ namespace App1.FairyTale
             return sb.ToString();
         }
 
-        public String PresentFairyTaleEvent(Language language)
+        public string PresentFairyTaleEvent(Language language)
         {
             var sb = new StringBuilder();
 
@@ -199,16 +200,16 @@ namespace App1.FairyTale
             return sb.ToString();
         }
 
-        public String PresentFairyTaleContinuation(Language language)
+        public string PresentFairyTaleContinuation(Language language)
         {
             var sb = new StringBuilder();
 
-            sb.Append(GetWords(language.Continuations).Replace("---", fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots + language.Space +language.ExchangeString);
+            sb.Append(GetWords(language.Continuations).Replace("---", fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots + language.NewLine + language.NewLine + language.Space + language.ExchangeString);
 
             return sb.ToString();
         }
 
-        public string GetWords(List<String> wordList)
+        public string GetWords(List<string> wordList)
         {
             var random = new Random();
             var word = wordList[random.Next(wordList.Count)];
@@ -218,7 +219,8 @@ namespace App1.FairyTale
 
     public class Page
     {
-        public String Text = String.Empty;
-        public String Emoji = String.Empty;
+        public string Text = string.Empty;
+        public string Emoji = string.Empty;
+        public string Palceholder = string.Empty;
     }
 }

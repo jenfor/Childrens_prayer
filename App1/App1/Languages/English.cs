@@ -31,15 +31,15 @@ namespace App1.Languages
             { "squirrel", "\U0001F43F" },
             {"hedgehog", "\U0001F994"},
             {"bat", "\U0001F987"},
-            //{"skunk", "\U0001F9A8"},
-            //{"badger", "\U0001F9A1"},
+            //{"skunk", "\U0001F9A8"}, // Todo: find better emoji
+            //{"badger", "\U0001F9A1"}, // Todo: find better emoji
             {"dove", "\U0001F54A"},
-            {"eagle", "\U0001F985"},// Todo: needs an instead of a
+            //{"eagle", "\U0001F985"},// Todo: needs an instead of a
             {"duck", "\U0001F986"},
-            //{"swan", "\U0001F9A2"},
-            //{"peacock", "\U0001F99A"},
-            //{"parrot", "\U0001F99C"},
-            {"owl", "\U0001F989"}, // Todo: needs an instead of a
+            //{"swan", "\U0001F9A2"}, // Todo: find better emoji
+            //{"peacock", "\U0001F99A"}, // Todo: find better emoji
+            //{"parrot", "\U0001F99C"}, // Todo: find better emoji
+            //{"owl", "\U0001F989"}, // Todo: needs an instead of a
             {"spider", "\U0001F577"},
             {"skorpion", "\U0001F982"},
             {"larva", "\U0001F41B"},
@@ -51,18 +51,21 @@ namespace App1.Languages
             {"frog", "\U0001F438"},
             {"ladybug", "\U0001F41E"},
             {"bird", "\U0001F426"},
-            {"ant", "\U0001F41C"}, // Todo: needs an instead of a
+            //{"ant", "\U0001F41C"}, // Todo: needs an instead of a
             {"shrew", "\U0001F42D"},
             {"chicken", "\U0001F425"},
             {"penguin", "\U0001F427"},
             {"koala", "\U0001F428"},
-            //{"hen", "\U0001F414"},
+            //{"hen", "\U0001F414"}, // Todo: find better emoji
             {"monkey", "\U0001F412"},
             {"dog", "\U0001F436"},
             {"panda", "\U0001F43C"},
             {"rabbit", "\U0001F407"},
             {"rat", "\U0001F401"},
             {"goat", "\U0001F410"},
+            {"honeybee", "\U0001F41D"},
+            {"cricket", "\U0001F997"},
+            {"butterfly", "\U0001F98B"},
         };
 
         public Dictionary<string, string> Places => new Dictionary<string, string>()
@@ -71,7 +74,7 @@ namespace App1.Languages
             //{"on their planet", "\U0001FA90"}, // ToDo: Fix this emoji
             {"in their city", "\U0001F306"},
             {"in their country", "\U0001F304"},
-            //{"in their hometown", "\U0001F3DEU"}, // ToDo: Fix this emoji
+            {"in their hometown", "\U0001F3DE"},
             {"in their village", "\U0001F3D8"},
             {"in their forest", "\U0001F333"}
         };
@@ -105,7 +108,7 @@ namespace App1.Languages
             "In an enchanted world there once was a",
             "In a another time there once lived a",
             "In a world where no human yet has taken a single step, there once lived a",
-            "Outside all human knowledge there once was a",
+            "Without any human knowing it there once was a",
             "Far away from all kind of attention there once lived a",
             "In a very odd world there once lived a",
             "Behind a secret door, in a forgotten house, a whole world is hidden. In there, there once lived a",
