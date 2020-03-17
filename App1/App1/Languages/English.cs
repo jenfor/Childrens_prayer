@@ -16,7 +16,7 @@ namespace App1.Languages
         public string Yes => "Yes";
         public string No => "No";
 
-        public string ExchangeString => "Now its your time to use your imagination to write the rest of the fairytale.";
+        public string ExchangeString => "Now its your time to use your imagination to write the rest of this fairytale rigth here.";
         public string WasNamed => "called ";
         public string HadA => " had a ";
         public string A => "a ";
