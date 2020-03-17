@@ -1938,11 +1938,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1.Android\\App1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.Android\\App1.Android.csproj",
       "projectName": "App1.Android",
-      "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1.Android\\App1.Android.csproj",
+      "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.Android\\App1.Android.csproj",
       "packagesPath": "C:\\Users\\jenny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1.Android\\obj\\",
+      "outputPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1964,8 +1964,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1\\App1.csproj": {
-              "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1\\App1.csproj"
+            "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj": {
+              "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj"
             }
           }
         }

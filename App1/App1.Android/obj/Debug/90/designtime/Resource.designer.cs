@@ -6794,6 +6794,12 @@ namespace App1.Droid
 			// aapt resource value: 0x7F0C0002
 			public const int launcher_foreground = 2131492866;
 			
+			// aapt resource value: 0x7F0C0003
+			public const int oldicon = 2131492867;
+			
+			// aapt resource value: 0x7F0C0004
+			public const int oldlauncher_foreground = 2131492868;
+			
 			static Mipmap()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

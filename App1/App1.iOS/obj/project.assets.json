@@ -1022,11 +1022,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.iOS\\App1.iOS.csproj",
       "projectName": "App1.iOS",
-      "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
+      "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.iOS\\App1.iOS.csproj",
       "packagesPath": "C:\\Users\\jenny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1.iOS\\obj\\",
+      "outputPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1048,8 +1048,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1\\App1.csproj": {
-              "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\App1\\App1\\App1\\App1.csproj"
+            "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj": {
+              "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj"
             }
           }
         }
