@@ -7,9 +7,9 @@ namespace App1.FairyTale
 {
     public class TheFairyTale
     {
-        public Page PresentPage = new Page();
+        public FairyTalePage PresentPage = new FairyTalePage();
         public int PageNr = 0;
-        private List<Page> pageList = new List<Page>();
+        private List<FairyTalePage> pageList = new List<FairyTalePage>();
         
         private FairyTaleCharacter fairyTaleCharacter1 = null;
         private FairyTaleCharacter fairyTaleCharacter2 = null;
@@ -128,9 +128,9 @@ namespace App1.FairyTale
             return emoji2;
         }
 
-        public Page CreatePage(string text, string emoji, string placeholder)
+        public FairyTalePage CreatePage(string text, string emoji, string placeholder)
         {
-            var page = new Page();
+            var page = new FairyTalePage();
             page.Text = text;
             page.Emoji = emoji;
             page.Palceholder = placeholder;
@@ -217,7 +217,7 @@ namespace App1.FairyTale
         }
     }
 
-    public class Page
+    public class FairyTalePage
     {
         public string Text = string.Empty;
         public string Emoji = string.Empty;

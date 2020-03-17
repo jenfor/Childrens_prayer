@@ -33,8 +33,7 @@ namespace App1.ViewModels
 
             NewFairyTale = new Command(() =>
             {
-                ShowFairyTale(language);
-                SetButtonVisibilitys();
+                CreateNewFairytale();
             });
 
             ContinueFairyTale = new Command(() =>
@@ -61,6 +60,16 @@ namespace App1.ViewModels
                 Placeholder = fairyTale.PresentPage.Palceholder;
                 SetButtonVisibilitys();
             });
+        }
+
+        public async Task CreateNewFairytale()
+        {
+            var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.Deletion, language.Yes, language.No);
+            if (action)
+            {
+                ShowFairyTale(language);
+                SetButtonVisibilitys();
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

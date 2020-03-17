@@ -11,6 +11,11 @@ namespace App1.Languages
         public string BackFairytale => "Back";
         public string ContinueFairytale => "Continue";
 
+        public string Warning => "Warning";
+        public string Deletion => "Are you sure you want to delete this fairytale and create a new one?";
+        public string Yes => "Yes";
+        public string No => "No";
+
         public string ExchangeString => "Now its your time to use your imagination to write the rest of the fairytale.";
         public string WasNamed => "called ";
         public string HadA => " had a ";

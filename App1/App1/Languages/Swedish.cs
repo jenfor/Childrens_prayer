@@ -11,6 +11,11 @@ namespace App1.Languages
         public string BackFairytale => "Bläddra bakåt";
         public string ContinueFairytale => "Fortsätt sagan";
 
+        public string Warning => "Varning";
+        public string Deletion => "Är du säker på att du vill radera den här sagan och skapa en ny?";
+        public string Yes => "Ja";
+        public string No => "Nej";
+
         public string ExchangeString => "Nu är det din tur att använda din fantasi för att skriva fortättningen på den här sagan.";
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";

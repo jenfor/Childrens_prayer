@@ -11,6 +11,11 @@ namespace App1.Languages
         string BackFairytale { get; }
         string ContinueFairytale { get; }
 
+        string Warning { get; }
+        string Deletion { get; }
+        string Yes { get; }
+        string No { get; }
+
         string ExchangeString { get; }
 
         string WasNamed { get; }
