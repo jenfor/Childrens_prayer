@@ -7,7 +7,7 @@ namespace App1.Languages
     public class English: Language
     {
         public string NewFairytale => "New Fairytale";
-        public string ShareFairytale => "Share Fairytale";
+        public string ShareFairytale => "Share the Fairytale";
         public string BackFairytale => "Back";
         public string ContinueFairytale => "Continue";
 

@@ -33,7 +33,7 @@ namespace App1.ViewModels
 
             NewFairyTale = new Command(() =>
             {
-                CreateNewFairytale();
+                CreateNewFairytale(language);
             });
 
             ContinueFairyTale = new Command(() =>
@@ -62,7 +62,7 @@ namespace App1.ViewModels
             });
         }
 
-        public async Task CreateNewFairytale()
+        public async Task CreateNewFairytale(Language language)
         {
             var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.Deletion, language.Yes, language.No);
             if (action)
