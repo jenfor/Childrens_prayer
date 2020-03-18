@@ -16,7 +16,7 @@ namespace App1.FairyTale
         private FairyTalePlace fairyTalePalce = null;
         private FairyTaleEvent fairyTaleEvent = null;
 
-        private List<String> thisFairytaleEmojis = new List<string>();
+        private List<String> thisFairyTaleEmojis = new List<string>();
 
         public TheFairyTale(Language language)
         {
@@ -28,7 +28,7 @@ namespace App1.FairyTale
         {
             PageNr = 0;
             pageList.Clear();
-            thisFairytaleEmojis.Clear();
+            thisFairyTaleEmojis.Clear();
 
             fairyTaleCharacter1 = GetFairyTaleCharacter(language);
             fairyTaleCharacter2 = GetFairyTaleCharacter(language);
@@ -36,19 +36,19 @@ namespace App1.FairyTale
             fairyTaleEvent = GetFairyTaleEvent(language);
 
             pageList.Add(CreatePage(PresentFairyTaleCharacter1(language), fairyTaleCharacter1.Emoji, string.Empty));
-            thisFairytaleEmojis.Add(fairyTaleCharacter1.Emoji);
+            thisFairyTaleEmojis.Add(fairyTaleCharacter1.Emoji);
 
             pageList.Add(CreatePage(PresentFairyTaleCharacter2(language), fairyTaleCharacter2.Emoji, string.Empty));
-            thisFairytaleEmojis.Add(fairyTaleCharacter2.Emoji);
+            thisFairyTaleEmojis.Add(fairyTaleCharacter2.Emoji);
 
             pageList.Add(CreatePage(PresentFairyTalePlace(language), fairyTalePalce.Emoji, string.Empty)); 
-            thisFairytaleEmojis.Add(fairyTalePalce.Emoji);
+            thisFairyTaleEmojis.Add(fairyTalePalce.Emoji);
 
             pageList.Add(CreatePage(PresentFairyTaleEvent(language), fairyTaleCharacter1.Emoji + fairyTaleEvent.Emoji, string.Empty));
-            thisFairytaleEmojis.Add(fairyTaleEvent.Emoji);
+            thisFairyTaleEmojis.Add(fairyTaleEvent.Emoji);
 
             pageList.Add(CreatePage(String.Empty, fairyTaleEvent.Emoji + fairyTaleCharacter2.Emoji, PresentFairyTaleContinuation(language)));
-            thisFairytaleEmojis.Add(fairyTaleCharacter1.Emoji);
+            thisFairyTaleEmojis.Add(fairyTaleCharacter1.Emoji);
         }
 
         public void ViewPreviousPage()
@@ -95,8 +95,8 @@ namespace App1.FairyTale
 
         public string GetRandomFairyTaleEmojis()
         {
-            var emoji1 = CreateAndSkipEqualEmojis(null, thisFairytaleEmojis); 
-            var emoji2 = CreateAndSkipEqualEmojis(emoji1, thisFairytaleEmojis); 
+            var emoji1 = CreateAndSkipEqualEmojis(null, thisFairyTaleEmojis); 
+            var emoji2 = CreateAndSkipEqualEmojis(emoji1, thisFairyTaleEmojis); 
 
             return emoji1 + emoji2;
         }

@@ -6,17 +6,17 @@ namespace App1.Languages
 {
     public class English: Language
     {
-        public string NewFairytale => "New Fairytale";
-        public string ShareFairytale => "Share the Fairytale";
-        public string BackFairytale => "Back";
-        public string ContinueFairytale => "Continue";
+        public string NewFairyTale => "New fairy tale";
+        public string ShareFairyTale => "Share the fairy tale";
+        public string BackFairyTale => "Back";
+        public string ContinueFairyTale => "Continue";
 
         public string Warning => "Warning";
-        public string Deletion => "Are you sure you want to delete this fairytale and create a new one?";
+        public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
         public string Yes => "Yes";
         public string No => "No";
 
-        public string ExchangeString => "Now its your time to use your imagination to write the rest of this fairytale rigth here.";
+        public string ExchangeString => "Now its your time to use your imagination to write the rest of this fairy tale rigth here.";
         public string WasNamed => "called ";
         public string HadA => " had a ";
         public string A => "a ";

@@ -113,7 +113,7 @@ namespace App1.ViewModels
             }
         }
 
-        private string _newFairytale = language.NewFairytale;
+        private string _newFairytale = language.NewFairyTale;
         public string NewFairytale
         {
             get => _newFairytale;
@@ -126,7 +126,7 @@ namespace App1.ViewModels
             }
         }
 
-        private string _shareFairytale = language.ShareFairytale;
+        private string _shareFairytale = language.ShareFairyTale;
         public string ShareFairytale
         {
             get => _shareFairytale;
@@ -139,7 +139,7 @@ namespace App1.ViewModels
             }
         }
 
-        private string _backFairytale = language.BackFairytale;
+        private string _backFairytale = language.BackFairyTale;
         public string BackFairytale
         {
             get => _backFairytale;
@@ -152,7 +152,7 @@ namespace App1.ViewModels
             }
         }
 
-        private string _continueFairytale = language.ContinueFairytale;
+        private string _continueFairytale = language.ContinueFairyTale;
         public string ContinueFairytale
         {
             get => _continueFairytale;
@@ -262,10 +262,10 @@ namespace App1.ViewModels
 
         private void SetButtonVisibilitys()
         {
-            NewFairytale = language.NewFairytale;
-            ShareFairytale = language.ShareFairytale;
-            BackFairytale = language.BackFairytale;
-            ContinueFairytale = language.ContinueFairytale;
+            NewFairytale = language.NewFairyTale;
+            ShareFairytale = language.ShareFairyTale;
+            BackFairytale = language.BackFairyTale;
+            ContinueFairytale = language.ContinueFairyTale;
 
             StartButtonVisibility = false;
             if (fairyTale.PageNr > 1)
