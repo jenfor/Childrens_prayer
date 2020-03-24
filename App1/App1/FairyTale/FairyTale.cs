@@ -51,14 +51,17 @@ namespace App1.FairyTale
             thisFairyTaleEmojis.Add(fairyTaleCharacter1.Emoji);
         }
 
-        public void ViewPreviousPage()
+        public bool ViewPreviousPage()
         {
             if (PageNr >= 2)
             {
                 PageNr -= 2;
                 PresentPage = pageList[PageNr];
                 PageNr++;
+                return true;
             }
+
+            return false;
         }
 
         public void ViewNextPage(Language language)

@@ -11,6 +11,7 @@ namespace App1.Languages
         string BackFairyTale { get; }
         string ContinueFairyTale { get; }
 
+        string BackToStartPageWarning { get; }
         string Warning { get; }
         string Deletion { get; }
         string Yes { get; }

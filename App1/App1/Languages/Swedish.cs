@@ -11,6 +11,7 @@ namespace App1.Languages
         public string BackFairyTale => "Bläddra bakåt";
         public string ContinueFairyTale => "Fortsätt sagan";
 
+        public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startsidan? Den här sagan kommer raderas.";
         public string Warning => "Varning";
         public string Deletion => "Är du säker på att du vill radera den här sagan och skapa en ny?";
         public string Yes => "Ja";

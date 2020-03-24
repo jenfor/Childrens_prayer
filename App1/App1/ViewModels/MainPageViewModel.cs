@@ -54,12 +54,31 @@ namespace App1.ViewModels
             Back = new Command(() =>
             {
                 fairyTale.PresentPage.Text = Text;
-                fairyTale.ViewPreviousPage();
-                Text = fairyTale.PresentPage.Text;
-                Image = fairyTale.PresentPage.Emoji;
-                Placeholder = fairyTale.PresentPage.Palceholder;
-                SetButtonVisibilitys();
+                if (fairyTale.ViewPreviousPage())
+                {
+                    Text = fairyTale.PresentPage.Text;
+                    Image = fairyTale.PresentPage.Emoji;
+                    Placeholder = fairyTale.PresentPage.Palceholder;
+                    SetButtonVisibilitys();
+                }
+                else
+                {
+                    BackToStartPage(language);
+                }
             });
+        }
+
+        public async Task BackToStartPage(Language language)
+        {
+            var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.BackToStartPageWarning, language.Yes, language.No);
+            if (action)
+            {
+                StartColumnWidth = new GridLength(1, GridUnitType.Star);
+                FairyTaleColumnWidth1 = new GridLength(0);
+                FairyTaleColumnWidth2 = new GridLength(0);
+
+                StartButtonVisibility = true;
+            }
         }
 
         public async Task CreateNewFairytale(Language language)
@@ -245,6 +264,11 @@ namespace App1.ViewModels
         public Command Back { get; }
         public Command ShareFairyTale { get; }
 
+        public Command ClickCommand => new Command<string>((url) =>
+        {
+            Device.OpenUri(new Uri(url));
+        });
+
         private void ShowFairyTale(Language language)
         {
             fairyTale = new TheFairyTale(language);
@@ -268,14 +292,7 @@ namespace App1.ViewModels
             ContinueFairytale = language.ContinueFairyTale;
 
             StartButtonVisibility = false;
-            if (fairyTale.PageNr > 1)
-            {
-                BackButtonVisibility = true;
-            }
-            else
-            {
-                BackButtonVisibility = false;
-            }
+            BackButtonVisibility = true;
         }
 
         private async void ShareFuction()
