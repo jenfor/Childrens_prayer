@@ -32,8 +32,6 @@
                VerticalTextAlignment="Center" FontSize="130" Grid.RowSpan="2"></Label>
         </StackLayout>
 
-
-
         <Label Grid.Column="0" Grid.Row="3"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
             <Label.FormattedText>
                 <FormattedString>
@@ -42,7 +40,7 @@
                   TextColor="Blue"
                   TextDecorations="Underline">
                         <Span.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding ClickCommand}"
+                            <TapGestureRecognizer Command="{Binding LinkClickCommand}"
                                           CommandParameter="https://jenfor.github.io/privacy_policy/magic_fairy_tale/" />
                         </Span.GestureRecognizers>
                     </Span>

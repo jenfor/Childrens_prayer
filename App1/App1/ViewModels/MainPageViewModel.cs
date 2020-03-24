@@ -66,6 +66,12 @@ namespace App1.ViewModels
                     BackToStartPage(language);
                 }
             });
+
+            LinkClickCommand =  new Command<string>((url) =>
+            {
+                Device.OpenUri(new Uri(url));
+            });
+
         }
 
         public async Task BackToStartPage(Language language)
@@ -263,13 +269,9 @@ namespace App1.ViewModels
         public Command ContinueFairyTale { get; }
         public Command Back { get; }
         public Command ShareFairyTale { get; }
+        public Command LinkClickCommand { get; }
 
-        public Command ClickCommand => new Command<string>((url) =>
-        {
-            Device.OpenUri(new Uri(url));
-        });
-
-        private void ShowFairyTale(Language language)
+    private void ShowFairyTale(Language language)
         {
             fairyTale = new TheFairyTale(language);
 
