@@ -17,7 +17,7 @@ namespace App1.Languages
         public string Yes => "Ja";
         public string No => "Nej";
 
-        public string ExchangeString => "Nu är det din tur att använda din fantasi för att skriva fortättningen på sagan här.";
+        public string ExchangeString => "Nu är det din tur att använda din fantasi för att skriva fortsättningen på sagan här.";
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
         public string A => "en ";
