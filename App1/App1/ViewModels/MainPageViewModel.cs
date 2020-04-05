@@ -20,15 +20,13 @@ namespace App1.ViewModels
             SwedishFairyTale = new Command(() =>
             {
                 language = new Swedish();
-                ShowFairyTale(language);
-                SetButtonVisibilitys();
+                SwedishVersion();
             });
 
             EnglishFairyTale = new Command(() =>
             {
                 language = new English();
-                ShowFairyTale(language);
-                SetButtonVisibilitys();
+                EnglishVersion();
             });
 
             NewFairyTale = new Command(() =>
@@ -72,6 +70,38 @@ namespace App1.ViewModels
                 Device.OpenUri(new Uri(url));
             });
 
+        }
+
+        public async Task SwedishVersion()
+        {
+            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Yes, language.No);
+            if (action)
+            {
+                language = new ShortSwedish();
+            }
+            else
+            {
+                language = new Swedish();
+            }
+
+            ShowFairyTale(language);
+            SetButtonVisibilitys();
+        }
+
+        public async Task EnglishVersion()
+        {
+            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Yes, language.No);
+            if (action)
+            {
+                language = new ShortEnglish();
+            }
+            else
+            {
+                language = new English();
+            }
+
+            ShowFairyTale(language);
+            SetButtonVisibilitys();
         }
 
         public async Task BackToStartPage(Language language)

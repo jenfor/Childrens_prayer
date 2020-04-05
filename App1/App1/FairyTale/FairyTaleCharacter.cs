@@ -15,7 +15,7 @@ namespace App1.FairyTale
 
         private List<char> uppercaseConsonants = new List<char>(){'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'V'};
         private List<char> lowercaseConsonants = new List<char>() { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v' };
-        private List<char> vowels = new List<char>() { 'a', 'e', 'i', 'o', 'u', 'y' };
+        private List<char> vowels = new List<char>() { 'a', 'e', 'i', 'o', 'u' };
 
         public FairyTaleCharacter(String animal, String adjective,  String gender, String relationShip, string emoji)
         {
@@ -48,13 +48,9 @@ namespace App1.FairyTale
 
             var consonant1 = uppercaseConsonants[random.Next(uppercaseConsonants.Count)];
             var vowel = vowels[random.Next(vowels.Count)];
-            sb.Append(consonant1).Append(vowel);
-            for (int i = 0; i <= random.Next(1); i++)
-            {
-                var consonant2 = lowercaseConsonants[random.Next(lowercaseConsonants.Count)];
-                var vowel2 = vowels[random.Next(vowels.Count)];
-                sb.Append(consonant2).Append(vowel2);
-            }
+            var vowel2 = vowels[random.Next(vowels.Count)];
+
+            sb.Append(consonant1).Append(vowel).Append(vowel2);
 
             var name = sb.ToString();
             return name;

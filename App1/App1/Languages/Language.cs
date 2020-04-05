@@ -11,8 +11,12 @@ namespace App1.Languages
         string BackFairyTale { get; }
         string ContinueFairyTale { get; }
 
+        string VersionOption { get; }
+
         string BackToStartPageWarning { get; }
         string Warning { get; }
+        string Question { get; }
+
         string Deletion { get; }
         string Yes { get; }
         string No { get; }
@@ -23,10 +27,9 @@ namespace App1.Languages
         string HadA { get; }
         string A { get; }
         string WhoWasCalled { get; }
-        string They { get; }
+        string And { get; }
         string ThatEverything { get; }
         string Was { get; }
-        string It { get; }
         string Dots { get; }
 
         string Dot { get; }

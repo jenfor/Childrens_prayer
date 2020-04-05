@@ -8,11 +8,13 @@ namespace App1.Languages
     {
         public string NewFairyTale => "Ny saga";
         public string ShareFairyTale => "Dela sagan";
-        public string BackFairyTale => "Bläddra bakåt";
-        public string ContinueFairyTale => "Fortsätt sagan";
+        public string BackFairyTale => "Tillbaka";
+        public string ContinueFairyTale => "Fortsätt";
+        public string VersionOption => "Vill du skriva en kort saga?";
 
         public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startsidan? Den här sagan kommer raderas.";
         public string Warning => "Varning";
+        public string Question => "Fråga";
         public string Deletion => "Är du säker på att du vill radera den här sagan och skapa en ny?";
         public string Yes => "Ja";
         public string No => "Nej";
@@ -22,10 +24,9 @@ namespace App1.Languages
         public string HadA => " hade en ";
         public string A => "en ";
         public string WhoWasCalled => " som kallades för ";
-        public string They => "De två ";
+        public string And => " och ";
         public string ThatEverything => " att allt ";
         public string Was => " var ";
-        public string It => "Det ";
         public string Dots => "...";
         public String Dot => ". ";
         public String Space => " ";
@@ -92,8 +93,8 @@ namespace App1.Languages
             {"trodde att det var lätt som en plätt att bygga en egen bil", "\U0001F698"},
             {"menade att det var möjligt att bygga städer på havsbotten", "\U0001F30A"},
             {"ville starta en ny sorts godisfabrik", "\U0001F36C" + "\U0001F36D"},
-            {"låtsades att --- var stor nog att börja i skolan redan nu", "\U0001F3EB"},
-            {"hade kommit på iden att sätta segel på ryggen", "\U0001F32C"},
+            {"låtsades att " + StringReplacer.Character1_Gender +" var stor nog att börja i skolan redan nu", "\U0001F3EB"},
+            {"hade kommit på idén att sätta segel på ryggen", "\U0001F32C"},
             {"hade bestämt sig för att uppfinna vingar som fungerade för alla", "\U0001F4B8"},
             {"ville ordna en flygkurs för alla", "\U0001F6E9"},
             {"tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84"},// ToDo: Fix this emoji
@@ -120,9 +121,9 @@ namespace App1.Languages
             "Bakom en hemlig dörr, i ett stort sett bortglömt hus, gömmer sig en hel värld. I den världen levde en gång en",
             "I ett låtsasland, som bara finns i vår fantasi, levde en gång en",
             "Inte långt härifrån bodde en gång en",
-            "Precis under din säng, den sängen du brukar sova i, finns det ett litet, litet hål."
+            "Precis under din säng finns det ett litet hål."
                     + " Det hålet är så litet att ingen människa kan se det, men inuti det finns det en hel värld."
-                    + " I den världen bodde en gång en "
+                    + " I den världen bodde en gång en"
         };
 
         public List<string> Relationships => new List<string>()
@@ -157,7 +158,7 @@ namespace App1.Languages
             "påstå",
             "lura i alla de kände",
             "få alla att tro",
-            "intala varandra",
+            "övertala varandra",
             "säga"
         };
 
@@ -183,11 +184,11 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-            "var det ibland också, men inte just nu",
-            "var det också vid vissa tillfällen, faktiskt också just nu",
-            "var det inte i verkligheten, inte just nu iallafall",
-            "var det inte, verkligheten var långt där ifrån",
-            "var det också, men för en som inte kände till det var det svårt att tro",
+            "Det var det ibland också, men inte just nu",
+            "Det var det också vid vissa tillfällen, faktiskt också just nu",
+            "Men det var det inte i verkligheten, inte just nu iallafall",
+            "Men det var det inte, verkligheten var långt där ifrån",
+            "Det var det också, men för en som inte kände till det var det svårt att tro",
         };
 
         public List<string> Gender => new List<string>()
@@ -202,10 +203,10 @@ namespace App1.Languages
             "ville genomföra sina egna planer",
             "ville hitta på någonting riktigt busigt",
             "hade kommit på någonting riktigt roligt",
-            "hade kommit på en ny spännande ide",
+            "hade kommit på en ny spännande idé",
             "ville pröva någonting nytt",
-            "ville testa en ny ide",
-            "ville förverkliga en av sina egna ideer",
+            "ville testa en ny idé",
+            "ville förverkliga en av sina egna idéer",
             "ville göra en stor förändring i sitt liv",
             "ville se till att saker och ting förändrades",
             "ville ge alla en stor överraskning",
