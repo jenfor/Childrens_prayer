@@ -21,7 +21,10 @@ namespace App1.Languages
         public string Yes => "Yes";
         public string No => "No";
 
-        public string ExchangeString => "Now its your time to use your imagination and write the rest of this fairy tale rigth here.";
+        public string ExchangeString => "Now it's your time to write about " +
+                         StringReplacer.Character1_Name + " and " +
+                         StringReplacer.Character2_Name + "!";
+
         public string WasNamed => "called ";
         public string HadA => " had a ";
         public string A => "a ";
@@ -33,7 +36,7 @@ namespace App1.Languages
         public String Dot => ". ";
         public String Space => " ";
         public String Comma => ", ";
-        public String NewLine => "\n ";
+        public String NewLine => "\n";
 
         public Dictionary<string, string> Animals => new Dictionary<string, string>()
         {
@@ -91,7 +94,7 @@ namespace App1.Languages
         public Dictionary<string, string> Events => new Dictionary<string, string>()
         {
             {"had decided to organize a big party where everyone should be invited", "\U0001F382"},
-            {"wanted it to look like it was time to go for a long journey. That's why " + StringReplacer.Character1_Gender + " started to pack a bag", "\U0001F45C"},
+            {"wanted it to look like " + StringReplacer.Character1_Gender+ " was going for a long journey. That's why " + StringReplacer.Character1_Gender + " started to pack a bag", "\U0001F45C"},
             {"started by telling everyone that this was a very important day", "\U0001F338"},
             {"said: \n- Let's build a space ship together", "\U0001F6F8"},
             {"thought it was easy to build a new car", "\U0001F698"},
@@ -114,14 +117,14 @@ namespace App1.Languages
             "Once upon a time there was a",
             "Some don't think this is true, but once upon a time there was a",
             "Far, far from here, there once was a",
-            "In an enchanted world there once was a",
+            "In an enchanted world there once lived a",
             "In a another time there once lived a",
             "In a world where no human yet has taken a single step, there once lived a",
-            "Without any human knowing it there once was a",
-            "Far away from all kind of attention there once lived a",
+            "Without any human knowledge there once lived a",
+            "Far away from all kind of attention there once was a",
             "In a very odd world there once lived a",
             "Behind a secret door, in a forgotten house, a whole world is hidden. In there, there once lived a",
-            "In an imaginable country there once lived a",
+            "In an imaginable world there once lived a",
             "Not far from here, there once lived a",
             "Right under your bed there is a small hole. "
                 + "No human eye has seen it, but anyway, inside there is a whole world."
@@ -135,7 +138,7 @@ namespace App1.Languages
             "buddy"
         };
 
-        public List<string> Adjectives => new List<string>()
+        public List<string> CharacterAdjectives => new List<string>()
         {
             "happy",
             "nice",
@@ -153,7 +156,7 @@ namespace App1.Languages
             "cranky"
         };
 
-        public List<string> Actions => new List<string>()
+        public List<string> Verb1 => new List<string>()
         {
             "pretend",
             "fool everyone",
@@ -161,7 +164,7 @@ namespace App1.Languages
             "say"
         };
 
-        public List<string> Conditions => new List<string>()
+        public List<string> PlaceAdjectives => new List<string>()
         {
             "peaceful",
             "lovely",
@@ -171,7 +174,7 @@ namespace App1.Languages
             "weird",
         };
 
-        public List<string> Verb => new List<string>()
+        public List<string> Verb2 => new List<string>()
         {
             "used to",
             "seemed to",
@@ -181,11 +184,11 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-           "Right now life actually happend to be " + StringReplacer.Place_Condition,
-            "Right now life was " + StringReplacer.Place_Condition +", but for someone who didn't know it, it was hard to believe",
-            "But right now life certainly wasn't " + StringReplacer.Place_Condition,
-            "But right now life wasn't " + StringReplacer.Place_Condition,
-            "But right now life wasn't " + StringReplacer.Place_Condition + ", reality was far from it",
+           "Right now life actually happend to be " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
+            "Right now life was " + StringReplacer.Place_Condition + " " + StringReplacer.Place +", but for someone who didn't know it, it was hard to believe",
+            "But right now life certainly wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
+            "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
+            "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place + ", reality was far from it",
         };
 
         public List<string> Gender => new List<string>()
@@ -194,7 +197,7 @@ namespace App1.Languages
             "She"
         };
 
-        public List<string> Conversions => new List<string>()
+        public List<string> Actions => new List<string>()
         {
             "wanted to do something",
             "had new plans",

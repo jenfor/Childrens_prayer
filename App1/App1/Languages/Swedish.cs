@@ -19,7 +19,9 @@ namespace App1.Languages
         public string Yes => "Ja";
         public string No => "Nej";
 
-        public string ExchangeString => "Nu är det din tur att använda din fantasi för att skriva fortsättningen på sagan här.";
+        public string ExchangeString => "Nu är det din tur att skriva om " 
+                    + StringReplacer.Character1_Name + " och "
+                    + StringReplacer.Character2_Name + ".";
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
         public string A => "en ";
@@ -31,7 +33,7 @@ namespace App1.Languages
         public String Dot => ". ";
         public String Space => " ";
         public String Comma => ", ";
-        public String NewLine => "\n ";
+        public String NewLine => "\n";
 
         public Dictionary<string, string> Animals => new Dictionary<string, string>()
         {
@@ -81,13 +83,13 @@ namespace App1.Languages
             {"i deras land", "\U0001F304"},
             {"i deras hembygd", "\U0001F3DE"},
             {"i deras by", "\U0001F3D8"},
-            {"i skogen, där de bodde,", "\U0001F333"}
+            {"i skogen", "\U0001F333"}
         };
         
         public Dictionary<string, string> Events => new Dictionary<string, string>()
         {
             {"hade bestämt sig för att ordna en stor låtsasfest dit alla skulle vara bjudna", "\U0001F382" },
-            {"började packa en väska för att det skulle se ut som att det var dags att ge sig ut på en längre resa", "\U0001F45C"},
+            {"började packa en väska för att det skulle se ut som att " + StringReplacer.Character1_Gender + " var på väg ut på en längre resa", "\U0001F45C"},
             {"började med att säga till alla att det var en mycket viktig dag idag", "\U0001F338"},
             {"påstod att om alla samarbetade kunde de tilsammans bygga ett rymdskepp", "\U0001F6F8"},
             {"trodde att det var lätt som en plätt att bygga en egen bil", "\U0001F698"},
@@ -114,7 +116,7 @@ namespace App1.Languages
             "Långt, långt härifrån fanns det en gång en",
             "I en förtrollad värld fanns det en gång en",
             "I en annan tid än vår levde en gång en",
-            "I en värld där ingen människa satt ännu sin fot levde en gång en",
+            "I en värld där ingen människa ännu satt sin fot levde en gång en",
             "Utan att någon människa kände till det fanns det en gång en",
             "Långt borta från all uppmärksamhet levde en gång en",
             "I en värld väldigt olik vår levde en gång en",
@@ -122,19 +124,19 @@ namespace App1.Languages
             "I ett låtsasland, som bara finns i vår fantasi, levde en gång en",
             "Inte långt härifrån bodde en gång en",
             "Precis under din säng finns det ett litet hål."
-                    + " Det hålet är så litet att ingen människa kan se det, men inuti det finns det en hel värld."
+                    + " Det hålet är så litet att ingen människa kan se det, men inuti finns det en hel värld."
                     + " I den världen bodde en gång en"
         };
 
         public List<string> Relationships => new List<string>()
         {
-             "vän",
+            "vän",
             "ovän",
             "fiende",
             "kompis"
         };
 
-        public List<string> Adjectives => new List<string>()
+        public List<string> CharacterAdjectives => new List<string>()
         {
             "glad",
             "fin",
@@ -151,7 +153,7 @@ namespace App1.Languages
             "gladlynt"
         };
 
-        public List<string> Actions => new List<string>()
+        public List<string> Verb1 => new List<string>()
         {
             "leka",
             "låtsas",
@@ -162,33 +164,32 @@ namespace App1.Languages
             "säga"
         };
 
-        public List<string> Conditions => new List<string>()
+        public List<string> PlaceAdjectives => new List<string>()
         {
-            "som i ett stort krig",
             "fredligt",
             "ljuvligt",
             "besvärligt",
             "underbart",
             "förfärligt",
-            "lite underligt",
-            "lite knasigt"
+            "underligt",
+            "knasigt"
         };
 
-        public List<string> Verb => new List<string>()
+        public List<string> Verb2 => new List<string>()
         {
             "brukade",
-            "verkade tycka om att",
+            "tyckte om att",
             "gillade att",
-            "trodde att de kunde"
+            "ville"
         };
 
         public List<string> Circumstances => new List<string>()
         {
-            "Det var det ibland också, men inte just nu",
-            "Det var det också vid vissa tillfällen, faktiskt också just nu",
-            "Men det var det inte i verkligheten, inte just nu iallafall",
-            "Men det var det inte, verkligheten var långt där ifrån",
-            "Det var det också, men för en som inte kände till det var det svårt att tro",
+            "Ibland var det " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men inte just nu",
+            "Vid vissa tillfällen var det faktist " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
+            "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", inte just nu iallafall",
+            "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", verkligheten var långt där ifrån",
+            "Det var " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men för vissa det var svårt att tro",
         };
 
         public List<string> Gender => new List<string>()
@@ -197,7 +198,7 @@ namespace App1.Languages
             "Han"
         };
 
-        public List<string> Conversions => new List<string>()
+        public List<string> Actions => new List<string>()
         {
             "ville ta tag i saker och få någonting nytt att hända",
             "ville genomföra sina egna planer",

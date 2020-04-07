@@ -6,9 +6,9 @@ namespace App1.FairyTale
 {
     public class FairyTaleCharacter
     {
+        public String Name = String.Empty;
         public String Animal = String.Empty;
         public String Adjective = String.Empty;
-        public String Name = String.Empty;
         public String Gender = String.Empty;
         public String RelationShip = String.Empty;
         public String Emoji = String.Empty;
@@ -17,11 +17,36 @@ namespace App1.FairyTale
         private List<char> lowercaseConsonants = new List<char>() { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v' };
         private List<char> vowels = new List<char>() { 'a', 'e', 'i', 'o', 'u' };
 
+        private List<string> names => new List<string>()
+        {
+            "Mia",
+            "Fia",
+            "Nie",
+            "Meo",
+            "Peo",
+            "Nea",
+            "Teo",
+            "Meo",
+            "Feo",
+            "Keo",
+            "Kio",
+            "Sio",
+            "Mio",
+            "Beo",
+            "Kai",
+            "Mai",
+            "Mea",
+            "Pia",
+            "Pio",
+            "Sai",
+            "Peo",
+        };
+
         public FairyTaleCharacter(String animal, String adjective,  String gender, String relationShip, string emoji)
         {
+            Name = GetFairyTaleName();
             Animal = animal;
             Adjective = adjective;
-            Name = GetFairyTaleName();
             Gender = gender;
             RelationShip = relationShip;
             Emoji = emoji;
@@ -41,20 +66,27 @@ namespace App1.FairyTale
             return String.Empty;
         }
 
-        public String GetFairyTaleName()
+        public string GetFairyTaleName()
         {
             var random = new Random();
-            var sb = new StringBuilder();
-
-            var consonant1 = uppercaseConsonants[random.Next(uppercaseConsonants.Count)];
-            var vowel = vowels[random.Next(vowels.Count)];
-            var vowel2 = vowels[random.Next(vowels.Count)];
-
-            sb.Append(consonant1).Append(vowel).Append(vowel2);
-
-            var name = sb.ToString();
+            var name = names[random.Next(names.Count)];
             return name;
         }
+
+        ////public String GetFairyTaleName()
+        ////{
+        ////    var random = new Random();
+        ////    var sb = new StringBuilder();
+
+        ////    var consonant1 = uppercaseConsonants[random.Next(uppercaseConsonants.Count)];
+        ////    var vowel = vowels[random.Next(vowels.Count)];
+        ////    var vowel2 = vowels[random.Next(vowels.Count)];
+
+        ////    sb.Append(consonant1).Append(vowel).Append(vowel2);
+
+        ////    var name = sb.ToString();
+        ////    return name;
+        ////}
     }
 }
 

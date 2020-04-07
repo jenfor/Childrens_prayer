@@ -21,7 +21,7 @@ namespace App1.Languages
         public string Yes => "Ja";
         public string No => "Nej";
 
-        public string ExchangeString => "Skriv saga!";
+        public string ExchangeString => "Skriv mer om " + StringReplacer.Character1_Name + " och " + StringReplacer.Character2_Name + "!";
         public string WasNamed => "som heter ";
         public string HadA => " har en ";
         public string A => "en ";
@@ -33,7 +33,7 @@ namespace App1.Languages
         public String Dot => ". ";
         public String Space => " ";
         public String Comma => ", ";
-        public String NewLine => "\n ";
+        public String NewLine => "\n";
 
         public Dictionary<string, string> Animals => new Dictionary<string, string>()
         {
@@ -98,7 +98,7 @@ namespace App1.Languages
 
         public List<string> FairyTaleStarts => new List<string>()
         {
-             "Här är",
+             "Det här är",
         };
 
         public List<string> Relationships => new List<string>()
@@ -107,7 +107,7 @@ namespace App1.Languages
             "kompis"
         };
 
-        public List<string> Adjectives => new List<string>()
+        public List<string> CharacterAdjectives => new List<string>()
         {
             "glad",
             "fin",
@@ -116,12 +116,12 @@ namespace App1.Languages
             "smart",
         };
 
-        public List<string> Actions => new List<string>()
+        public List<string> Verb1 => new List<string>()
         {
             "leka",
         };
 
-        public List<string> Conditions => new List<string>()
+        public List<string> PlaceAdjectives => new List<string>()
         {
             "bra",
             "roligt",
@@ -129,7 +129,7 @@ namespace App1.Languages
 
         };
 
-        public List<string> Verb => new List<string>()
+        public List<string> Verb2 => new List<string>()
         {
             "ska",
 
@@ -137,8 +137,8 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-            NewLine + NewLine + "Det är " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också",
-            NewLine + NewLine + "Men det är inte så " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " idag",
+            "Det är " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också",
+            "Men det är inte så " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " idag",
         };
 
         public List<string> Gender => new List<string>()
@@ -147,7 +147,7 @@ namespace App1.Languages
             "Han"
         };
 
-        public List<string> Conversions => new List<string>()
+        public List<string> Actions => new List<string>()
         {
             "vill ha en sak",
         };

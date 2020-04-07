@@ -30,8 +30,8 @@ namespace App1.FairyTale
             pageList.Clear();
             thisFairyTaleEmojis.Clear();
 
-            fairyTaleCharacter1 = GetFairyTaleCharacter(language);
-            fairyTaleCharacter2 = GetFairyTaleCharacter(language);
+            GetFairyTaleCharacters(language);
+
             fairyTalePalce = GetFairyTalePlace(language);
             fairyTaleEvent = GetFairyTaleEvent(language);
 
@@ -68,32 +68,47 @@ namespace App1.FairyTale
         {
             if (PageNr >= pageList.Count)
             {
-                pageList.Add(CreatePage(string.Empty, GetRandomFairyTaleEmojis(), language.ExchangeString));
+                pageList.Add(CreatePage(string.Empty, GetRandomFairyTaleEmojis(), 
+                    language.ExchangeString.Replace(StringReplacer.Character1_Animal, fairyTaleCharacter1.Animal)
+                    .Replace(StringReplacer.Character1_Name, fairyTaleCharacter1.Name)
+                    .Replace(StringReplacer.Character2_Animal, fairyTaleCharacter2.Animal)
+                    .Replace(StringReplacer.Character2_Name, fairyTaleCharacter2.Name)));
             }
 
             PresentPage = pageList[PageNr];
             PageNr++;
         }
 
+        private void GetFairyTaleCharacters(Language language)
+        {
+            fairyTaleCharacter1 = GetFairyTaleCharacter(language);
+            fairyTaleCharacter2 = GetFairyTaleCharacter(language);
+
+            while (fairyTaleCharacter1.Name.Equals(fairyTaleCharacter2.Name))
+            {
+                fairyTaleCharacter2 = GetFairyTaleCharacter(language);
+            }
+        }
+
         public FairyTaleCharacter GetFairyTaleCharacter(Language language)
         {           
             var animals = new List<string>(language.Animals.Keys);
             var animal = GetWords(animals);
-            return new FairyTaleCharacter(animal, GetWords(language.Adjectives), GetWords(language.Gender), GetWords(language.Relationships), language.Animals[animal]);
+            return new FairyTaleCharacter(animal, GetWords(language.CharacterAdjectives), GetWords(language.Gender), GetWords(language.Relationships), language.Animals[animal]);
         }
 
         public FairyTalePlace GetFairyTalePlace(Language language)
         {
             var places = new List<string>(language.Places.Keys);
             var place = GetWords(places);
-            return new FairyTalePlace(GetWords(language.Verb), GetWords(language.Conditions), place, GetWords(language.Circumstances), GetWords(language.Actions), language.Places[place]);
+            return new FairyTalePlace(GetWords(language.Verb2), GetWords(language.PlaceAdjectives), place, GetWords(language.Circumstances), GetWords(language.Verb1), language.Places[place]);
         }
 
         public FairyTaleEvent GetFairyTaleEvent(Language language)
         {
             var events = new List<string>(language.Events.Keys);
             var e = GetWords(events);
-            return new FairyTaleEvent(e, GetWords(language.Conversions), language.Events[e]);
+            return new FairyTaleEvent(e, GetWords(language.Actions), language.Events[e]);
         }
 
         public string GetRandomFairyTaleEmojis()
@@ -184,11 +199,11 @@ namespace App1.FairyTale
             var sb = new StringBuilder();
 
             sb.Append(
-                language.They + fairyTalePalce.Verb + language.Space + fairyTalePalce.Action + language.ThatEverything + fairyTalePalce.Place
-                 + language.Was + fairyTalePalce.Condition + language.Dot
+                fairyTaleCharacter1.Name + language.And + fairyTaleCharacter2.Name + language.Space + fairyTalePalce.Verb + language.Space + fairyTalePalce.Action + language.ThatEverything + fairyTalePalce.Place
+                 + language.Was + fairyTalePalce.Condition + language.Dot + language.NewLine + language.NewLine
             );
 
-            sb.Append(language.It + fairyTalePalce.Circumstance.Replace("---", fairyTalePalce.Condition) + language.Dot);
+            sb.Append(fairyTalePalce.Circumstance.Replace(StringReplacer.Place_Condition, fairyTalePalce.Condition).Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot);
 
             return sb.ToString();
         }
@@ -197,8 +212,8 @@ namespace App1.FairyTale
         {
             var sb = new StringBuilder();
 
-            sb.Append(fairyTaleCharacter1.Name + language.Space + fairyTaleEvent.Conversion + language.Dot);
-            sb.Append(fairyTaleCharacter1.Gender + language.Space + fairyTaleEvent.Event.Replace("---", fairyTaleCharacter1.Gender.ToLower()) + language.Dot);
+            sb.Append(fairyTaleCharacter1.Name + language.Space + fairyTaleEvent.Conversion.Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot + language.NewLine + language.NewLine);
+            sb.Append(fairyTaleCharacter1.Gender + language.Space + fairyTaleEvent.Event.Replace(StringReplacer.Character1_Gender, fairyTaleCharacter1.Gender.ToLower()) + language.Dot);
 
             return sb.ToString();
         }
@@ -207,7 +222,11 @@ namespace App1.FairyTale
         {
             var sb = new StringBuilder();
 
-            sb.Append(GetWords(language.Continuations).Replace("---", fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots + language.NewLine + language.NewLine + language.Space + language.ExchangeString);
+            sb.Append(GetWords(language.Continuations).Replace(StringReplacer.Character1_Gender, fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots + language.NewLine + language.NewLine
+                + language.ExchangeString.Replace(StringReplacer.Character1_Animal, fairyTaleCharacter1.Animal)
+                    .Replace(StringReplacer.Character1_Name, fairyTaleCharacter1.Name)
+                    .Replace(StringReplacer.Character2_Animal, fairyTaleCharacter2.Animal)
+                    .Replace(StringReplacer.Character2_Name, fairyTaleCharacter2.Name));
 
             return sb.ToString();
         }

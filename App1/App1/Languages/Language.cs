@@ -43,13 +43,13 @@ namespace App1.Languages
 
         List<string> FairyTaleStarts { get; }
         List<string> Relationships { get; }
-        List<string> Adjectives { get; }
-        List<string> Actions { get; }
-        List<string> Conditions { get; }
-        List<string> Verb { get; }
+        List<string> CharacterAdjectives { get; }
+        List<string> Verb1 { get; }
+        List<string> PlaceAdjectives { get; }
+        List<string> Verb2 { get; }
         List<string> Circumstances { get; }
         List<string> Gender { get; }
-        List<string> Conversions { get; }
+        List<string> Actions { get; }
         List<string> Continuations { get; }
     }
 }
