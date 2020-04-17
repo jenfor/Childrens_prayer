@@ -80,7 +80,7 @@ namespace App1.Languages
 
         public Dictionary<string, string> Places => new Dictionary<string, string>()
         {
-            //{"on their planet", "\U0001FA90"}, // ToDo: Fix this emoji
+            {"on their planet", "\U0001FA90"}, // ToDo: Fix this emoji
             {"in their city", "\U0001F306"},
             {"in their country", "\U0001F304"},
             {"in their forest", "\U0001F333"}

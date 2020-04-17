@@ -21,7 +21,7 @@ namespace App1.Languages
 
         public string ExchangeString => "Nu är det din tur att skriva om " 
                     + StringReplacer.Character1_Name + " och "
-                    + StringReplacer.Character2_Name + ".";
+                    + StringReplacer.Character2_Name + " här.";
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
         public string A => "en ";
@@ -78,7 +78,7 @@ namespace App1.Languages
         public Dictionary<string, string> Places => new Dictionary<string, string>()
         {
             {"på jorden", "\U0001F30D"},
-            //{"på deras planet", "\U0001FA90"},// ToDo: Fix this emoji
+            {"på deras planet", "\U0001FA90"},// ToDo: Fix this emoji
             {"i deras stad", "\U0001F306"},
             {"i deras land", "\U0001F304"},
             {"i deras hembygd", "\U0001F3DE"},
@@ -188,8 +188,8 @@ namespace App1.Languages
             "Ibland var det " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men inte just nu",
             "Vid vissa tillfällen var det faktist " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
             "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", inte just nu iallafall",
-            "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", verkligheten var långt där ifrån",
-            "Det var " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men för vissa det var svårt att tro",
+            "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", verkligheten var långt därifrån",
+            "Det var på sätt och vis " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men för vissa det var svårt att tro",
         };
 
         public List<string> Gender => new List<string>()

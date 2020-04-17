@@ -98,7 +98,7 @@ namespace App1.Languages
 
         public List<string> FairyTaleStarts => new List<string>()
         {
-             "Det här är",
+             "Det här är en",
         };
 
         public List<string> Relationships => new List<string>()
@@ -137,7 +137,7 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-            "Det är " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också",
+            "Det är " + StringReplacer.Place_Condition + " på många sätt",
             "Men det är inte så " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " idag",
         };
 
