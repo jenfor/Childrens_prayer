@@ -99,7 +99,7 @@ namespace App1.Languages
             {"hade kommit på idén att sätta segel på ryggen", "\U0001F32C"},
             {"hade bestämt sig för att uppfinna vingar som fungerade för alla", "\U0001F4B8"},
             {"ville ordna en flygkurs för alla", "\U0001F6E9"},
-            {"tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84"},// ToDo: Fix this emoji
+            //{"tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84"},// ToDo: Fix this emoji
             {"trodde det var enkelt att bygga ett stort slott av sandkorn", "\U0001F3F0"},
             {"ville bevisa att det fortfarande fanns levande drakar", "\U0001F409"},
             {"hade hittat en lampa som det kunde vara en ande i", "\U0001FA94"},// ToDo: Fix this emoji

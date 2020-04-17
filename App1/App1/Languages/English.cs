@@ -10,7 +10,7 @@ namespace App1.Languages
         public string ShareFairyTale => "Share the fairy tale";
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
-        public string VersionOption => "Do you want to write at short fairy tale?";
+        public string VersionOption => "Do you want to write a short fairy tale?";
 
 
         public string BackToStartPageWarning => "Are you sure you want to go back to start? This story will be deleted!";
@@ -21,7 +21,7 @@ namespace App1.Languages
         public string Yes => "Yes";
         public string No => "No";
 
-        public string ExchangeString => "Now it's your time to write about " +
+        public string ExchangeString => "It's your time to write about " +
                          StringReplacer.Character1_Name + " and " +
                          StringReplacer.Character2_Name + "!";
 
@@ -105,7 +105,7 @@ namespace App1.Languages
             {"had decided to invent wings that could make everyone and everything fly", "\U0001F4B8"},
             {"wanted to arrange a flight course for everyone", "\U0001F6E9"},
             {"planned to dress up as a good fairy and hand out three wishes", "\U0001FA84"},// ToDo: Fix this emoji
-            {"thought it was easy to build large castles out of sand", "\U0001F3F0"},
+            {"thought it was easy to build a large castle out of sand", "\U0001F3F0"},
             {"wanted to prove that the dragons still were alive", "\U0001F409"},
             {"had found a lamp in where it might be a genie", "\U0001FA94"},// ToDo: Fix this emoji
             {"thought " + StringReplacer.Character1_Gender + " had found a new way to the moon", "\U0001F314"}, 
@@ -127,7 +127,7 @@ namespace App1.Languages
             "In an imaginable world there once lived a",
             "Not far from here, there once lived a",
             "Right under your bed there is a small hole. "
-                + "No human eye has seen it, but anyway, inside there is a whole world."
+                + "No human eye has seen it, but inside there is a whole world."
                 + "In there, there once lived a"
         };
 
