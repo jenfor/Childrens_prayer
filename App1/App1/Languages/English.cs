@@ -12,12 +12,13 @@ namespace App1.Languages
         public string ContinueFairyTale => "Continue";
         public string VersionOption => "Do you want to write a short fairy tale?";
 
-
-        public string BackToStartPageWarning => "Are you sure you want to go back to start? This story will be deleted!";
         public string Warning => "Warning";
         public string Question => "Question";
 
+        public string BackToStartPageWarning => "Are you sure you want to go back to start? This story will be deleted!";
+        public string VersionOption => "Do you want to write a short fairy tale?";
         public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
+
         public string Yes => "Yes";
         public string No => "No";
 
@@ -32,6 +33,7 @@ namespace App1.Languages
         public string And => " and ";
         public string ThatEverything => " that everything ";
         public string Was => " was ";
+
         public string Dots => "...";
         public String Dot => ". ";
         public String Space => " ";
@@ -104,10 +106,10 @@ namespace App1.Languages
             {"wanted to put sails on everyone's backs", "\U0001F32C"},
             {"had decided to invent wings that could make everyone and everything fly", "\U0001F4B8"},
             {"wanted to arrange a flight course for everyone", "\U0001F6E9"},
-            {"planned to dress up as a good fairy and hand out three wishes", "\U0001FA84"},// ToDo: Fix this emoji
+            //{"planned to dress up as a good fairy and hand out three wishes", "\U0001FA84"},// ToDo: Fix this emoji
             {"thought it was easy to build a large castle out of sand", "\U0001F3F0"},
             {"wanted to prove that the dragons still were alive", "\U0001F409"},
-            {"had found a lamp in where it might be a genie", "\U0001FA94"},// ToDo: Fix this emoji
+            //{"had found a lamp in where it might be a genie", "\U0001FA94"},// ToDo: Fix this emoji
             {"thought " + StringReplacer.Character1_Gender + " had found a new way to the moon", "\U0001F314"}, 
             {"had found the place where the rainbow starts", "\U0001F308"}
         };
@@ -179,13 +181,14 @@ namespace App1.Languages
             "used to",
             "seemed to",
             "liked to",
-            "thought they should"
+            "tried to",
+            "wanted to",
         };
 
         public List<string> Circumstances => new List<string>()
         {
-           "Right now life actually happend to be " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
-            "Right now life was " + StringReplacer.Place_Condition + " " + StringReplacer.Place +", but for someone who didn't know it, it was hard to believe",
+            "Right now life actually happend to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
+            "Right now life seemd to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
             "But right now life certainly wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
             "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
             "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place + ", reality was far from it",
