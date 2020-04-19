@@ -16,7 +16,6 @@ namespace App1.Languages
         public string Question => "Question";
 
         public string BackToStartPageWarning => "Are you sure you want to go back to start? This story will be deleted!";
-        public string VersionOption => "Do you want to write a short fairy tale?";
         public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
 
         public string Yes => "Yes";

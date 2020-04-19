@@ -186,7 +186,7 @@ namespace App1.Languages
         public List<string> Circumstances => new List<string>()
         {
             "Ibland var det " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men inte just nu",
-            "Vid vissa tillfällen var det faktist " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
+            "Vid vissa tillfällen var det faktiskt " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
             "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", inte just nu iallafall",
             "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", verkligheten var långt därifrån",
             "Det var på sätt och vis " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men för vissa det var svårt att tro",
