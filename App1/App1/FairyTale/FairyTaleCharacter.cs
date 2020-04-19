@@ -19,8 +19,8 @@ namespace App1.FairyTale
 
         private List<string> names => new List<string>()
         {
-            "Mia",
-            "Fia",
+            "Mie",
+            "Fie",
             "Nie",
             "Meo",
             "Peo",
@@ -35,8 +35,8 @@ namespace App1.FairyTale
             "Beo",
             "Kai",
             "Mai",
-            "Mea",
-            "Pia",
+            "Mei",
+            "Pie",
             "Pio",
             "Sai",
             "Peo",
