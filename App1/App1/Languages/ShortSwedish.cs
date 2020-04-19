@@ -147,7 +147,7 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-            "Det är " + StringReplacer.Place_Condition + " på många sätt",
+            "Det kan vara " + StringReplacer.Place_Condition + " på många sätt",
             "Men det är inte så " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " idag",
         };
 
