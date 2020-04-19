@@ -94,7 +94,19 @@ namespace App1.FairyTale
         {           
             var animals = new List<string>(language.Animals.Keys);
             var animal = GetWords(animals);
-            return new FairyTaleCharacter(animal, GetWords(language.CharacterAdjectives), GetWords(language.Gender), GetWords(language.Relationships), language.Animals[animal]);
+            var relation = GetWords(language.Relationships);
+            string adjectiv = String.Empty;
+
+            if(language.BadRelationships.Contains(relation))
+            {
+                adjectiv = GetWords(language.BadRelationshipsAdjectives);
+            }
+            else
+            {
+                adjectiv = GetWords(language.CharacterAdjectives);
+            }
+
+            return new FairyTaleCharacter(animal, adjectiv, GetWords(language.Gender), relation, language.Animals[animal]);
         }
 
         public FairyTalePlace GetFairyTalePlace(Language language)

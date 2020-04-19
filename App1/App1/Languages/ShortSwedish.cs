@@ -107,6 +107,11 @@ namespace App1.Languages
             "kompis"
         };
 
+        public List<string> BadRelationships => new List<string>()
+        {
+            "ovän",
+        };
+
         public List<string> CharacterAdjectives => new List<string>()
         {
             "glad",
@@ -114,6 +119,11 @@ namespace App1.Languages
             "bra",
             "söt",
             "smart",
+        };
+
+        public List<string> BadRelationshipsAdjectives => new List<string>()
+        {
+            "arg",
         };
 
         public List<string> Verb1 => new List<string>()

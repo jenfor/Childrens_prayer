@@ -43,7 +43,9 @@ namespace App1.Languages
 
         List<string> FairyTaleStarts { get; }
         List<string> Relationships { get; }
+        List<string> BadRelationships { get; }
         List<string> CharacterAdjectives { get; }
+        List<string> BadRelationshipsAdjectives { get; }
         List<string> Verb1 { get; }
         List<string> PlaceAdjectives { get; }
         List<string> Verb2 { get; }

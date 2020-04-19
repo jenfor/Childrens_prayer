@@ -72,21 +72,7 @@ namespace App1.FairyTale
             var name = names[random.Next(names.Count)];
             return name;
         }
-
-        ////public String GetFairyTaleName()
-        ////{
-        ////    var random = new Random();
-        ////    var sb = new StringBuilder();
-
-        ////    var consonant1 = uppercaseConsonants[random.Next(uppercaseConsonants.Count)];
-        ////    var vowel = vowels[random.Next(vowels.Count)];
-        ////    var vowel2 = vowels[random.Next(vowels.Count)];
-
-        ////    sb.Append(consonant1).Append(vowel).Append(vowel2);
-
-        ////    var name = sb.ToString();
-        ////    return name;
-        ////}
+        
     }
 }
 
