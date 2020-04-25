@@ -10,6 +10,8 @@ namespace App1.Languages
         public string ShareFairyTale => "Dela sagan";
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
+        public string ViewFairyTale => "Visa/Dela sagan";
+
         public string VersionOption => "Vill du skriva en kort saga?";
 
         public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startsidan? Den här sagan kommer raderas.";

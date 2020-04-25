@@ -10,6 +10,8 @@ namespace App1.Languages
         public string ShareFairyTale => "Share the fairy tale";
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
+        public string ViewFairyTale => "View/Share fairy tale";
+
         public string VersionOption => "Do you want to write a short fairy tale?";
 
         public string Warning => "Warning";

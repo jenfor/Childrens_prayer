@@ -8,6 +8,7 @@ namespace App1.Languages
     {
         string NewFairyTale { get; }
         string ShareFairyTale { get; }
+        string ViewFairyTale { get; }
         string BackFairyTale { get; }
         string ContinueFairyTale { get; }
 

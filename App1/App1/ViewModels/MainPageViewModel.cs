@@ -10,136 +10,21 @@ using App1.Languages;
 
 namespace App1.ViewModels
 {
+
     public class MainPageViewModel : INotifyPropertyChanged
     {
-        private static Language language = new English();
+        public static Language language = new English();
         private TheFairyTale fairyTale = new TheFairyTale(language);
 
-        public MainPageViewModel()
-        {
-            SwedishFairyTale = new Command(() =>
-            {
-                language = new Swedish();
-                SwedishVersion();
-            });
-
-            EnglishFairyTale = new Command(() =>
-            {
-                language = new English();
-                EnglishVersion();
-            });
-
-            NewFairyTale = new Command(() =>
-            {
-                CreateNewFairytale(language);
-            });
-
-            ContinueFairyTale = new Command(() =>
-            {
-                if (fairyTale.PageNr == fairyTale.LastComputerPreperdPage)
-                {
-                    UserTimeToWrite(language);
-                }
-
-                fairyTale.PresentPage.Text = Text;
-                fairyTale.ViewNextPage(language);
-                Text = fairyTale.PresentPage.Text;
-                Image = fairyTale.PresentPage.Emoji;
-                Placeholder = fairyTale.PresentPage.Palceholder;
-                SetButtonVisibilitys();
-            });
-
-            ShareFairyTale = new Command(() =>
-            {
-                ShareFuction();
-            });
-
-            Back = new Command(() =>
-            {
-                fairyTale.PresentPage.Text = Text;
-                if (fairyTale.ViewPreviousPage())
-                {
-                    Text = fairyTale.PresentPage.Text;
-                    Image = fairyTale.PresentPage.Emoji;
-                    Placeholder = fairyTale.PresentPage.Palceholder;
-                    SetButtonVisibilitys();
-                }
-                else
-                {
-                    BackToStartPage(language);
-                }
-            });
-
-            LinkClickCommand =  new Command<string>((url) =>
-            {
-                Device.OpenUri(new Uri(url));
-            });
-
-        }
-
-        public async Task SwedishVersion()
-        {
-            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Yes, language.No);
-            if (action)
-            {
-                language = new ShortSwedish();
-            }
-            else
-            {
-                language = new Swedish();
-            }
-
-            ShowFairyTale(language);
-            SetButtonVisibilitys();
-        }
-
-        public async Task EnglishVersion()
-        {
-            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Yes, language.No);
-            if (action)
-            {
-                language = new ShortEnglish();
-            }
-            else
-            {
-                language = new English();
-            }
-
-            ShowFairyTale(language);
-            SetButtonVisibilitys();
-        }
-
-        public async Task BackToStartPage(Language language)
-        {
-            var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.BackToStartPageWarning, language.Yes, language.No);
-            if (action)
-            {
-                StartColumnWidth = new GridLength(1, GridUnitType.Star);
-                FairyTaleColumnWidth1 = new GridLength(0);
-                FairyTaleColumnWidth2 = new GridLength(0);
-
-                StartButtonVisibility = true;
-            }
-        }
-
-        public async Task UserTimeToWrite(Language language)
-        {
-           await App.Current.MainPage.DisplayAlert(language.Information, language.ExchangeString
-                    .Replace(StringReplacer.Character1_Animal, fairyTale.fairyTaleCharacter1.Animal)
-                    .Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name)
-                    .Replace(StringReplacer.Character2_Animal, fairyTale.fairyTaleCharacter2.Animal)
-                    .Replace(StringReplacer.Character2_Name, fairyTale.fairyTaleCharacter2.Name), "OK"); 
-        }
-
-        public async Task CreateNewFairytale(Language language)
-        {
-            var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.Deletion, language.Yes, language.No);
-            if (action)
-            {
-                ShowFairyTale(language);
-                SetButtonVisibilitys();
-            }
-        }
+        public Command SwedishFairyTale { get; }
+        public Command EnglishFairyTale { get; }
+        public Command NewFairyTale { get; }
+        public Command ContinueFairyTale { get; }
+        public Command Back { get; }
+        public Command ShareFairyTale { get; }
+        public Command ViewFairyTale { get; }
+        public Command ShowFairyTale { get; }
+        public Command LinkClickCommand { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -152,6 +37,19 @@ namespace App1.ViewModels
                 _text = value;
 
                 var args = new PropertyChangedEventArgs(nameof(Text));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _summary = String.Empty;
+        public string Summary
+        {
+            get => _summary;
+            set
+            {
+                _summary = value;
+
+                var args = new PropertyChangedEventArgs(nameof(Summary));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -191,6 +89,19 @@ namespace App1.ViewModels
                 _newFairytale = value;
 
                 var args = new PropertyChangedEventArgs(nameof(NewFairytale));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _viewFairytale = language.ViewFairyTale;
+        public string ViewFairytale
+        {
+            get => _viewFairytale;
+            set
+            {
+                _viewFairytale = value;
+
+                var args = new PropertyChangedEventArgs(nameof(ViewFairytale));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -307,15 +218,157 @@ namespace App1.ViewModels
             }
         }
 
-        public Command SwedishFairyTale { get; }
-        public Command EnglishFairyTale { get; }
-        public Command NewFairyTale { get; }
-        public Command ContinueFairyTale { get; }
-        public Command Back { get; }
-        public Command ShareFairyTale { get; }
-        public Command LinkClickCommand { get; }
+        private GridLength _fairyTaleColumnWidth3 = new GridLength(0);
+        public GridLength FairyTaleColumnWidth3
+        {
+            get => _fairyTaleColumnWidth3;
+            set
+            {
+                _fairyTaleColumnWidth3 = value;
 
-    private void ShowFairyTale(Language language)
+                var args = new PropertyChangedEventArgs(nameof(FairyTaleColumnWidth3));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        public MainPageViewModel()
+        {
+            SwedishFairyTale = new Command(() =>
+            {
+                language = new Swedish();
+                SwedishVersion();
+            });
+
+            EnglishFairyTale = new Command(() =>
+            {
+                language = new English();
+                EnglishVersion();
+            });
+
+            NewFairyTale = new Command(() =>
+            {
+                CreateNewFairytale(language);
+            });
+
+            ShowFairyTale = new Command(() =>
+            {
+                SetVisibilitys();
+            });
+
+            ContinueFairyTale = new Command(() =>
+            {
+                if (fairyTale.PageNr == fairyTale.LastComputerPreperdPage)
+                {
+                    UserTimeToWrite(language);
+                }
+
+                fairyTale.PresentPage.Text = Text;
+                fairyTale.ViewNextPage(language);
+                Text = fairyTale.PresentPage.Text;
+                Image = fairyTale.PresentPage.Emoji;
+                Placeholder = fairyTale.PresentPage.Palceholder;
+                SetVisibilitys();
+            });
+
+            ShareFairyTale = new Command(() =>
+            {
+                ShareFuction();
+            });
+
+            ViewFairyTale = new Command(() =>
+            {
+                ViewFuction();
+            });
+
+            Back = new Command(() =>
+            {
+                fairyTale.PresentPage.Text = Text;
+                if (fairyTale.ViewPreviousPage())
+                {
+                    Text = fairyTale.PresentPage.Text;
+                    Image = fairyTale.PresentPage.Emoji;
+                    Placeholder = fairyTale.PresentPage.Palceholder;
+                    SetVisibilitys();
+                }
+                else
+                {
+                    BackToStartPage(language);
+                }
+            });
+
+            LinkClickCommand =  new Command<string>((url) =>
+            {
+                Device.OpenUri(new Uri(url));
+            });
+
+        }
+
+        public async Task SwedishVersion()
+        {
+            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Yes, language.No);
+            if (action)
+            {
+                language = new ShortSwedish();
+            }
+            else
+            {
+                language = new Swedish();
+            }
+
+            ShowNewFairyTale(language);
+            SetVisibilitys();
+        }
+
+        public async Task EnglishVersion()
+        {
+            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Yes, language.No);
+            if (action)
+            {
+                language = new ShortEnglish();
+            }
+            else
+            {
+                language = new English();
+            }
+
+            ShowNewFairyTale(language);
+            SetVisibilitys();
+        }
+
+        public async Task BackToStartPage(Language language)
+        {
+            var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.BackToStartPageWarning, language.Yes, language.No);
+            if (action)
+            {
+                StartColumnWidth = new GridLength(1, GridUnitType.Star);
+                FairyTaleColumnWidth1 = new GridLength(0);
+                FairyTaleColumnWidth2 = new GridLength(0);
+                FairyTaleColumnWidth3 = new GridLength(0);
+
+                StartButtonVisibility = true;
+            }
+        }
+
+        public async Task UserTimeToWrite(Language language)
+        {
+           await App.Current.MainPage.DisplayAlert(language.Information, language.ExchangeString
+                    .Replace(StringReplacer.Character1_Animal, fairyTale.fairyTaleCharacter1.Animal)
+                    .Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name)
+                    .Replace(StringReplacer.Character2_Animal, fairyTale.fairyTaleCharacter2.Animal)
+                    .Replace(StringReplacer.Character2_Name, fairyTale.fairyTaleCharacter2.Name), "OK"); 
+        }
+
+        public async Task CreateNewFairytale(Language language)
+        {
+            var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.Deletion, language.Yes, language.No);
+            if (action)
+            {
+                ShowNewFairyTale(language);
+                SetVisibilitys();
+            }
+        }
+
+        private void ShowNewFairyTale(Language language)
         {
             fairyTale = new TheFairyTale(language);
 
@@ -323,28 +376,42 @@ namespace App1.ViewModels
             Image = fairyTale.PresentPage.Emoji;
             Placeholder = fairyTale.PresentPage.Palceholder;
 
+            SetVisibilitys();
+        }
+
+        private void SetVisibilitys()
+        {
             StartColumnWidth = new GridLength(0);
             FairyTaleColumnWidth1 = new GridLength(1, GridUnitType.Star);
             FairyTaleColumnWidth2 = new GridLength(1, GridUnitType.Star);
+            FairyTaleColumnWidth3 = new GridLength(0);
 
-            SetButtonVisibilitys();
-        }
-
-        private void SetButtonVisibilitys()
-        {
             NewFairytale = language.NewFairyTale;
             ShareFairytale = language.ShareFairyTale;
             BackFairytale = language.BackFairyTale;
             ContinueFairytale = language.ContinueFairyTale;
-
+            ViewFairytale = language.ViewFairyTale;
             StartButtonVisibility = false;
             BackButtonVisibility = true;
         }
 
         private async void ShareFuction()
         {
+            SetVisibilitys();
             fairyTale.PresentPage.Text = Text;
-            await ShareText(fairyTale.GetFairytaleString(language));
+            await ShareText(Summary);
+        }
+
+        private void ViewFuction()
+        {
+            fairyTale.PresentPage.Text = Text;
+
+            StartColumnWidth = new GridLength(0);
+            FairyTaleColumnWidth1 = new GridLength(0);
+            FairyTaleColumnWidth2 = new GridLength(0);
+            FairyTaleColumnWidth3 = new GridLength(1, GridUnitType.Star);
+
+            Summary = fairyTale.GetFairytaleString(language);
         }
 
         private async Task ShareText(string text)
