@@ -161,7 +161,7 @@ namespace App1.Languages
 
         public List<string> Actions => new List<string>()
         {
-            "vill ha en sak",
+            StringReplacer.Character1_Name + " vill ha en sak",
         };
 
         public List<string> Continuations => new List<string>()

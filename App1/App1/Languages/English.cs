@@ -200,10 +200,9 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-           "Right now life actually happend to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
+            "Right now life actually happend to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
             "Right now life seemed to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place +", but for some it was hard to believe",
             "But right now life certainly wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
-            "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
             "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place + ", reality was far from it",
         };
 
@@ -215,15 +214,15 @@ namespace App1.Languages
 
         public List<string> Actions => new List<string>()
         {
-            "wanted to do something",
-            "had new plans",
-            "had come up with something",
-            "had got a fun idea",
-            "had got an exciting idea",
-            "wanted to try something new",
-            "wanted to try a new idea",
-            "wanted to make a big change",
-            "wanted to give everyone a big surprise",
+            "Today " + StringReplacer.Character1_Name + " wanted to try something new",
+            StringReplacer.Character1_Name + " had new plans",
+            StringReplacer.Character1_Name + " had come up with something new",
+            "Today " + StringReplacer.Character1_Name + " had got a fun idea",
+            StringReplacer.Character1_Name + " had got an exciting idea",
+            "Today " + StringReplacer.Character1_Name + " wanted to try something new",
+            StringReplacer.Character1_Name + " wanted to try a new idea",
+            StringReplacer.Character1_Name + " wanted to make a big change",
+            "Today " + StringReplacer.Character1_Name + " wanted to give everyone a big surprise",
         };
 
         public List<string> Continuations => new List<string>()

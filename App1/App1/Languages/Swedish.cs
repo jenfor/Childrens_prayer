@@ -190,7 +190,7 @@ namespace App1.Languages
             "underbart",
             "förfärligt",
             "underligt",
-            "knasigt"
+            "lite knasigt"
         };
 
         public List<string> Verb2 => new List<string>()
@@ -218,17 +218,17 @@ namespace App1.Languages
 
         public List<string> Actions => new List<string>()
         {
-            "ville ta tag i saker och få någonting nytt att hända",
-            "ville genomföra sina egna planer",
-            "ville hitta på någonting riktigt busigt",
-            "hade kommit på någonting riktigt roligt",
-            "hade kommit på en ny spännande idé",
-            "ville pröva någonting nytt",
-            "ville testa en ny idé",
-            "ville förverkliga en av sina egna idéer",
-            "ville göra en stor förändring i sitt liv",
-            "ville se till att saker och ting förändrades",
-            "ville ge alla en stor överraskning",
+            "Just idag dag ville " + StringReplacer.Character1_Name + " ta tag i saker och få någonting nytt att hända",
+            StringReplacer.Character1_Name + " ville genomföra sina egna planer",
+            "Idag ville " + StringReplacer.Character1_Name + " hitta på någonting riktigt busigt",
+            StringReplacer.Character1_Name + " hade kommit på någonting riktigt roligt",
+            StringReplacer.Character1_Name + " hade kommit på en ny spännande idé",
+            "Idag skulle " + StringReplacer.Character1_Name + " pröva någonting nytt",
+            StringReplacer.Character1_Name + " skulle testa en ny idé",
+            StringReplacer.Character1_Name + " ville förverkliga en av sina egna idéer",
+            StringReplacer.Character1_Name + " ville göra en stor förändring i sitt liv",
+            StringReplacer.Character1_Name + " ville se till att saker och ting förändrades",
+            "Idag ville " +StringReplacer.Character1_Name + " ge alla en stor överraskning",
         };
 
         public List<string> Continuations => new List<string>()

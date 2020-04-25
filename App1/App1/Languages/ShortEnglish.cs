@@ -163,7 +163,7 @@ namespace App1.Languages
 
         public List<string> Actions => new List<string>()
         {
-            "wants to have something",
+            StringReplacer.Character1_Name + " wants to have something",
         };
 
         public List<string> Continuations => new List<string>()
