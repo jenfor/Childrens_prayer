@@ -15,14 +15,16 @@ namespace App1.Languages
         public string BackToStartPageWarning => "Are you sure you want to go back to start? This story will be deleted!";
         public string Warning => "Warning";
         public string Question => "Question";
+        public string Information => "Information";
 
         public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
         public string Yes => "Yes";
         public string No => "No";
 
-        public string ExchangeString => "Write more about " +
+        public string ExchangeString => "It's your time to write more about " +
                          StringReplacer.Character1_Name + " and " +
-                         StringReplacer.Character2_Name + "!";
+                         StringReplacer.Character2_Name + " here!";
+
         public string WasNamed => "called ";
         public string HadA => " has a ";
         public string A => "a ";

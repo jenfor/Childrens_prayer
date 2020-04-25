@@ -13,6 +13,7 @@ namespace App1.Languages
 
         public string Warning => "Varning";
         public string Question => "Fråga";
+        public string Information => "Information";
 
         public string VersionOption => "Vill du skriva en kort saga?";
         public string BackToStartPageWarning => "Vill du radera sagan och gå till start?";
@@ -21,7 +22,7 @@ namespace App1.Languages
         public string Yes => "Ja";
         public string No => "Nej";
 
-        public string ExchangeString => "Skriv mer om " + StringReplacer.Character1_Name + " och " + StringReplacer.Character2_Name + "!";
+        public string ExchangeString => "Nu är det din tur att skriva mer om " + StringReplacer.Character1_Name + " och " + StringReplacer.Character2_Name + " här!";
         public string WasNamed => "som heter ";
         public string HadA => " har en ";
         public string A => "en ";

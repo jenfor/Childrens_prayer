@@ -16,6 +16,8 @@ namespace App1.Languages
         string BackToStartPageWarning { get; }
         string Warning { get; }
         string Question { get; }
+        string Information { get; }
+
 
         string Deletion { get; }
         string Yes { get; }

@@ -14,6 +14,7 @@ namespace App1.Languages
 
         public string Warning => "Warning";
         public string Question => "Question";
+        public string Information => "Information";
 
         public string BackToStartPageWarning => "Are you sure you want to go back to start? This story will be deleted!";
         public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
@@ -21,9 +22,9 @@ namespace App1.Languages
         public string Yes => "Yes";
         public string No => "No";
 
-        public string ExchangeString => "It's your time to write about " +
+        public string ExchangeString => "Now it's your time to write more about " +
                          StringReplacer.Character1_Name + " and " +
-                         StringReplacer.Character2_Name + "!";
+                         StringReplacer.Character2_Name + " here!";
 
         public string WasNamed => "called ";
         public string HadA => " had a ";
@@ -198,7 +199,7 @@ namespace App1.Languages
         public List<string> Circumstances => new List<string>()
         {
            "Right now life actually happend to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
-            "Right now life seemed to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place +", but for someone who didn't know it, it was hard to believe",
+            "Right now life seemed to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place +", but for some it was hard to believe",
             "But right now life certainly wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
             "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
             "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place + ", reality was far from it",

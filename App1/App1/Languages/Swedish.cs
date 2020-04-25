@@ -15,13 +15,16 @@ namespace App1.Languages
         public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startsidan? Den här sagan kommer raderas.";
         public string Warning => "Varning";
         public string Question => "Fråga";
+        public string Information => "Information";
+
         public string Deletion => "Är du säker på att du vill radera den här sagan och skapa en ny?";
         public string Yes => "Ja";
         public string No => "Nej";
 
-        public string ExchangeString => "Nu är det din tur att skriva om " 
+        public string ExchangeString => "Nu är det din tur att skriva fortsättningen på sagan om " 
                     + StringReplacer.Character1_Name + " och "
-                    + StringReplacer.Character2_Name + " här.";
+                    + StringReplacer.Character2_Name + " här!";
+
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
         public string A => "en ";

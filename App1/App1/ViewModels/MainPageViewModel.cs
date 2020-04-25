@@ -36,6 +36,11 @@ namespace App1.ViewModels
 
             ContinueFairyTale = new Command(() =>
             {
+                if (fairyTale.PageNr == fairyTale.LastComputerPreperdPage)
+                {
+                    UserTimeToWrite(language);
+                }
+
                 fairyTale.PresentPage.Text = Text;
                 fairyTale.ViewNextPage(language);
                 Text = fairyTale.PresentPage.Text;
@@ -115,6 +120,15 @@ namespace App1.ViewModels
 
                 StartButtonVisibility = true;
             }
+        }
+
+        public async Task UserTimeToWrite(Language language)
+        {
+           await App.Current.MainPage.DisplayAlert(language.Information, language.ExchangeString
+                    .Replace(StringReplacer.Character1_Animal, fairyTale.fairyTaleCharacter1.Animal)
+                    .Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name)
+                    .Replace(StringReplacer.Character2_Animal, fairyTale.fairyTaleCharacter2.Animal)
+                    .Replace(StringReplacer.Character2_Name, fairyTale.fairyTaleCharacter2.Name), "OK"); 
         }
 
         public async Task CreateNewFairytale(Language language)
