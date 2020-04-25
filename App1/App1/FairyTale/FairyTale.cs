@@ -217,7 +217,7 @@ namespace App1.FairyTale
 
             sb.Append(
                 fairyTaleCharacter1.Name + language.And + fairyTaleCharacter2.Name + language.Space + fairyTalePalce.Verb + language.Space + fairyTalePalce.Action + language.ThatEverything + fairyTalePalce.Place
-                 + language.Was + fairyTalePalce.Condition + language.Dot + language.NewLine + language.NewLine
+                 + language.Was + fairyTalePalce.Condition + language.Dot
             );
 
             sb.Append(fairyTalePalce.Circumstance.Replace(StringReplacer.Place_Condition, fairyTalePalce.Condition).Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot);

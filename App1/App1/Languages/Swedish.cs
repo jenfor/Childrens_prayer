@@ -97,7 +97,7 @@ namespace App1.Languages
             {"började packa en väska för att det skulle se ut som att " + StringReplacer.Character1_Gender + " var på väg ut på en längre resa", "\U0001F45C"},
             {"började med att säga till alla att det var en mycket viktig dag idag", "\U0001F338"},
             {"påstod att om alla samarbetade kunde de tilsammans bygga ett rymdskepp", "\U0001F6F8"},
-            {"trodde att det var lätt som en plätt att bygga en egen bil", "\U0001F698"},
+            {"trodde att det var lätt som en plätt att bygga en bil", "\U0001F698"},
             {"menade att det var möjligt att bygga städer på havsbotten", "\U0001F30A"},
             {"ville starta en ny sorts godisfabrik", "\U0001F36C" + "\U0001F36D"},
             {"låtsades att " + StringReplacer.Character1_Gender +" var stor nog att börja i skolan redan nu", "\U0001F3EB"},
@@ -203,11 +203,11 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-            "Ibland var det " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men inte just nu",
-            "Vid vissa tillfällen var det faktiskt " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
-            "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", inte just nu iallafall",
-            "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", verkligheten var långt därifrån",
-            "Det var på sätt och vis " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", men för vissa det var svårt att tro",
+            "Ibland var det " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också, men inte just nu",
+            "Det var faktiskt " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också",
+            "Men det var inte så " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", inte just nu iallafall",
+            "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " nu, verkligheten var långt därifrån",
+            "Det var på sätt och vis " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också, men för vissa det var svårt att tro",
         };
 
         public List<string> Gender => new List<string>()
@@ -218,7 +218,7 @@ namespace App1.Languages
 
         public List<string> Actions => new List<string>()
         {
-            "Just idag dag ville " + StringReplacer.Character1_Name + " ta tag i saker och få någonting nytt att hända",
+            "Just idag ville " + StringReplacer.Character1_Name + " ta tag i saker och få någonting nytt att hända",
             StringReplacer.Character1_Name + " ville genomföra sina egna planer",
             "Idag ville " + StringReplacer.Character1_Name + " hitta på någonting riktigt busigt",
             StringReplacer.Character1_Name + " hade kommit på någonting riktigt roligt",
