@@ -6,7 +6,7 @@ namespace App1.Languages
 {
     public class ShortSwedish : Language
     {
-        public string NewFairyTale => "Ny saga";
+        public string BackToStart => "Tillbaka till start";
         public string ShareFairyTale => "Dela sagan";
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
@@ -14,7 +14,7 @@ namespace App1.Languages
 
         public string Warning => "Varning";
         public string Question => "Fråga";
-        public string Information => "Information";
+        public string Information => "Nu är det din tur";
 
         public string VersionOption => "Vilken sorts saga vill du skriva?";
         public string BackToStartPageWarning => "Vill du radera sagan och gå till start?";
@@ -31,7 +31,7 @@ namespace App1.Languages
         public string InformationExchangeString => "Nu är det din tur att skriva mer om "
             + StringReplacer.Character1_Name + " och "
             + StringReplacer.Character2_Name + "." + NewLine + NewLine
-                    + "Tryck på texten högst upp på sidan för att börja skriva.";
+                    + "Tryck på sagotexten på den här sidan och börja skriv!";
 
         public string ExchangeString => "Tryck här och skriv om "
             + StringReplacer.Character1_Name + " och "

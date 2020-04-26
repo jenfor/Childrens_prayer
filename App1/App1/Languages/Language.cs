@@ -6,7 +6,7 @@ namespace App1.Languages
 {
     public interface Language
     {
-        string NewFairyTale { get; }
+        string BackToStart { get; }
         string ShareFairyTale { get; }
         string ViewFairyTale { get; }
         string BackFairyTale { get; }

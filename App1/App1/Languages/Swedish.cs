@@ -6,7 +6,7 @@ namespace App1.Languages
 {
     public class Swedish : Language
     {
-        public string NewFairyTale => "Ny saga";
+        public string BackToStart => "Tillbaka till start";
         public string ShareFairyTale => "Dela sagan";
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
@@ -17,7 +17,7 @@ namespace App1.Languages
         public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startsidan?" + NewLine + NewLine + "Den här sagan kommer raderas.";
         public string Warning => "Varning";
         public string Question => "Fråga";
-        public string Information => "Information";
+        public string Information => "Nu är det din tur";
 
         public string Deletion => "Är du säker på att du vill radera den här sagan och skapa en ny?";
         public string Short => "En kort saga";

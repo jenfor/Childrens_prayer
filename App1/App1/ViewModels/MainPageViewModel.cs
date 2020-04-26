@@ -18,7 +18,7 @@ namespace App1.ViewModels
 
         public Command SwedishFairyTale { get; }
         public Command EnglishFairyTale { get; }
-        public Command NewFairyTale { get; }
+        public Command BackToStart{ get; }
         public Command ContinueFairyTale { get; }
         public Command Back { get; }
         public Command ShareFairyTale { get; }
@@ -80,15 +80,15 @@ namespace App1.ViewModels
             }
         }
 
-        private string _newFairytale = language.NewFairyTale;
-        public string NewFairytale
+        private string _backToStart = language.BackToStart;
+        public string BackTostart
         {
-            get => _newFairytale;
+            get => _backToStart;
             set
             {
-                _newFairytale = value;
+                _backToStart = value;
 
-                var args = new PropertyChangedEventArgs(nameof(NewFairytale));
+                var args = new PropertyChangedEventArgs(nameof(BackTostart));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -245,9 +245,9 @@ namespace App1.ViewModels
                 EnglishVersion();
             });
 
-            NewFairyTale = new Command(() =>
+            BackToStart = new Command(() =>
             {
-                CreateNewFairytale(language);
+                BackToStartPage(language);
             });
 
             ShowFairyTale = new Command(() =>
@@ -356,7 +356,7 @@ namespace App1.ViewModels
                     .Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name), "OK"); 
         }
 
-        public async Task CreateNewFairytale(Language language)
+        /*public async Task ToStartPage(Language language)
         {
             var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.Deletion, language.Yes, language.No);
             if (action)
@@ -364,7 +364,7 @@ namespace App1.ViewModels
                 ShowNewFairyTale(language);
                 SetVisibilitys();
             }
-        }
+        }*/
 
         private void ShowNewFairyTale(Language language)
         {
@@ -384,7 +384,7 @@ namespace App1.ViewModels
             FairyTaleColumnWidth2 = new GridLength(1, GridUnitType.Star);
             FairyTaleColumnWidth3 = new GridLength(0);
 
-            NewFairytale = language.NewFairyTale;
+            BackTostart = language.BackToStart;
             ShareFairytale = language.ShareFairyTale;
             BackFairytale = language.BackFairyTale;
             ContinueFairytale = language.ContinueFairyTale;

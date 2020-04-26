@@ -6,7 +6,7 @@ namespace App1.Languages
 {
     public class English: Language
     {
-        public string NewFairyTale => "New fairy tale";
+        public string BackToStart => "Back to start";
         public string ShareFairyTale => "Share the fairy tale";
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
@@ -16,24 +16,24 @@ namespace App1.Languages
 
         public string Warning => "Warning";
         public string Question => "Question";
-        public string Information => "Information";
+        public string Information => "It is your turn";
 
         public string BackToStartPageWarning => "Are you sure you want to go back to start?" + NewLine + NewLine + "This story will be deleted!";
         public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
 
-        public string TapHere => "Tap here and write!";
+        public string TapHere => "Tap here to write!";
 
         public string Yes => "Yes";
         public string No => "No";
         public string Short => "A short fairy tale";
         public string Long => "A long fairy tale";
 
-        public string InformationExchangeString => "Now it's your time to write more about "
+        public string InformationExchangeString => "Now it's your turn to write about "
                 + StringReplacer.Character1_Name + " and "
                 + StringReplacer.Character2_Name + "." + NewLine + NewLine
-                    + "Tap the fairy tale text you see in this page and start to write!";
+                    + "Tap the fairy tale text you see in this page and start writing!";
 
-        public string ExchangeString => "Tap here to write more about " + 
+        public string ExchangeString => "Tap here to write about " + 
                          StringReplacer.Character1_Name + " and " +
                          StringReplacer.Character2_Name + Dot;
 
@@ -175,7 +175,7 @@ namespace App1.Languages
         public List<string> BadRelationshipsAdjectives => new List<string>()
         {
             "stupid",
-            "angry",
+            //"angry", //ToDo: needs an
             "mean",
         };
 
@@ -189,12 +189,9 @@ namespace App1.Languages
 
         public List<string> PlaceAdjectives => new List<string>()
         {
-            "peaceful",
             "lovely",
-            "hard",
             "wonderful",
             "terrible",
-            "weird",
         };
 
         public List<string> Verb2 => new List<string>()
@@ -241,10 +238,9 @@ namespace App1.Languages
         {
             "It turned out to be",
             "It started with",
-            StringReplacer.Character1_Gender + " said that",
+            StringReplacer.Character1_Gender + " said that", 
             StringReplacer.Character1_Gender + " wanted to let",
             StringReplacer.Character1_Gender + " refused to let",
-            StringReplacer.Character1_Gender + " didn't want to let",
             "But"
         };
     }

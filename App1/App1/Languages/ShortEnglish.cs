@@ -6,7 +6,7 @@ namespace App1.Languages
 {
     public class ShortEnglish : Language
     {
-        public string NewFairyTale => "New fairy tale";
+        public string BackToStart => "Back to start";
         public string ShareFairyTale => "Share the fairy tale";
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
@@ -17,7 +17,7 @@ namespace App1.Languages
         public string BackToStartPageWarning => "Are you sure you want to go back to start?" + NewLine + NewLine + " This story will be deleted!";
         public string Warning => "Warning";
         public string Question => "Question";
-        public string Information => "Information";
+        public string Information => "It is your turn";
 
         public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
         public string Short => "A short fairy tale";
@@ -25,14 +25,14 @@ namespace App1.Languages
         public string Yes => "Yes";
         public string No => "No";
 
-        public string TapHere => "Tap here and write!";
+        public string TapHere => "Tap here to write!";
 
-        public string InformationExchangeString => "Now it's your time to write more about "
+        public string InformationExchangeString => "Now it's your turn to write about "
             + StringReplacer.Character1_Name + " and "
             + StringReplacer.Character2_Name + "." + NewLine + NewLine
-                    + "Tap the text you see in the top of this page and start to write.";
+                    + "Tap the fairy tale text you see in this page and start writing!";
 
-        public string ExchangeString => "Tap here to write more about " +
+        public string ExchangeString => "Tap here to write about " +
                          StringReplacer.Character1_Name + " and " +
                          StringReplacer.Character2_Name + Dot;
 
