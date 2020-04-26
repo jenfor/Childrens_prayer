@@ -12,20 +12,29 @@ namespace App1.Languages
         public string ContinueFairyTale => "Continue";
         public string ViewFairyTale => "View/Share fairy tale";
 
-        public string VersionOption => "Do you want to write at short fairy tale?";
+        public string VersionOption => "What kind of fairy tale do you want to write?";
 
-        public string BackToStartPageWarning => "Are you sure you want to go back to start? This story will be deleted!";
+        public string BackToStartPageWarning => "Are you sure you want to go back to start?" + NewLine + NewLine + " This story will be deleted!";
         public string Warning => "Warning";
         public string Question => "Question";
         public string Information => "Information";
 
         public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
+        public string Short => "A short fairy tale";
+        public string Long => "A long fairy tale";
         public string Yes => "Yes";
         public string No => "No";
 
-        public string ExchangeString => "It's your time to write more about " +
+        public string TapHere => "Tap here and write!";
+
+        public string InformationExchangeString => "Now it's your time to write more about "
+            + StringReplacer.Character1_Name + " and "
+            + StringReplacer.Character2_Name + "." + NewLine + NewLine
+                    + "Tap the text you see in the top of this page and start to write.";
+
+        public string ExchangeString => "Tap here to write more about " +
                          StringReplacer.Character1_Name + " and " +
-                         StringReplacer.Character2_Name + " here!";
+                         StringReplacer.Character2_Name + Dot;
 
         public string WasNamed => "called ";
         public string HadA => " has a ";
@@ -151,7 +160,7 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-            "It is " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " too",
+            "It can be " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " in many different ways",
             "But it isn't " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " today",
         };
 

@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="1.7*"></RowDefinition>
+            <RowDefinition Height="1.9*"></RowDefinition>
             <RowDefinition Height="80"></RowDefinition>
         </Grid.RowDefinitions>
 
@@ -28,7 +28,7 @@
         </Grid.ColumnDefinitions>
         
         <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical" VerticalOptions="Start" Margin="25,30,25,0">
-            <Button Text="Write a new fairytale in English" Command="{Binding EnglishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
+            <Button Text="Write a new fairy tale in English" Command="{Binding EnglishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
             <Button Text="Skriv en ny saga på svenska" Command="{Binding SwedishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
             <Label Grid.Column="0"  Grid.Row="1"   Text="{Binding StartImage}" HorizontalTextAlignment="Center" Margin="0,50,0,0" IsVisible="{Binding StartButtonVisibility}"
                VerticalTextAlignment="Center" FontSize="130" Grid.RowSpan="2"></Label>

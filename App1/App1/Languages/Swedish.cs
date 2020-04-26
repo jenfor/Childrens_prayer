@@ -12,20 +12,30 @@ namespace App1.Languages
         public string ContinueFairyTale => "Fortsätt";
         public string ViewFairyTale => "Visa/Dela sagan";
 
-        public string VersionOption => "Vill du skriva en kort saga?";
+        public string VersionOption => "Vilken sorts saga vill du skriva?";
 
-        public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startsidan? Den här sagan kommer raderas.";
+        public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startsidan?" + NewLine + NewLine + "Den här sagan kommer raderas.";
         public string Warning => "Varning";
         public string Question => "Fråga";
         public string Information => "Information";
 
         public string Deletion => "Är du säker på att du vill radera den här sagan och skapa en ny?";
+        public string Short => "En kort saga";
+        public string Long => "En lång saga";
+
         public string Yes => "Ja";
         public string No => "Nej";
 
-        public string ExchangeString => "Nu är det din tur att skriva fortsättningen på sagan om " 
+        public string TapHere => "Tryck här och skriv!";
+
+        public string InformationExchangeString => "Nu är det din tur att skriva mer om " 
                     + StringReplacer.Character1_Name + " och "
-                    + StringReplacer.Character2_Name + " här!";
+                    + StringReplacer.Character2_Name + "." + NewLine + NewLine
+                    + "Tryck på sagotexten på den här sidan och börja skriv!";
+
+        public string ExchangeString => "Tryck här och skriv om " 
+                    + StringReplacer.Character1_Name + " och "
+                    + StringReplacer.Character2_Name + Dot;
 
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
@@ -95,7 +105,7 @@ namespace App1.Languages
         {
             {"hade bestämt sig för att ordna en stor låtsasfest dit alla skulle vara bjudna", "\U0001F382" },
             {"började packa en väska för att det skulle se ut som att " + StringReplacer.Character1_Gender + " var på väg ut på en längre resa", "\U0001F45C"},
-            {"började säga till alla att det var en mycket viktig dag idag", "\U0001F338"},
+            {"började med att säga till alla att det var en mycket viktig dag idag", "\U0001F338"},
             {"påstod att om alla samarbetade kunde de tilsammans bygga ett rymdskepp", "\U0001F6F8"},
             {"trodde att det var lätt som en plätt att bygga en bil", "\U0001F698"},
             {"menade att det var möjligt att bygga städer på havsbotten", "\U0001F30A"},
@@ -203,11 +213,14 @@ namespace App1.Languages
 
         public List<string> Circumstances => new List<string>()
         {
-            "Ibland var det " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också, men inte just nu",
-            "Det var faktiskt " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också",
-            "Men det var inte så " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", inte just nu iallafall",
-            "Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " nu, verkligheten var långt därifrån",
-            "Det var på sätt och vis " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också, men för vissa det var svårt att tro",
+            //"Ibland var det " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också, men inte just nu",
+            //"Det var faktiskt " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också",
+            //"Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + ", inte just nu iallafall",
+            //"Men det var inte " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " nu, verkligheten var långt därifrån",
+            //"Det var på sätt och vis " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " också, men för vissa det var svårt att tro",
+
+            "Det kunde vara " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " på många sätt",
+            "Men det var inte så " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " idag",
         };
 
         public List<string> Gender => new List<string>()

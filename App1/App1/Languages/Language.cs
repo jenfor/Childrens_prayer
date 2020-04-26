@@ -19,12 +19,16 @@ namespace App1.Languages
         string Question { get; }
         string Information { get; }
 
+        string TapHere { get; }
 
         string Deletion { get; }
         string Yes { get; }
         string No { get; }
+        string Short { get; }
+        string Long { get; }
 
         string ExchangeString { get; }
+        string InformationExchangeString { get; }
 
         string WasNamed { get; }
         string HadA { get; }

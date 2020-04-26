@@ -16,14 +16,27 @@ namespace App1.Languages
         public string Question => "Fråga";
         public string Information => "Information";
 
-        public string VersionOption => "Vill du skriva en kort saga?";
+        public string VersionOption => "Vilken sorts saga vill du skriva?";
         public string BackToStartPageWarning => "Vill du radera sagan och gå till start?";
         public string Deletion => "Vill du radera sagan och göra en ny?";
+
+        public string Short => "En kort saga";
+        public string Long => "En lång saga";
 
         public string Yes => "Ja";
         public string No => "Nej";
 
-        public string ExchangeString => "Nu är det din tur att skriva mer om " + StringReplacer.Character1_Name + " och " + StringReplacer.Character2_Name + " här!";
+        public string TapHere => "Tryck här och skriv!";
+
+        public string InformationExchangeString => "Nu är det din tur att skriva mer om "
+            + StringReplacer.Character1_Name + " och "
+            + StringReplacer.Character2_Name + "." + NewLine + NewLine
+                    + "Tryck på texten högst upp på sidan för att börja skriva.";
+
+        public string ExchangeString => "Tryck här och skriv om "
+            + StringReplacer.Character1_Name + " och "
+            + StringReplacer.Character2_Name + Dot;
+
         public string WasNamed => "som heter ";
         public string HadA => " har en ";
         public string A => "en ";

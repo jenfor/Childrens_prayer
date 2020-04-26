@@ -305,7 +305,7 @@ namespace App1.ViewModels
 
         public async Task SwedishVersion()
         {
-            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Yes, language.No);
+            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
             if (action)
             {
                 language = new ShortSwedish();
@@ -321,7 +321,7 @@ namespace App1.ViewModels
 
         public async Task EnglishVersion()
         {
-            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Yes, language.No);
+            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
             if (action)
             {
                 language = new ShortEnglish();
@@ -351,11 +351,9 @@ namespace App1.ViewModels
 
         public async Task UserTimeToWrite(Language language)
         {
-           await App.Current.MainPage.DisplayAlert(language.Information, language.ExchangeString
-                    .Replace(StringReplacer.Character1_Animal, fairyTale.fairyTaleCharacter1.Animal)
-                    .Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name)
-                    .Replace(StringReplacer.Character2_Animal, fairyTale.fairyTaleCharacter2.Animal)
-                    .Replace(StringReplacer.Character2_Name, fairyTale.fairyTaleCharacter2.Name), "OK"); 
+           await App.Current.MainPage.DisplayAlert(language.Information, language.InformationExchangeString.Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name)
+                    .Replace(StringReplacer.Character2_Name, fairyTale.fairyTaleCharacter2.Name)
+                    .Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name), "OK"); 
         }
 
         public async Task CreateNewFairytale(Language language)

@@ -49,7 +49,8 @@ namespace App1.FairyTale
             pageList.Add(CreatePage(PresentFairyTaleEvent(language), fairyTaleCharacter1.Emoji + fairyTaleEvent.Emoji, string.Empty, PageNr+3));
             thisFairyTaleEmojis.Add(fairyTaleEvent.Emoji);
 
-            pageList.Add(CreatePage(PresentFairyTaleContinuation(language), fairyTaleEvent.Emoji + fairyTaleCharacter2.Emoji, string.Empty, PageNr+4));
+            pageList.Add(CreatePage(String.Empty, fairyTaleEvent.Emoji + fairyTaleCharacter2.Emoji,
+                PresentFairyTaleContinuation(language) + language.TapHere, PageNr+4));
             thisFairyTaleEmojis.Add(fairyTaleCharacter1.Emoji);
         }
 
@@ -179,10 +180,13 @@ namespace App1.FairyTale
 
             foreach (var page in pagesToUse)
             {
-                sb.Append(page.Text);
-                sb.Append(page.Emoji);
-                sb.Append(language.NewLine);
-                sb.Append(language.NewLine);
+                if(!page.Text.Equals(string.Empty))
+                {
+                    sb.Append(page.Text);
+                    sb.Append(page.Emoji);
+                    sb.Append(language.NewLine);
+                    sb.Append(language.NewLine);
+                }
             }
             return sb.ToString();
         }
@@ -220,7 +224,7 @@ namespace App1.FairyTale
                  + language.Was + fairyTalePalce.Condition + language.Dot
             );
 
-            sb.Append(fairyTalePalce.Circumstance.Replace(StringReplacer.Place_Condition, fairyTalePalce.Condition).Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot);
+            //sb.Append(fairyTalePalce.Circumstance.Replace(StringReplacer.Place_Condition, fairyTalePalce.Condition).Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot);
 
             return sb.ToString();
         }
