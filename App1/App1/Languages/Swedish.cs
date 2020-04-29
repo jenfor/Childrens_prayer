@@ -11,15 +11,16 @@ namespace App1.Languages
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
         public string ViewFairyTale => "Visa/Dela sagan";
+        public string NewImage => "Byt bild";
 
         public string VersionOption => "Vilken sorts saga vill du skriva?";
 
-        public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startsidan?" + NewLine + NewLine + "Den här sagan kommer raderas.";
+        public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startmenyn?" + NewLine + NewLine + "Den här sagan kommer att tas bort.";
         public string Warning => "Varning";
         public string Question => "Fråga";
         public string Information => "Nu är det din tur";
 
-        public string Deletion => "Är du säker på att du vill radera den här sagan och skapa en ny?";
+        public string Deletion => "Är du säker på att du vill ta bort den här sagan och skriva en ny?";
         public string Short => "En kort saga";
         public string Long => "En lång saga";
 
@@ -246,7 +247,6 @@ namespace App1.Languages
 
         public List<string> Continuations => new List<string>()
         {
-            "Då visade det sig att",
             "Då började",
             "Då sa",
             "Då ville",

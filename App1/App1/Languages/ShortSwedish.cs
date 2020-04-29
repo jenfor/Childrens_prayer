@@ -11,14 +11,15 @@ namespace App1.Languages
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
         public string ViewFairyTale => "Visa/Dela sagan";
+        public string NewImage => "Byt bild";
 
         public string Warning => "Varning";
         public string Question => "Fråga";
         public string Information => "Nu är det din tur";
 
         public string VersionOption => "Vilken sorts saga vill du skriva?";
-        public string BackToStartPageWarning => "Vill du radera sagan och gå till start?";
-        public string Deletion => "Vill du radera sagan och göra en ny?";
+        public string BackToStartPageWarning => "Vill du ta bort den här sagan och gå till startmenyn?";
+        public string Deletion => "Vill du sagan sagan och skriva en ny?";
 
         public string Short => "En kort saga";
         public string Long => "En lång saga";

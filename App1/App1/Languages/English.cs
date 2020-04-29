@@ -11,6 +11,7 @@ namespace App1.Languages
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
         public string ViewFairyTale => "View/Share fairy tale";
+        public string NewImage => "Change";
 
         public string VersionOption => "What kind of fairy tale do you want to write?";
 

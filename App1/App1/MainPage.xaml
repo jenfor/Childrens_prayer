@@ -13,10 +13,10 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="1.9*"></RowDefinition>
-            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -27,9 +27,9 @@
             <ColumnDefinition Width="{Binding FairyTaleColumnWidth3}"/>
         </Grid.ColumnDefinitions>
         
-        <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical" VerticalOptions="Start" Margin="25,30,25,0">
-            <Button Text="Write a new fairy tale in English" Command="{Binding EnglishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
-            <Button Text="Skriv en ny saga på svenska" Command="{Binding SwedishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
+        <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical" VerticalOptions="Start" Margin="25,30,25,0" >
+            <Button Text="Write a fairy tale in English" Command="{Binding EnglishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
+            <Button Text="Skriv en saga på svenska" Command="{Binding SwedishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
             <Label Grid.Column="0"  Grid.Row="1"   Text="{Binding StartImage}" HorizontalTextAlignment="Center" Margin="0,50,0,0" IsVisible="{Binding StartButtonVisibility}"
                VerticalTextAlignment="Center" FontSize="130" Grid.RowSpan="2"></Label>
         </StackLayout>
@@ -37,17 +37,34 @@
         <Button Grid.Column="1" Text="{Binding BackTostart}" Command="{Binding BackToStart}" BackgroundColor="LightBlue" Margin="10, 35, 5, 10"></Button>
         <Button Grid.Column="2" Grid.Row="0" Text="{Binding ViewFairytale}" Command="{Binding ViewFairyTale}" BackgroundColor="LightBlue" Margin="5, 35, 10, 10"/>
 
-        <Label Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="1"  Text="{Binding Image}" HorizontalTextAlignment="Center"
+        <Editor Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" BackgroundColor="White"  x:Name="txtText" AutoSize="TextChanges"  Text="{Binding Text}" Placeholder="{Binding Placeholder}"  FontSize="20" IsEnabled="True"  Margin="10" IsSpellCheckEnabled="False"></Editor>
+
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+
+         <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{Binding ImageWidth}"/>
+                <ColumnDefinition Width="{Binding NewImageWidth}"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.RowSpan="3" Grid.ColumnSpan="{Binding ImageColumnSpan}"  Text="{Binding Image}" HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center" FontSize="150"></Label>
-        
-        <Editor BackgroundColor="White" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" x:Name="txtText" AutoSize="TextChanges"  Text="{Binding Text}" Placeholder="{Binding Placeholder}"  FontSize="20" IsEnabled="True" TextColor="Black" Margin="10" IsSpellCheckEnabled="False"></Editor>
+            <Button Grid.Row="1" Text="{Binding NewImage}" Command="{Binding ChangeImage}" Grid.Column="1" BackgroundColor="LightBlue" IsVisible="true"></Button>
+
+        </Grid>
+
         <Button  Command="{Binding Back}" Grid.Row="3" Grid.Column="1" Text="{Binding BackFairytale}" BackgroundColor="LightBlue" IsVisible="{Binding BackButtonVisibility}" Margin="5, 20, 10, 20"></Button>
-        <Button Command="{Binding ContinueFairyTale}" Grid.Row="3" Grid.Column="2" Text="{Binding ContinueFairytale}" BackgroundColor="LightBlue" Margin="10, 20, 5, 20"></Button>
+        <Button Command="{Binding ContinueFairyTale}" Grid.Row="3"  Grid.Column="2" Text="{Binding ContinueFairytale}" BackgroundColor="LightBlue" Margin="10, 20, 5, 20"></Button>
 
         <ScrollView Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="3">
             <Label  Text="{Binding Summary}" FontSize="20" IsEnabled="False" TextColor="Black" Margin="10"></Label>
         </ScrollView>
-        <Button Grid.Row="3" Grid.Column="3"  Command="{Binding ShowFairyTale}"  Text="{Binding BackFairytale}" BackgroundColor="LightBlue" IsVisible="{Binding BackButtonVisibility}" Margin="5, 20, 10, 20"></Button>
+        <Button Grid.Row="3" Grid.Column="3"  Command="{Binding ShowFairyTale}"  Text="{Binding BackFairytale}" BackgroundColor="LightBlue" Margin="5, 20, 10, 20"></Button>
         <Button Grid.Row="3" Grid.Column="4" Command="{Binding ShareFairyTale}"  Text="{Binding ShareFairytale}" BackgroundColor="LightBlue" Margin="10, 20, 5, 20"></Button>
     </Grid>
 
