@@ -14,7 +14,7 @@ namespace App1.ViewModels
     public class MainPageViewModel : INotifyPropertyChanged
     {
         public static Language language = new English();
-        private TheFairyTale fairyTale = new TheFairyTale(language);
+        private static TheFairyTale fairyTale = new TheFairyTale(language);
 
         public Command SwedishFairyTale { get; }
         public Command EnglishFairyTale { get; }
@@ -64,6 +64,19 @@ namespace App1.ViewModels
                 _image = value;
 
                 var args = new PropertyChangedEventArgs(nameof(Image));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _imageDescription = fairyTale.PresentPage.ImageDescription;
+        public string ImageDescription
+        {
+            get => _imageDescription;
+            set
+            {
+                _imageDescription = value;
+
+                var args = new PropertyChangedEventArgs(nameof(ImageDescription));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -180,15 +193,15 @@ namespace App1.ViewModels
             }
         }
 
-        private bool _backButtonVisibility = false;
-        public bool BackButtonVisibility
+        private bool _mainPageVisibility = false;
+        public bool MainPageVisibility
         {
-            get => _backButtonVisibility;
+            get => _mainPageVisibility;
             set
             {
-                _backButtonVisibility = value;
+                _mainPageVisibility = value;
 
-                var args = new PropertyChangedEventArgs(nameof(BackButtonVisibility));
+                var args = new PropertyChangedEventArgs(nameof(MainPageVisibility));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -258,7 +271,7 @@ namespace App1.ViewModels
             }
         }
 
-        private GridLength _imageWidth = new GridLength(1, GridUnitType.Star);
+        /*private GridLength _imageWidth = new GridLength(1, GridUnitType.Star);
         public GridLength ImageWidth
         {
             get => _imageWidth;
@@ -269,17 +282,17 @@ namespace App1.ViewModels
                 var args = new PropertyChangedEventArgs(nameof(ImageWidth));
                 PropertyChanged?.Invoke(this, args);
             }
-        }
+        }*/
 
         private GridLength _newButtonWidth = new GridLength(0);
-        public GridLength NewImageWidth
+        public GridLength NewImageButtonWidth
         {
             get => _newButtonWidth;
             set
             {
                 _newButtonWidth = value;
 
-                var args = new PropertyChangedEventArgs(nameof(NewImageWidth));
+                var args = new PropertyChangedEventArgs(nameof(NewImageButtonWidth));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -313,13 +326,13 @@ namespace App1.ViewModels
                 if (fairyTale.PageNr == fairyTale.LastComputerPreperdPage)
                 {
                     UserTimeToWrite(language);
-
                 }
 
                 fairyTale.PresentPage.Text = Text;
                 fairyTale.ViewNextPage(language);
                 Text = fairyTale.PresentPage.Text;
                 Image = fairyTale.PresentPage.Emoji;
+                ImageDescription = fairyTale.PresentPage.ImageDescription;
                 Placeholder = fairyTale.PresentPage.Palceholder;
                 SetVisibilitys();
             });
@@ -331,7 +344,7 @@ namespace App1.ViewModels
 
             ViewFairyTale = new Command(() =>
             {
-                ViewFuction();
+                ViewSummary();
             });
 
             Back = new Command(() =>
@@ -341,6 +354,7 @@ namespace App1.ViewModels
                 {
                     Text = fairyTale.PresentPage.Text;
                     Image = fairyTale.PresentPage.Emoji;
+                    ImageDescription = fairyTale.PresentPage.ImageDescription;
                     Placeholder = fairyTale.PresentPage.Palceholder;
                     SetVisibilitys();
                 }
@@ -358,8 +372,12 @@ namespace App1.ViewModels
 
             ChangeImage = new Command(() =>
             {
-                Image = fairyTale.GetRandomFairyTaleEmojis();
+                var s = fairyTale.GetRandomFairyTaleEmojis(language).Split(',');
+
+                Image = s[0];
+                ImageDescription = s[1];
                 fairyTale.PresentPage.Emoji = Image;
+                fairyTale.PresentPage.ImageDescription = ImageDescription;
             });
 
         }
@@ -405,7 +423,8 @@ namespace App1.ViewModels
                 FairyTaleColumnWidth1 = new GridLength(0);
                 FairyTaleColumnWidth2 = new GridLength(0);
                 FairyTaleColumnWidth3 = new GridLength(0);
-                NewImageWidth = new GridLength(0);
+                NewImageButtonWidth = new GridLength(0);
+                MainPageVisibility = false;
 
                 StartButtonVisibility = true;
             }
@@ -418,22 +437,13 @@ namespace App1.ViewModels
                     .Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name), "OK"); 
         }
 
-        /*public async Task ToStartPage(Language language)
-        {
-            var action = await App.Current.MainPage.DisplayAlert(language.Warning, language.Deletion, language.Yes, language.No);
-            if (action)
-            {
-                ShowNewFairyTale(language);
-                SetVisibilitys();
-            }
-        }*/
-
         private void ShowNewFairyTale(Language language)
         {
             fairyTale = new TheFairyTale(language);
 
             Text = fairyTale.PresentPage.Text;
             Image = fairyTale.PresentPage.Emoji;
+            ImageDescription = fairyTale.PresentPage.ImageDescription;
             Placeholder = fairyTale.PresentPage.Palceholder;
 
             SetVisibilitys();
@@ -453,7 +463,7 @@ namespace App1.ViewModels
             ViewFairytale = language.ViewFairyTale;
             NewImage = language.NewImage;
             StartButtonVisibility = false;
-            BackButtonVisibility = true;
+            MainPageVisibility = true;
 
             NewImageButtonVisibility();
         }
@@ -462,12 +472,12 @@ namespace App1.ViewModels
         {
             if (fairyTale.PageNr > fairyTale.LastComputerPreperdPage +1)
             {
-                NewImageWidth = new GridLength(50);
+                NewImageButtonWidth = new GridLength(60);
                 ImageColumnSpan = 1;
             }
             else
             {
-                NewImageWidth = new GridLength(0);
+                NewImageButtonWidth = new GridLength(0);
                 ImageColumnSpan = 2;
             }
         }
@@ -479,7 +489,7 @@ namespace App1.ViewModels
             await ShareText(Summary);
         }
 
-        private void ViewFuction()
+        private void ViewSummary()
         {
             fairyTale.PresentPage.Text = Text;
 
@@ -487,7 +497,8 @@ namespace App1.ViewModels
             FairyTaleColumnWidth1 = new GridLength(0);
             FairyTaleColumnWidth2 = new GridLength(0);
             FairyTaleColumnWidth3 = new GridLength(1, GridUnitType.Star);
-            NewImageWidth = new GridLength(0);
+            NewImageButtonWidth = new GridLength(0);
+            MainPageVisibility = false;
 
             Summary = fairyTale.GetFairytaleString(language);
         }

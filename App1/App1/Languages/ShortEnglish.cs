@@ -10,7 +10,7 @@ namespace App1.Languages
         public string ShareFairyTale => "Share the fairy tale";
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
-        public string ViewFairyTale => "View/Share fairy tale";
+        public string ViewFairyTale => "View/Share";
         public string NewImage => "Change";
 
         public string VersionOption => "What kind of fairy tale do you want to write?";
@@ -94,22 +94,22 @@ namespace App1.Languages
 
         public Dictionary<string, string> Places => new Dictionary<string, string>()
         {
-            {"on their planet", "\U0001FA90"}, // ToDo: Fix this emoji
-            {"in their city", "\U0001F306"},
-            {"in their country", "\U0001F304"},
-            {"in their forest", "\U0001F333"}
+            {"on their planet", "\U0001FA90" + ",their planet"}, // ToDo: Fix this emoji
+            {"in their city", "\U0001F306" + ",the city"},
+            {"in their country", "\U0001F304" + ",mountains from their country"},
+            {"in their forest", "\U0001F333" + ",a tree"}
         };
 
         public Dictionary<string, string> Events => new Dictionary<string, string>()
         {
-            {"wants to have a big party", "\U0001F382"},
-            {"wants to have a space ship", "\U0001F6F8"},
-            {"wants to have a new car", "\U0001F698"},
-            {"wants to have more candy", "\U0001F36C" + "\U0001F36D"},
-            {"wants to have a new school", "\U0001F3EB"},
-            {"wants to have a castle", "\U0001F3F0"},
-            {"wants to have a dragon", "\U0001F409"},
-            {"wants to have a rainbow", "\U0001F308"}
+            {"wants to see a big party", "\U0001F382" + ",a cake"},
+            {"wants to see a space ship", "\U0001F6F8" + ",a space ship"},
+            {"wants to see a new car", "\U0001F698" + ",a car"},
+            {"wants to see more candy", "\U0001F36C" + "\U0001F36D" + ",the candy"},
+            {"wants to see a new school", "\U0001F3EB" + ",a school"},
+            {"wants to see a castle", "\U0001F3F0" + ",a castle"},
+            {"wants to see a dragon", "\U0001F409" + ",a dragon"},
+            {"wants to see the rainbow", "\U0001F308" + ",a rainbow"}
         };
 
         public List<string> FairyTaleStarts => new List<string>()
@@ -173,7 +173,7 @@ namespace App1.Languages
 
         public List<string> Actions => new List<string>()
         {
-            StringReplacer.Character1_Name + " wants to have something",
+            StringReplacer.Character1_Name + " wants to see something new " + StringReplacer.Place,
         };
 
         public List<string> Continuations => new List<string>()

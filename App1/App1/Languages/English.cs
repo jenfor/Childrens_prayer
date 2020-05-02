@@ -10,7 +10,7 @@ namespace App1.Languages
         public string ShareFairyTale => "Share the fairy tale";
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
-        public string ViewFairyTale => "View/Share fairy tale";
+        public string ViewFairyTale => "View/Share";
         public string NewImage => "Change";
 
         public string VersionOption => "What kind of fairy tale do you want to write?";
@@ -67,7 +67,7 @@ namespace App1.Languages
             //{"parrot", "\U0001F99C"}, // Todo: find better emoji
             //{"owl", "\U0001F989"}, // Todo: needs an instead of a
             {"spider", "\U0001F577"},
-            {"skorpion", "\U0001F982"},
+            {"scorpion", "\U0001F982"},
             {"larva", "\U0001F41B"},
             {"snake", "\U0001F40D"},
             {"hamster", "\U0001F439"},
@@ -96,34 +96,49 @@ namespace App1.Languages
 
         public Dictionary<string, string> Places => new Dictionary<string, string>()
         {
-            {"on earth", "\U0001F30D"},
-            //{"on their planet", "\U0001FA90"}, // ToDo: Fix this emoji
-            {"in their city", "\U0001F306"},
-            {"in their country", "\U0001F304"},
-            {"in their hometown", "\U0001F3DE"},
-            {"in their village", "\U0001F3D8"},
-            {"in their forest", "\U0001F333"}
+            {"on earth", "\U0001F30D" + ", earth"},
+            {"on their planet", "\U0001FA90" + ",their planet"}, // ToDo: Fix this emoji
+            {"in their city", "\U0001F306" + ",their city"},
+            {"in their country", "\U0001F304" + ",a picture from their country"},
+            {"in their hometown", "\U0001F3DE" + ",a view from their home"},
+            {"in their village", "\U0001F3D8" + ",their village"},
+            {"in their forest", "\U0001F333" + ",a tree in their forest"}
         };
 
         public Dictionary<string, string> Events => new Dictionary<string, string>()
         {
-            {"had decided to organize a big party where everyone should be invited", "\U0001F382"},
-            {"wanted it to look like " + StringReplacer.Character1_Gender+ " was going for a long journey. That's why " + StringReplacer.Character1_Gender + " started to pack a bag", "\U0001F45C"},
-            {"started by telling everyone that this was a very important day", "\U0001F338"},
-            {"said: \n- Let's build a space ship together", "\U0001F6F8"},
-            {"thought it was easy to build a new car", "\U0001F698"},
-            {"thought it was possible to build a citiy on the seabed", "\U0001F30A"},
-            {"wanted to start a new sort of candy factory", "\U0001F36C" + "\U0001F36D"},
-            {"said " + StringReplacer.Character1_Gender + " was big enough to start school", "\U0001F3EB"}, 
-            {"wanted to put sails on everyone's backs", "\U0001F32C"},
-            {"had decided to invent wings that could make everyone and everything fly", "\U0001F4B8"},
-            {"wanted to arrange a flight course for everyone", "\U0001F6E9"},
-            //{"planned to dress up as a good fairy and hand out three wishes", "\U0001FA84"},// ToDo: Fix this emoji
-            {"thought it was easy to build a large castle out of sand", "\U0001F3F0"},
-            {"wanted to prove that the dragons still were alive", "\U0001F409"},
-            //{"had found a lamp in where it might be a genie", "\U0001FA94"},// ToDo: Fix this emoji
-            {"thought " + StringReplacer.Character1_Gender + " had found a new way to the moon", "\U0001F314"}, 
-            {"had found the place where the rainbow starts", "\U0001F308"}
+            {"had decided to organize a big party where everyone should be invited",
+                "\U0001F382"  + ",a cake"},
+            {"wanted it to look like " + StringReplacer.Character1_Gender+ " was going for a long journey. That's why " + StringReplacer.Character1_Gender + " started to pack a bag",
+                "\U0001F45C" + ",a bag"},
+            {"started by telling everyone that this was a very important day",
+                "\U0001F338" + ",a flower"},
+            {"said: \n- Let's build a space ship together",
+                "\U0001F6F8" + ",a space ship"},
+            {"thought it was easy to build a new car",
+                "\U0001F698" + ",a car"},
+            {"thought it was possible to build a citiy on the seabed",
+                "\U0001F30A" + ",a wave"},
+            {"wanted to start a new sort of candy factory",
+                "\U0001F36C" + "\U0001F36D" + ",the candy"},
+            {"said " + StringReplacer.Character1_Gender + " was big enough to start school",
+                "\U0001F3EB" + ",the school"}, 
+            {"wanted to put sails on everyone's backs",
+                "\U0001F32C" + ",the wind"},
+            {"had decided to invent wings that could make everyone and everything fly",
+                "\U0001F4B8"  + ",money with wings"},
+            {"wanted to arrange a flight course for everyone",
+                "\U0001F6E9" + ",an airplane"},
+            //{"planned to dress up as a good fairy and hand out three wishes", "\U0001FA84" + ",a wand"},// ToDo: Fix this emoji
+            {"thought it was easy to build a large castle out of sand",
+                "\U0001F3F0" + ",a large castle"},
+            {"wanted to prove that the dragons still were alive",
+                "\U0001F409" + ",a dragon"},
+            //{"had found a lamp in where it might be a genie", "\U0001FA94" + ", a magic lamp"},// ToDo: Fix this emoji
+            {"thought " + StringReplacer.Character1_Gender + " had found a new way to the moon",
+                "\U0001F314" + ",the moon"}, 
+            {"had found the place where the rainbow starts",
+                "\U0001F308" + ",the rainbow"}
         };
 
         public List<string> FairyTaleStarts => new List<string>()

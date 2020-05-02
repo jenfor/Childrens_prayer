@@ -93,23 +93,23 @@ namespace App1.Languages
 
         public Dictionary<string, string> Places => new Dictionary<string, string>()
         {
-            {"i staden", "\U0001F306"},
-            {"på landet", "\U0001F304"},
-            {"i byn", "\U0001F3D8"},
-            {"i skogen", "\U0001F333"}
+            {"i staden", "\U0001F306" + ",staden"},
+            {"på landet", "\U0001F304" + ",en bild från landet"},
+            {"i byn", "\U0001F3D8" + ",byn"},
+            {"i skogen", "\U0001F333" + ",ett träd från skogen"}
         };
 
         public Dictionary<string, string> Events => new Dictionary<string, string>()
         {
-            {"vill ha en fest", "\U0001F382" },
-            {"vill ha en bil", "\U0001F698"},
-            {"vill ha ett hav", "\U0001F30A"},
-            {"vill ha godis", "\U0001F36C" + "\U0001F36D"},
-            {"vill ha en ny skola", "\U0001F3EB"},
-            {"vill ha ett slott", "\U0001F3F0"},
-            {"vill ha en drake", "\U0001F409"},
-            {"vill ha en ny måne", "\U0001F314"},
-            {"vill ha en regnbåge", "\U0001F308"}
+            {"vill ha en fest", "\U0001F382" + ",en tårta" },
+            {"vill ha en bil", "\U0001F698" + ",en bil"},
+            {"vill ha ett hav", "\U0001F30A" + ",en våg"},
+            {"vill ha godis", "\U0001F36C" + "\U0001F36D" + ",godiset"},
+            {"vill ha en ny skola", "\U0001F3EB" + ",skolan"},
+            {"vill ha ett slott", "\U0001F3F0" + ",ett slott"},
+            {"vill ha en drake", "\U0001F409" + ",en drake"},
+            {"vill ha en ny måne", "\U0001F314" + ",månen"},
+            {"vill ha en regnbåge", "\U0001F308" + ",regnbågen"}
         };
 
         public List<string> FairyTaleStarts => new List<string>()
@@ -175,7 +175,7 @@ namespace App1.Languages
 
         public List<string> Actions => new List<string>()
         {
-            StringReplacer.Character1_Name + " vill ha en sak",
+            StringReplacer.Character1_Name + " vill ha en sak " + StringReplacer.Place,
         };
 
         public List<string> Continuations => new List<string>()

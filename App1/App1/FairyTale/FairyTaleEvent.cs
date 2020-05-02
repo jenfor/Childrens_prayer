@@ -9,12 +9,14 @@ namespace App1.FairyTale
         public string Action = String.Empty;
         public string Event = String.Empty;
         public string Emoji = String.Empty;
+        public string ImageDescription = String.Empty;
 
-        public FairyTaleEvent(string events, string action,  string emoji)
+        public FairyTaleEvent(string events, string action,  string emoji, string imageDescription)
         {
             Action = action;
             Event = events;
             Emoji = emoji;
+            ImageDescription = imageDescription;
         }
     }
 }

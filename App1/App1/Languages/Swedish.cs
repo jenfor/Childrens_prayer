@@ -93,34 +93,49 @@ namespace App1.Languages
         
         public Dictionary<string, string> Places => new Dictionary<string, string>()
         {
-            {"på jorden", "\U0001F30D"},
-            {"på deras planet", "\U0001FA90"},// ToDo: Fix this emoji
-            {"i deras stad", "\U0001F306"},
-            {"i deras land", "\U0001F304"},
-            {"i deras hembygd", "\U0001F3DE"},
-            {"i deras by", "\U0001F3D8"},
-            {"i skogen", "\U0001F333"}
+            {"på jorden", "\U0001F30D" + ",jorden"},
+            {"på deras planet", "\U0001FA90" + ",deras planet"},// ToDo: Fix this emoji
+            {"i deras stad", "\U0001F306" + ",staden"},
+            {"i deras land", "\U0001F304" + ",en bild från deras land"},
+            {"i deras hembygd", "\U0001F3DE" + ",hembygden"},
+            {"i deras by", "\U0001F3D8" + ",byn"},
+            {"i skogen", "\U0001F333" + ",ett träd från skogen"}
         };
         
         public Dictionary<string, string> Events => new Dictionary<string, string>()
         {
-            {"hade bestämt sig för att ordna en stor låtsasfest dit alla skulle vara bjudna", "\U0001F382" },
-            {"började packa en väska för att det skulle se ut som att " + StringReplacer.Character1_Gender + " var på väg ut på en längre resa", "\U0001F45C"},
-            {"började med att säga till alla att det var en mycket viktig dag idag", "\U0001F338"},
-            {"påstod att om alla samarbetade kunde de tilsammans bygga ett rymdskepp", "\U0001F6F8"},
-            {"trodde att det var lätt som en plätt att bygga en bil", "\U0001F698"},
-            {"menade att det var möjligt att bygga städer på havsbotten", "\U0001F30A"},
-            {"ville starta en ny sorts godisfabrik", "\U0001F36C" + "\U0001F36D"},
-            {"låtsades att " + StringReplacer.Character1_Gender +" var stor nog att börja i skolan redan nu", "\U0001F3EB"},
-            {"hade kommit på idén att sätta segel på ryggen", "\U0001F32C"},
-            {"hade bestämt sig för att uppfinna vingar som fungerade för alla", "\U0001F4B8"},
-            {"ville ordna en flygkurs för alla", "\U0001F6E9"},
-            //{"tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84"},// ToDo: Fix this emoji
-            {"trodde det var enkelt att bygga ett stort slott av sandkorn", "\U0001F3F0"},
-            {"ville bevisa att det fortfarande fanns levande drakar", "\U0001F409"},
+            {"hade bestämt sig för att ordna en stor låtsasfest dit alla skulle vara bjudna",
+                "\U0001F382" + ",en tårta"},
+            {"började packa en väska för att det skulle se ut som att " + StringReplacer.Character1_Gender + " var på väg ut på en längre resa"
+                , "\U0001F45C" + ",en väska"},
+            {"började med att säga till alla att det var en mycket viktig dag idag",
+                "\U0001F338" + ",en blomma"},
+            {"påstod att om alla samarbetade kunde de tilsammans bygga ett rymdskepp",
+                "\U0001F6F8"  + ",ett rymdskepp"},
+            {"trodde att det var lätt som en plätt att bygga en bil",
+                "\U0001F698" + ",en bil"},
+            {"menade att det var möjligt att bygga städer på havsbotten",
+                "\U0001F30A"  + ",en havsvåg"},
+            {"ville starta en ny sorts godisfabrik",
+                "\U0001F36C" + "\U0001F36D"  + ",godiset"},
+            {"låtsades att " + StringReplacer.Character1_Gender +" var stor nog att börja i skolan redan nu",
+                "\U0001F3EB" + ",skolan"},
+            {"hade kommit på idén att sätta segel på ryggen",
+                "\U0001F32C"  + ",vinden"},
+            {"hade bestämt sig för att uppfinna vingar som fungerade för alla",
+                "\U0001F4B8" + ",pengar med vingar"},
+            {"ville ordna en flygkurs för alla",
+                "\U0001F6E9"  + ",ett flygplan"},
+            //{"tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84" + ", ett trollspö"},// ToDo: Fix this emoji
+            {"trodde det var enkelt att bygga ett stort slott av sandkorn",
+                "\U0001F3F0" + ",ett stort slott"},
+            {"ville bevisa att det fortfarande fanns levande drakar",
+                "\U0001F409"  + ",en drake"},
             //{"hade hittat en lampa som det kunde vara en ande i", "\U0001FA94"},// ToDo: Fix this emoji
-            {"trodde sig ha hittat en ny väg till månen", "\U0001F314"},
-            {"hade hittat platsen där regnbågen börjar", "\U0001F308"}
+            {"trodde sig ha hittat en ny väg till månen",
+                "\U0001F314" + ",månen"},
+            {"hade hittat platsen där regnbågen börjar",
+                "\U0001F308" + ",regnbågen"}
         };
 
         public List<string> FairyTaleStarts => new List<string>()
@@ -195,7 +210,7 @@ namespace App1.Languages
 
         public List<string> PlaceAdjectives => new List<string>()
         {
-            "fredligt",
+            "möjligt",
             "ljuvligt",
             "besvärligt",
             "underbart",
@@ -239,7 +254,7 @@ namespace App1.Languages
             StringReplacer.Character1_Name + " hade kommit på en ny spännande idé",
             "Idag skulle " + StringReplacer.Character1_Name + " pröva någonting nytt",
             StringReplacer.Character1_Name + " skulle testa en ny idé",
-            StringReplacer.Character1_Name + " ville förverkliga en av sina egna idéer",
+            StringReplacer.Character1_Name + " ville förverkliga en av sina egna drömmar",
             StringReplacer.Character1_Name + " ville göra en stor förändring i sitt liv",
             StringReplacer.Character1_Name + " ville se till att saker och ting förändrades",
             "Idag ville " +StringReplacer.Character1_Name + " ge alla en stor överraskning",
