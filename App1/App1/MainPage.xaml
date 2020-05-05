@@ -33,7 +33,7 @@
             <Button Text="Write a fairy tale in English" Command="{Binding EnglishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
             <Button Text="Skriv en saga på svenska" Command="{Binding SwedishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
             <Label Grid.Column="0"  Grid.Row="1"   Text="{Binding StartImage}" HorizontalTextAlignment="Center" Margin="0,50,0,0" IsVisible="{Binding StartButtonVisibility}"
-               VerticalTextAlignment="Center" FontSize="130" Grid.RowSpan="2"></Label>
+               VerticalTextAlignment="Center" FontSize="110" Grid.RowSpan="2"></Label>
         </StackLayout>
 
         <Button Grid.Column="1" Text="{Binding BackTostart}" Command="{Binding BackToStart}" BackgroundColor="LightBlue" Margin="10, 35, 5, 10"></Button>

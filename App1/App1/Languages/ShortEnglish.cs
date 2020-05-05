@@ -97,7 +97,7 @@ namespace App1.Languages
             {"on their planet", "\U0001FA90" + ",their planet"}, // ToDo: Fix this emoji
             {"in their city", "\U0001F306" + ",the city"},
             {"in their country", "\U0001F304" + ",mountains from their country"},
-            {"in their forest", "\U0001F333" + ",a tree"}
+            {"in their forest", "\U0001F333" + ",a tree in their forest"}
         };
 
         public Dictionary<string, string> Events => new Dictionary<string, string>()
@@ -173,7 +173,7 @@ namespace App1.Languages
 
         public List<string> Actions => new List<string>()
         {
-            StringReplacer.Character1_Name + " wants to see something new " + StringReplacer.Place,
+            StringReplacer.Character1_Name + " wants to see something new",
         };
 
         public List<string> Continuations => new List<string>()

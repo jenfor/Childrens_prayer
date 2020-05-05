@@ -43,8 +43,8 @@ namespace App1.FairyTale
             pageList.Add(CreatePage(PresentFairyTaleCharacter2(language), fairyTaleCharacter2.Emoji, fairyTaleCharacter2.Name, string.Empty, PageNr+1));
             thisFairyTaleEmojis.Add(fairyTaleCharacter2.Emoji + "," + fairyTaleCharacter2.Name); ;
 
-            pageList.Add(CreatePage(PresentFairyTalePlace(language), fairyTalePalce.Emoji, fairyTalePalce.ImageDescription, string.Empty, PageNr+2)); 
-            thisFairyTaleEmojis.Add(fairyTalePalce.Emoji + "," + fairyTalePalce.ImageDescription);
+            //pageList.Add(CreatePage(PresentFairyTalePlace(language), fairyTalePalce.Emoji, fairyTalePalce.ImageDescription, string.Empty, PageNr+2)); 
+            //thisFairyTaleEmojis.Add(fairyTalePalce.Emoji + "," + fairyTalePalce.ImageDescription);
 
             pageList.Add(CreatePage(PresentFairyTaleEvent(language), fairyTaleCharacter1.Emoji + fairyTaleEvent.Emoji,
                 fairyTaleCharacter1.Name + language.And + fairyTaleEvent.ImageDescription, string.Empty, PageNr+3));

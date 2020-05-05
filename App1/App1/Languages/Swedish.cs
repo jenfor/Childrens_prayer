@@ -155,8 +155,8 @@ namespace App1.Languages
             "I ett låtsasland, som bara finns i vår fantasi, levde en gång en",
             "Inte långt härifrån bodde en gång en",
             "Precis under din säng finns det ett litet hål."
-                    + " Det hålet är så litet att ingen människa kan se det, men inuti finns det en hel värld."
-                    + " I den världen bodde en gång en"
+                    + " Det är så litet att ingen människa kan se det, men inuti finns det en hel värld."
+                    + " I den världen bodde en"
         };
 
         public List<string> Relationships => new List<string>()
