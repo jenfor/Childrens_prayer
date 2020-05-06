@@ -129,7 +129,7 @@ namespace App1.Languages
             //{"tänkte klä ut sig till en god fe och dela ut tre önskningar", "\U0001FA84" + ", ett trollspö"},// ToDo: Fix this emoji
             {"trodde det var enkelt att bygga ett stort slott av sandkorn",
                 "\U0001F3F0" + ",ett stort slott"},
-            {"ville bevisa att det fortfarande fanns levande drakar",
+            {"ville ta reda på om det fortfarande fanns levande drakar",
                 "\U0001F409"  + ",en drake"},
             //{"hade hittat en lampa som det kunde vara en ande i", "\U0001FA94"},// ToDo: Fix this emoji
             {"trodde sig ha hittat en ny väg till månen",

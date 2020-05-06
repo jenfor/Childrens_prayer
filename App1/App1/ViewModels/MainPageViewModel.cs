@@ -68,6 +68,18 @@ namespace App1.ViewModels
             }
         }
 
+        private int _imageFontSize = 110;
+        public int ImageFontSize
+        {
+            get => _imageFontSize;
+            set
+            {
+                _imageFontSize = value;
+
+                var args = new PropertyChangedEventArgs(nameof(ImageFontSize));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
         private string _imageDescription = fairyTale.PresentPage.ImageDescription;
         public string ImageDescription
         {
@@ -271,19 +283,6 @@ namespace App1.ViewModels
             }
         }
 
-        /*private GridLength _imageWidth = new GridLength(1, GridUnitType.Star);
-        public GridLength ImageWidth
-        {
-            get => _imageWidth;
-            set
-            {
-                _imageWidth = value;
-
-                var args = new PropertyChangedEventArgs(nameof(ImageWidth));
-                PropertyChanged?.Invoke(this, args);
-            }
-        }*/
-
         private GridLength _newButtonWidth = new GridLength(0);
         public GridLength NewImageButtonWidth
         {
@@ -334,7 +333,18 @@ namespace App1.ViewModels
                 Image = fairyTale.PresentPage.Emoji;
                 ImageDescription = fairyTale.PresentPage.ImageDescription;
                 Placeholder = fairyTale.PresentPage.Palceholder;
+
+                if(fairyTale.PresentPage.NrOfEmoji== 1)
+                {
+                    ImageFontSize = 110;
+                }
+                else
+                {
+                    ImageFontSize = 100;
+                }
+
                 SetVisibilitys();
+
             });
 
             ShareFairyTale = new Command(() =>
@@ -356,6 +366,16 @@ namespace App1.ViewModels
                     Image = fairyTale.PresentPage.Emoji;
                     ImageDescription = fairyTale.PresentPage.ImageDescription;
                     Placeholder = fairyTale.PresentPage.Palceholder;
+
+                    if (fairyTale.PresentPage.NrOfEmoji == 1)
+                    {
+                        ImageFontSize = 110;
+                    }
+                    else
+                    {
+                        ImageFontSize = 100;
+                    }
+
                     SetVisibilitys();
                 }
                 else

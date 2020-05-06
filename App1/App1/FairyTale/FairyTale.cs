@@ -37,21 +37,21 @@ namespace App1.FairyTale
             fairyTalePalce = GetFairyTalePlace(language);
             fairyTaleEvent = GetFairyTaleEvent(language);
 
-            pageList.Add(CreatePage(PresentFairyTaleCharacter1(language), fairyTaleCharacter1.Emoji, fairyTaleCharacter1.Name, string.Empty, PageNr));
+            pageList.Add(CreatePage(PresentFairyTaleCharacter1(language), fairyTaleCharacter1.Emoji, fairyTaleCharacter1.Name, string.Empty, PageNr, 1));
             thisFairyTaleEmojis.Add(fairyTaleCharacter1.Emoji + "," + fairyTaleCharacter1.Name);
 
-            pageList.Add(CreatePage(PresentFairyTaleCharacter2(language), fairyTaleCharacter2.Emoji, fairyTaleCharacter2.Name, string.Empty, PageNr+1));
+            pageList.Add(CreatePage(PresentFairyTaleCharacter2(language), fairyTaleCharacter2.Emoji, fairyTaleCharacter2.Name, string.Empty, PageNr+1, 1));
             thisFairyTaleEmojis.Add(fairyTaleCharacter2.Emoji + "," + fairyTaleCharacter2.Name); ;
 
             //pageList.Add(CreatePage(PresentFairyTalePlace(language), fairyTalePalce.Emoji, fairyTalePalce.ImageDescription, string.Empty, PageNr+2)); 
             //thisFairyTaleEmojis.Add(fairyTalePalce.Emoji + "," + fairyTalePalce.ImageDescription);
 
             pageList.Add(CreatePage(PresentFairyTaleEvent(language), fairyTaleCharacter1.Emoji + fairyTaleEvent.Emoji,
-                fairyTaleCharacter1.Name + language.And + fairyTaleEvent.ImageDescription, string.Empty, PageNr+3));
+                fairyTaleCharacter1.Name + language.And + fairyTaleEvent.ImageDescription, string.Empty, PageNr+3, 2));
             thisFairyTaleEmojis.Add(fairyTaleEvent.Emoji + "," + fairyTaleEvent.ImageDescription);
 
             pageList.Add(CreatePage(String.Empty, fairyTaleEvent.Emoji + fairyTaleCharacter2.Emoji, fairyTaleEvent.ImageDescription + language.And + fairyTaleCharacter2.Name,
-                PresentFairyTaleContinuation(language) + language.TapHere, PageNr+4));
+                PresentFairyTaleContinuation(language) + language.TapHere, PageNr+4, 2));
 
             LastComputerPreperdPage = pageList.Count -1;
         }
@@ -79,7 +79,7 @@ namespace App1.FairyTale
                     language.ExchangeString.Replace(StringReplacer.Character1_Animal, fairyTaleCharacter1.Animal)
                     .Replace(StringReplacer.Character1_Name, fairyTaleCharacter1.Name)
                     .Replace(StringReplacer.Character2_Animal, fairyTaleCharacter2.Animal)
-                    .Replace(StringReplacer.Character2_Name, fairyTaleCharacter2.Name), PageNr));
+                    .Replace(StringReplacer.Character2_Name, fairyTaleCharacter2.Name), PageNr, 2));
             }
 
             PresentPage = pageList[PageNr];
@@ -172,11 +172,12 @@ namespace App1.FairyTale
             return emoji2;
         }
 
-        public FairyTalePage CreatePage(string text, string emoji, string imageDescription, string placeholder, int pageNr)
+        public FairyTalePage CreatePage(string text, string emoji, string imageDescription, string placeholder, int pageNr, int nrOfEmoji)
         {
             var page = new FairyTalePage();
             page.Text = text;
             page.Emoji = emoji;
+            page.NrOfEmoji = nrOfEmoji;
             page.ImageDescription = imageDescription;
             page.Palceholder = placeholder;
             page.PageNr = pageNr;
@@ -271,6 +272,7 @@ namespace App1.FairyTale
         public string Text = string.Empty;
         public string Emoji = string.Empty;
         public string ImageDescription = String.Empty;
+        public int NrOfEmoji = 0;
         public string Palceholder = string.Empty;
         public int PageNr = 0;
         public bool IsShown = false;
