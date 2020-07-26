@@ -5,7 +5,7 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using App1.FairyTale;
+using App1.Prayer;
 using App1.Languages;
 
 namespace App1.ViewModels
@@ -14,7 +14,7 @@ namespace App1.ViewModels
     public class MainPageViewModel : INotifyPropertyChanged
     {
         public static Language language = new English();
-        private static ThePray prayer = new ThePray(language);
+        private static ThePrayer prayer = new ThePrayer(language);
 
         public Command SwedishFairyTale { get; }
         public Command EnglishFairyTale { get; }
@@ -298,17 +298,17 @@ namespace App1.ViewModels
 
         public MainPageViewModel()
         {
-            SwedishFairyTale = new Command( () =>
-            {
-                language = new Swedish();
-                SwedishVersion();
-            });
+            SwedishFairyTale = new Command(() =>
+           {
+               language = new Swedish();
+               SwedishVersion();
+           });
 
-            EnglishFairyTale = new Command( () =>
-            {
-                language = new English();
-                EnglishVersion();
-            });
+            EnglishFairyTale = new Command(() =>
+           {
+               language = new English();
+               EnglishVersion();
+           });
 
             BackToStart = new Command(async () =>
             {
@@ -320,11 +320,11 @@ namespace App1.ViewModels
                 SetVisibilitys();
             });
 
-            ContinueFairyTale = new Command(async () =>
+            ContinueFairyTale = new Command(/*async*/ () =>
             {
                 if (prayer.PageNr == prayer.LastComputerPreperdPage)
                 {
-                    await UserTimeToWrite(language);
+                    //await UserTimeToWrite(language);
                 }
 
                 prayer.PresentPage.Text = Text;
@@ -385,8 +385,8 @@ namespace App1.ViewModels
 
             });
 
-            LinkClickCommand = new Command<string>( (url) =>
-           {
+            LinkClickCommand = new Command<string>((url) =>
+          {
                //Device.OpenUri(new Uri(url));
            });
 
@@ -411,7 +411,7 @@ namespace App1.ViewModels
             }
             else
             {*/
-                language = new Swedish();
+            language = new Swedish();
             //}
 
             ShowNewFairyTale(language);
@@ -420,14 +420,14 @@ namespace App1.ViewModels
 
         public /*async Task*/ void EnglishVersion()
         {
-           /* var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
-            if (action)
-            {
-                language = new ShortEnglish();
-            }
-            else
-            {*/
-                language = new English();
+            /* var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
+             if (action)
+             {
+                 language = new ShortEnglish();
+             }
+             else
+             {*/
+            language = new English();
             //}
 
             ShowNewFairyTale(language);
@@ -452,14 +452,14 @@ namespace App1.ViewModels
 
         public async Task UserTimeToWrite(Language language)
         {
-            await App.Current.MainPage.DisplayAlert(language.Information, language.InformationExchangeString.Replace(StringReplacer.Character1_Name, prayer.PrayerObject.Object)
-                     .Replace(StringReplacer.Character2_Name, prayer.PrayerObject.Object)
-                     .Replace(StringReplacer.Character1_Name, prayer.PrayerObject.Object), "OK");
+            await App.Current.MainPage.DisplayAlert(language.Information, language.InformationExchangeString.Replace(StringReplacer.Character1_Name, prayer.PrayerObject.ObjectFirstForm)
+                     .Replace(StringReplacer.Character2_Name, prayer.PrayerObject.ObjectFirstForm)
+                     .Replace(StringReplacer.Character1_Name, prayer.PrayerObject.ObjectSecondForm), "OK");
         }
 
         private void ShowNewFairyTale(Language language)
         {
-            prayer = new ThePray(language);
+            prayer = new ThePrayer(language);
 
             Text = prayer.PresentPage.Text;
             Image = prayer.PresentPage.Emoji;
@@ -520,7 +520,7 @@ namespace App1.ViewModels
             NewImageButtonWidth = new GridLength(0);
             MainPageVisibility = false;
 
-            Summary = prayer.GetFairytaleString(language);
+            Summary = prayer.GetPrayerString(language);
         }
 
         private async Task ShareText(string text)

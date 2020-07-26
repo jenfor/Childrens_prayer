@@ -187,6 +187,8 @@ namespace App1.Languages
         // Addition A childs prayer
         public string God => "Gud";
         public string All => "alla";
+        public string TodayHeThinks => "Idag tänker han särskilt mycket på";
+
 
         public List<string> GodCareVerb => new List<string>()
         {

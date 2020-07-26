@@ -263,6 +263,8 @@ namespace App1.Languages
         // Addition A childs prayer
         public string God => "God";
         public string All => "all";
+        public string TodayHeThinks => "Today he thinks especially of";
+
 
         public List<string> GodCareVerb => new List<string>()
         {
@@ -273,16 +275,16 @@ namespace App1.Languages
 
         public Dictionary<string, string> Loves_MeetsList => new Dictionary<string, string>()
         {
-            {"the earth", "\U0001F30D" + ", "},
-            {"of you", "\U0001FA90" + ", "},
-            {"your friends", "\U0001F306" + ", "},
-            {"your family", "\U0001F304" + ", "},
-            {"the animals", "\U0001F3DE" + ", "},
-            {"the plants", "\U0001F3D8" + ", "},
-            {"the world", "\U0001F30D" + ", "},
-            {"the sea", "\U0001F30D" + ", "},
-            {"the lakes", "\U0001F30D" + ", "},
-            {"the trees", "\U0001F30D" + ", "},
+            {"the earth", "\U0001F30D" + ",the earth"},
+            {"of you", "\U0001FA90" + ",you"},
+            {"your friends", "\U0001F306" + ",a friend"},
+            {"your family", "\U0001F304" + ",someone in your family"},
+            {"the animals", "\U0001F3DE" + ",an animal"},
+            {"the plants", "\U0001F3D8" + ",a plant"},
+            {"the world", "\U0001F30D" + ",our world"},
+            {"the sea", "\U0001F30D" + ",a sea"},
+            {"the lakes", "\U0001F30D" + ",a lake"},
+            {"the trees", "\U0001F30D" + ",a tree"},
         };
     } 
 }

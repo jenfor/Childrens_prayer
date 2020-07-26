@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace App1.FairyTale
+namespace App1.Prayer
 {
-    public class ThePray
-    {
+    public class ThePrayer
+    { 
        public AChildsPrayerPage PresentPage = new AChildsPrayerPage();
         public int PageNr = 0;
         public int LastComputerPreperdPage = 4;
@@ -22,7 +22,7 @@ namespace App1.FairyTale
 
         private List<String> thisPrayerEmojis = new List<string>();
 
-        public ThePray(Language language)
+        public ThePrayer(Language language)
         {
             WritePrayer(language);
             ViewNextPage(language);
@@ -38,6 +38,8 @@ namespace App1.FairyTale
 
             pageList.Add(CreatePage(PrayerStart(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr, 1));
             thisPrayerEmojis.Add(PrayerObject.Emoji + "," + PrayerObject.ImageDescription);
+
+            pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr+1, 1));
 
             //fairyTalePalce = GetFairyTalePlace(language);
             //fairyTaleEvent = GetFairyTaleEvent(language);
@@ -199,9 +201,9 @@ namespace App1.FairyTale
             return page;
         }
 
-        public string GetFairytaleString(Language language)
+        public string GetPrayerString(Language language)
         {
-            var sb = new StringBuilder();
+            var sb = new StringBuilder(); 
             var pagesToUse = pageList.Where(x => x.IsShown);
 
             foreach (var page in pagesToUse)
@@ -223,22 +225,32 @@ namespace App1.FairyTale
             sb.Append(language.God + language.Space +
                 GetWords(language.GodCareVerb) + language.Space
                 + language.All + language.Space
-                + PrayerObject.Object
+                + PrayerObject.ObjectFirstForm + language.Dot
                 );
 
             return sb.ToString();
         }
 
-       /* public string PresentFairyTaleCharacter1(Language language)
+        public string SecondPrayerPage(Language language)
         {
             var sb = new StringBuilder();
+            sb.Append(language.TodayHeThinks + language.Space +
+                PrayerObject.ObjectSecondForm + language.Dot
+                );
 
-            //sb.Append(GetWords(language.FairyTaleStarts) + language.Space)
-            /*sb.Append(
-                fairyTaleCharacter1.Adjective + language.Space + fairyTaleCharacter1.Animal + language.Space + language.WasNamed
-                        + fairyTaleCharacter1.Name + language.Dot*/
-            //);
-            //return sb.ToString();
+            return sb.ToString();
+        }
+
+        /* public string PresentFairyTaleCharacter1(Language language)
+         {
+             var sb = new StringBuilder();
+
+             //sb.Append(GetWords(language.FairyTaleStarts) + language.Space)
+             /*sb.Append(
+                 fairyTaleCharacter1.Adjective + language.Space + fairyTaleCharacter1.Animal + language.Space + language.WasNamed
+                         + fairyTaleCharacter1.Name + language.Dot*/
+        //);
+        //return sb.ToString();
         //}
 
         /*public string PresentFairyTaleCharacter2(Language language)
@@ -250,7 +262,7 @@ namespace App1.FairyTale
                         + language.Space + fairyTaleCharacter2.RelationShip + language.Comma + language.A + fairyTaleCharacter2.Animal + language.WhoWasCalled + fairyTaleCharacter2.Name + language.Dot
             );*/
 
-            //return sb.ToString();
+        //return sb.ToString();
         //}
 
         /*public string PresentFairyTalePlace(Language language)
@@ -262,28 +274,28 @@ namespace App1.FairyTale
                 + fairyTalePalce.Place + language.Was + fairyTalePalce.Condition + language.Dot
             );*/
 
-            //sb.Append(fairyTalePalce.Circumstance.Replace(StringReplacer.Place_Condition, fairyTalePalce.Condition).Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot);
+        //sb.Append(fairyTalePalce.Circumstance.Replace(StringReplacer.Place_Condition, fairyTalePalce.Condition).Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot);
 
-            //return sb.ToString();
+        //return sb.ToString();
         //}
 
         //public string PresentFairyTaleEvent(Language language)
         //{
-            //var sb = new StringBuilder();
+        //var sb = new StringBuilder();
 
-           /* sb.Append(fairyTaleEvent.Action.Replace(StringReplacer.Place, fairyTalePalce.Place).Replace(StringReplacer.Character1_Name, fairyTaleCharacter1.Name) + language.Dot);
-            sb.Append(fairyTaleCharacter1.Gender + language.Space + fairyTaleEvent.Event.Replace(StringReplacer.Character1_Gender, fairyTaleCharacter1.Gender.ToLower()).Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot);
-           */
-            //return sb.ToString();
+        /* sb.Append(fairyTaleEvent.Action.Replace(StringReplacer.Place, fairyTalePalce.Place).Replace(StringReplacer.Character1_Name, fairyTaleCharacter1.Name) + language.Dot);
+         sb.Append(fairyTaleCharacter1.Gender + language.Space + fairyTaleEvent.Event.Replace(StringReplacer.Character1_Gender, fairyTaleCharacter1.Gender.ToLower()).Replace(StringReplacer.Place, fairyTalePalce.Place) + language.Dot);
+        */
+        //return sb.ToString();
         //}
 
         //public string PresentFairyTaleContinuation(Language language)
         //{
-            //var sb = new StringBuilder();
+        //var sb = new StringBuilder();
 
-            //sb.Append(GetWords(language.Continuations).Replace(StringReplacer.Character1_Gender, fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots);
+        //sb.Append(GetWords(language.Continuations).Replace(StringReplacer.Character1_Gender, fairyTaleCharacter1.Gender) + language.Space + fairyTaleCharacter2.Name + language.Dots);
 
-            //return sb.ToString();
+        //return sb.ToString();
         //}
 
         public string GetWords(List<string> wordList)

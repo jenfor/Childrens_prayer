@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace App1.FairyTale
+namespace App1.Prayer
 {
     public class FairyTalePlace
     {

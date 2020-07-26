@@ -273,6 +273,8 @@ namespace App1.Languages
         // Addition A childs prayer
         public string God => "Gud";
         public string All => "alla";
+        public string TodayHeThinks => "Idag tänker han särskilt mycket på";
+
 
         public List<string> GodCareVerb => new List<string>()
         {
@@ -283,16 +285,16 @@ namespace App1.Languages
 
         public Dictionary<string, string> Loves_MeetsList => new Dictionary<string, string>()
         {
-            {"på jorden", "\U0001F30D" + ", "},
-            {"dig", "\U0001FA90" + ", "},
-            {"dina vänner", "\U0001F306" + ", "},
-            {"i din familj", "\U0001F304" + ", "},
-            {"djuren", "\U0001F3DE" + ", "},
-            {"växterna", "\U0001F3D8" + ", "},
-            {"i hela världen", "\U0001F30D" + ", "},
-            {"haven", "\U0001F30D" + ", "},
-            {"sjöarna", "\U0001F30D" + ", "},
-            {"träden", "\U0001F30D" + ", "},
+            {"på jorden", "\U0001F30D" + ",vår jord"},
+            {"som är som dig", "\U0001FA90" + ",dig"},
+            {"dina vänner", "\U0001F306" + ",en vän"},
+            {"i din familj", "\U0001F304" + ",en i din familj"},
+            {"djuren", "\U0001F3DE" + ",ett djur"},
+            {"växterna", "\U0001F3D8" + ",en växt"},
+            {"hela världen", "\U0001F30D" + ",vår värld"},
+            {"haven", "\U0001F30D" + ",ett hav"},
+            {"sjöarna", "\U0001F30D" + ",en sjö"},
+            {"träden", "\U0001F30D" + ",ett träd"},
         };
     }
 }

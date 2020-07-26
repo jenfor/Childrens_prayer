@@ -64,6 +64,7 @@ namespace App1.Languages
 
         // Addition A childs prayer
         string God { get; }
+        string TodayHeThinks { get; }
         List<string> GodCareVerb { get; }
         string All { get; }
         Dictionary<string, string> Loves_MeetsList { get; }
