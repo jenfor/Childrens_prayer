@@ -61,5 +61,13 @@ namespace App1.Languages
         List<string> Gender { get; }
         List<string> Actions { get; }
         List<string> Continuations { get; }
+
+        // Addition A childs prayer
+        string God { get; }
+        List<string> GodCareVerb { get; }
+        string All { get; }
+        Dictionary<string, string> Loves_MeetsList { get; }
+
+
     }
 }

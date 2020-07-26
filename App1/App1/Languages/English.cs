@@ -7,7 +7,7 @@ namespace App1.Languages
     public class English: Language
     {
         public string BackToStart => "Back to start";
-        public string ShareFairyTale => "Share the fairy tale";
+        public string ShareFairyTale => "Share the prayer";
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
         public string ViewFairyTale => "View/Share";
@@ -19,8 +19,8 @@ namespace App1.Languages
         public string Question => "Question";
         public string Information => "It is your turn";
 
-        public string BackToStartPageWarning => "Are you sure you want to go back to start?" + NewLine + NewLine + "This story will be deleted!";
-        public string Deletion => "Are you sure you want to delete this fairy tale and create a new one?";
+        public string BackToStartPageWarning => "Are you sure you want to go back to start?" + NewLine + NewLine + "This prayer will be deleted!";
+        public string Deletion => "Are you sure you want to delete this prayer and create a new one?";
 
         public string TapHere => "Tap here to write!";
 
@@ -259,5 +259,30 @@ namespace App1.Languages
             StringReplacer.Character1_Gender + " refused to let",
             "But"
         };
-    }
+
+        // Addition A childs prayer
+        public string God => "God";
+        public string All => "all";
+
+        public List<string> GodCareVerb => new List<string>()
+        {
+            "loves",
+            "meets",
+            "cares about"
+        };
+
+        public Dictionary<string, string> Loves_MeetsList => new Dictionary<string, string>()
+        {
+            {"the earth", "\U0001F30D" + ", "},
+            {"of you", "\U0001FA90" + ", "},
+            {"your friends", "\U0001F306" + ", "},
+            {"your family", "\U0001F304" + ", "},
+            {"the animals", "\U0001F3DE" + ", "},
+            {"the plants", "\U0001F3D8" + ", "},
+            {"the world", "\U0001F30D" + ", "},
+            {"the sea", "\U0001F30D" + ", "},
+            {"the lakes", "\U0001F30D" + ", "},
+            {"the trees", "\U0001F30D" + ", "},
+        };
+    } 
 }

@@ -1,40 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.iOS\\App1.iOS.csproj": {}
+    "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.iOS/App1.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.iOS\\App1.iOS.csproj": {
+    "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.iOS/App1.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.iOS\\App1.iOS.csproj",
+        "projectUniqueName": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.iOS/App1.iOS.csproj",
         "projectName": "App1.iOS",
-        "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.iOS\\App1.iOS.csproj",
-        "packagesPath": "C:\\Users\\jenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.iOS\\obj\\",
+        "projectPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.iOS/App1.iOS.csproj",
+        "packagesPath": "/Users/jennyforsberg/.nuget/packages/",
+        "outputPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.iOS/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/jennyforsberg/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "xamarinios10"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://api.nuget.org/v3/index.json": {},
-          "http://packagesource": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj": {
-                "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj"
+              "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj": {
+                "projectPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj"
               }
             }
           }
@@ -66,30 +59,23 @@
         }
       }
     },
-    "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj": {
+    "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj",
+        "projectUniqueName": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj",
-        "packagesPath": "C:\\Users\\jenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\obj\\",
+        "projectPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj",
+        "packagesPath": "/Users/jennyforsberg/.nuget/packages/",
+        "outputPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/jennyforsberg/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://api.nuget.org/v3/index.json": {},
-          "http://packagesource": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -130,7 +116,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
         }
       }
     }

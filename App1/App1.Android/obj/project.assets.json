@@ -1932,40 +1932,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jenny\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/jennyforsberg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.Android\\App1.Android.csproj",
+      "projectUniqueName": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.Android/App1.Android.csproj",
       "projectName": "App1.Android",
-      "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.Android\\App1.Android.csproj",
-      "packagesPath": "C:\\Users\\jenny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1.Android\\obj\\",
+      "projectPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.Android/App1.Android.csproj",
+      "packagesPath": "/Users/jennyforsberg/.nuget/packages/",
+      "outputPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/jennyforsberg/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://api.nuget.org/v3/index.json": {},
-        "http://packagesource": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj": {
-              "projectPath": "C:\\Users\\jenny\\Desktop\\Sagoappen\\fairytale 200316\\FairyTale\\App1\\App1\\App1.csproj"
+            "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj": {
+              "projectPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj"
             }
           }
         }

@@ -14,11 +14,11 @@ namespace App1.ViewModels
     public class MainPageViewModel : INotifyPropertyChanged
     {
         public static Language language = new English();
-        private static TheFairyTale fairyTale = new TheFairyTale(language);
+        private static ThePray prayer = new ThePray(language);
 
         public Command SwedishFairyTale { get; }
         public Command EnglishFairyTale { get; }
-        public Command BackToStart{ get; }
+        public Command BackToStart { get; }
         public Command ContinueFairyTale { get; }
         public Command Back { get; }
         public Command ShareFairyTale { get; }
@@ -80,7 +80,7 @@ namespace App1.ViewModels
                 PropertyChanged?.Invoke(this, args);
             }
         }
-        private string _imageDescription = fairyTale.PresentPage.ImageDescription;
+        private string _imageDescription = prayer.PresentPage.ImageDescription;
         public string ImageDescription
         {
             get => _imageDescription;
@@ -201,7 +201,7 @@ namespace App1.ViewModels
         {
             get
             {
-                return fairyTale.GetRandomEmojis(language);
+                return prayer.GetRandomEmojis(language);
             }
         }
 
@@ -295,24 +295,24 @@ namespace App1.ViewModels
                 PropertyChanged?.Invoke(this, args);
             }
         }
-        
+
         public MainPageViewModel()
         {
-            SwedishFairyTale = new Command(() =>
+            SwedishFairyTale = new Command( () =>
             {
                 language = new Swedish();
                 SwedishVersion();
             });
 
-            EnglishFairyTale = new Command(() =>
+            EnglishFairyTale = new Command( () =>
             {
                 language = new English();
                 EnglishVersion();
             });
 
-            BackToStart = new Command(() =>
+            BackToStart = new Command(async () =>
             {
-                BackToStartPage(language);
+                await BackToStartPage(language);
             });
 
             ShowFairyTale = new Command(() =>
@@ -320,21 +320,21 @@ namespace App1.ViewModels
                 SetVisibilitys();
             });
 
-            ContinueFairyTale = new Command(() =>
+            ContinueFairyTale = new Command(async () =>
             {
-                if (fairyTale.PageNr == fairyTale.LastComputerPreperdPage)
+                if (prayer.PageNr == prayer.LastComputerPreperdPage)
                 {
-                    UserTimeToWrite(language);
+                    await UserTimeToWrite(language);
                 }
 
-                fairyTale.PresentPage.Text = Text;
-                fairyTale.ViewNextPage(language);
-                Text = fairyTale.PresentPage.Text;
-                Image = fairyTale.PresentPage.Emoji;
-                ImageDescription = fairyTale.PresentPage.ImageDescription;
-                Placeholder = fairyTale.PresentPage.Palceholder;
+                prayer.PresentPage.Text = Text;
+                prayer.ViewNextPage(language);
+                Text = prayer.PresentPage.Text;
+                Image = prayer.PresentPage.Emoji;
+                ImageDescription = prayer.PresentPage.ImageDescription;
+                Placeholder = prayer.PresentPage.Palceholder;
 
-                if(fairyTale.PresentPage.NrOfEmoji== 1)
+                if (prayer.PresentPage.NrOfEmoji == 1)
                 {
                     ImageFontSize = 110;
                 }
@@ -357,17 +357,17 @@ namespace App1.ViewModels
                 ViewSummary();
             });
 
-            Back = new Command(() =>
+            Back = new Command(async () =>
             {
-                fairyTale.PresentPage.Text = Text;
-                if (fairyTale.ViewPreviousPage())
+                prayer.PresentPage.Text = Text;
+                if (prayer.ViewPreviousPage())
                 {
-                    Text = fairyTale.PresentPage.Text;
-                    Image = fairyTale.PresentPage.Emoji;
-                    ImageDescription = fairyTale.PresentPage.ImageDescription;
-                    Placeholder = fairyTale.PresentPage.Palceholder;
+                    Text = prayer.PresentPage.Text;
+                    Image = prayer.PresentPage.Emoji;
+                    ImageDescription = prayer.PresentPage.ImageDescription;
+                    Placeholder = prayer.PresentPage.Palceholder;
 
-                    if (fairyTale.PresentPage.NrOfEmoji == 1)
+                    if (prayer.PresentPage.NrOfEmoji == 1)
                     {
                         ImageFontSize = 110;
                     }
@@ -380,55 +380,55 @@ namespace App1.ViewModels
                 }
                 else
                 {
-                    BackToStartPage(language);
+                    await BackToStartPage(language);
                 }
 
             });
 
-            LinkClickCommand =  new Command<string>((url) =>
-            {
-                Device.OpenUri(new Uri(url));
-            });
+            LinkClickCommand = new Command<string>( (url) =>
+           {
+               //Device.OpenUri(new Uri(url));
+           });
 
             ChangeImage = new Command(() =>
             {
-                var s = fairyTale.GetRandomFairyTaleEmojis(language).Split(',');
+                /*var s = fairyTale.GetRandomEmojis(language).Split(',');
 
                 Image = s[0];
                 ImageDescription = s[1];
                 fairyTale.PresentPage.Emoji = Image;
-                fairyTale.PresentPage.ImageDescription = ImageDescription;
+                fairyTale.PresentPage.ImageDescription = ImageDescription;*/
             });
 
         }
 
-        public async Task SwedishVersion()
+        public /*async Task*/ void SwedishVersion()
         {
-            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
+            /*var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
             if (action)
             {
                 language = new ShortSwedish();
             }
             else
-            {
+            {*/
                 language = new Swedish();
-            }
+            //}
 
             ShowNewFairyTale(language);
             SetVisibilitys();
         }
 
-        public async Task EnglishVersion()
+        public /*async Task*/ void EnglishVersion()
         {
-            var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
+           /* var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
             if (action)
             {
                 language = new ShortEnglish();
             }
             else
-            {
+            {*/
                 language = new English();
-            }
+            //}
 
             ShowNewFairyTale(language);
             SetVisibilitys();
@@ -452,19 +452,19 @@ namespace App1.ViewModels
 
         public async Task UserTimeToWrite(Language language)
         {
-           await App.Current.MainPage.DisplayAlert(language.Information, language.InformationExchangeString.Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name)
-                    .Replace(StringReplacer.Character2_Name, fairyTale.fairyTaleCharacter2.Name)
-                    .Replace(StringReplacer.Character1_Name, fairyTale.fairyTaleCharacter1.Name), "OK"); 
+            await App.Current.MainPage.DisplayAlert(language.Information, language.InformationExchangeString.Replace(StringReplacer.Character1_Name, prayer.PrayerObject.Object)
+                     .Replace(StringReplacer.Character2_Name, prayer.PrayerObject.Object)
+                     .Replace(StringReplacer.Character1_Name, prayer.PrayerObject.Object), "OK");
         }
 
         private void ShowNewFairyTale(Language language)
         {
-            fairyTale = new TheFairyTale(language);
+            prayer = new ThePray(language);
 
-            Text = fairyTale.PresentPage.Text;
-            Image = fairyTale.PresentPage.Emoji;
-            ImageDescription = fairyTale.PresentPage.ImageDescription;
-            Placeholder = fairyTale.PresentPage.Palceholder;
+            Text = prayer.PresentPage.Text;
+            Image = prayer.PresentPage.Emoji;
+            //ImageDescription = fairyTale.PresentPage.ImageDescription;
+            Placeholder = prayer.PresentPage.Palceholder;
 
             SetVisibilitys();
         }
@@ -490,7 +490,7 @@ namespace App1.ViewModels
 
         private void NewImageButtonVisibility()
         {
-            if (fairyTale.PageNr > fairyTale.LastComputerPreperdPage +1)
+            if (prayer.PageNr > prayer.LastComputerPreperdPage + 1)
             {
                 NewImageButtonWidth = new GridLength(60);
                 ImageColumnSpan = 1;
@@ -505,13 +505,13 @@ namespace App1.ViewModels
         private async void ShareFuction()
         {
             SetVisibilitys();
-            fairyTale.PresentPage.Text = Text;
+            prayer.PresentPage.Text = Text;
             await ShareText(Summary);
         }
 
         private void ViewSummary()
         {
-            fairyTale.PresentPage.Text = Text;
+            prayer.PresentPage.Text = Text;
 
             StartColumnWidth = new GridLength(0);
             FairyTaleColumnWidth1 = new GridLength(0);
@@ -520,7 +520,7 @@ namespace App1.ViewModels
             NewImageButtonWidth = new GridLength(0);
             MainPageVisibility = false;
 
-            Summary = fairyTale.GetFairytaleString(language);
+            Summary = prayer.GetFairytaleString(language);
         }
 
         private async Task ShareText(string text)

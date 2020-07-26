@@ -183,6 +183,31 @@ namespace App1.Languages
             "Då vill",
             "Då kommer",
         };
+
+        // Addition A childs prayer
+        public string God => "Gud";
+        public string All => "alla";
+
+        public List<string> GodCareVerb => new List<string>()
+        {
+            "älskar",
+            "möter",
+            "bryr sig om"
+        };
+
+        public Dictionary<string, string> Loves_MeetsList => new Dictionary<string, string>()
+        {
+            {"jorden", "\U0001F30D" + ", "},
+            {"dig", "\U0001FA90" + ", "},
+            {"din vän", "\U0001F306" + ", "},
+            {"din familj", "\U0001F304" + ", "},
+            {"djuren", "\U0001F3DE" + ", "},
+            {"växterna", "\U0001F3D8" + ", "},
+            {"världen", "\U0001F30D" + ", "},
+            {"haven", "\U0001F30D" + ", "},
+            {"sjöarna", "\U0001F30D" + ", "},
+            {"träden", "\U0001F30D" + ", "},
+        };
     }
 }
 

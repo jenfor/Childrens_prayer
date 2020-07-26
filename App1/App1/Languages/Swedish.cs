@@ -15,12 +15,12 @@ namespace App1.Languages
 
         public string VersionOption => "Vilken sorts saga vill du skriva?";
 
-        public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startmenyn?" + NewLine + NewLine + "Den här sagan kommer att tas bort.";
+        public string BackToStartPageWarning => "Är du säker på att du vill gå tillbaka till startmenyn?" + NewLine + NewLine + "Den här bönen kommer att tas bort.";
         public string Warning => "Varning";
         public string Question => "Fråga";
         public string Information => "Nu är det din tur";
 
-        public string Deletion => "Är du säker på att du vill ta bort den här sagan och skriva en ny?";
+        public string Deletion => "Är du säker på att du vill ta bort den här bönen och läsa en ny?";
         public string Short => "En kort saga";
         public string Long => "En lång saga";
 
@@ -268,6 +268,31 @@ namespace App1.Languages
             "Då vägrade",
             "Då kom",
             "Då visade"
+        };
+
+        // Addition A childs prayer
+        public string God => "Gud";
+        public string All => "alla";
+
+        public List<string> GodCareVerb => new List<string>()
+        {
+            "älskar",
+            "möter",
+            "bryr sig om"
+        };
+
+        public Dictionary<string, string> Loves_MeetsList => new Dictionary<string, string>()
+        {
+            {"på jorden", "\U0001F30D" + ", "},
+            {"dig", "\U0001FA90" + ", "},
+            {"dina vänner", "\U0001F306" + ", "},
+            {"i din familj", "\U0001F304" + ", "},
+            {"djuren", "\U0001F3DE" + ", "},
+            {"växterna", "\U0001F3D8" + ", "},
+            {"i hela världen", "\U0001F30D" + ", "},
+            {"haven", "\U0001F30D" + ", "},
+            {"sjöarna", "\U0001F30D" + ", "},
+            {"träden", "\U0001F30D" + ", "},
         };
     }
 }

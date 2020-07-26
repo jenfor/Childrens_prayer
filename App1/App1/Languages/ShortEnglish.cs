@@ -180,6 +180,31 @@ namespace App1.Languages
         {
             "But",
         };
+
+        // Addition A childs prayer
+        public string God => "God";
+        public string All => "all";
+
+        public List<string> GodCareVerb => new List<string>()
+        {
+            "loves",
+            "meets",
+            "cares about"
+        };
+
+        public Dictionary<string, string> Loves_MeetsList => new Dictionary<string, string>()
+        {
+            {"the earth", "\U0001F30D" + ", "},
+            {"you", "\U0001FA90" + ", "},
+            {"your friend", "\U0001F306" + ", "},
+            {"your family", "\U0001F304" + ", "},
+            {"the animals", "\U0001F3DE" + ", "},
+            {"the plants", "\U0001F3D8" + ", "},
+            {"the world", "\U0001F30D" + ", "},
+            {"the sea", "\U0001F30D" + ", "},
+            {"the lakes", "\U0001F30D" + ", "},
+            {"the trees", "\U0001F30D" + ", "},
+        };
     }
 }
 

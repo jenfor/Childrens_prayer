@@ -1,26 +1,40 @@
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\bin\Debug\netstandard2.0\App1.deps.json
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\bin\Debug\netstandard2.0\App1.dll
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\bin\Debug\netstandard2.0\ref\App1.dll
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\bin\Debug\netstandard2.0\App1.pdb
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\App1.dll
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\ref\App1.dll
-C:\Users\jenny\Desktop\Sagoappen\App1\App1\App1\obj\Debug\netstandard2.0\App1.pdb
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\bin\Debug\netstandard2.0\App1.deps.json
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\bin\Debug\netstandard2.0\App1.dll
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\bin\Debug\netstandard2.0\ref\App1.dll
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\bin\Debug\netstandard2.0\App1.pdb
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\App1.dll
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\ref\App1.dll
-C:\Users\jenny\Desktop\Sagoappen\fairytale 200316\FairyTale\App1\App1\obj\Debug\netstandard2.0\App1.pdb
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/bin/Debug/netstandard2.0/App1.deps.json
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/bin/Debug/netstandard2.0/App1.dll
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/bin/Debug/netstandard2.0/ref/App1.dll
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/bin/Debug/netstandard2.0/App1.pdb
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/App1.csprojAssemblyReference.cache
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/App.xaml.g.cs
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/App1.AssemblyInfoInputs.cache
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/App1.AssemblyInfo.cs
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/XamlC.stamp
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/App1.dll
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/ref/App1.dll
+C:/Users/jenny/Desktop/Sagoappen/App1/App1/App1/obj/Debug/netstandard2.0/App1.pdb
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/bin/Debug/netstandard2.0/App1.deps.json
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/bin/Debug/netstandard2.0/App1.dll
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/bin/Debug/netstandard2.0/ref/App1.dll
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/bin/Debug/netstandard2.0/App1.pdb
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/App1.csprojAssemblyReference.cache
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/App.xaml.g.cs
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/App1.AssemblyInfoInputs.cache
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/App1.AssemblyInfo.cs
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/XamlC.stamp
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/App1.dll
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/ref/App1.dll
+C:/Users/jenny/Desktop/Sagoappen/fairytale 200316/FairyTale/App1/App1/obj/Debug/netstandard2.0/App1.pdb
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/bin/Debug/netstandard2.0/App1.deps.json
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/bin/Debug/netstandard2.0/App1.dll
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/bin/Debug/netstandard2.0/ref/App1.dll
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/bin/Debug/netstandard2.0/App1.pdb
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/App1.csprojAssemblyReference.cache
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/App1.AssemblyInfoInputs.cache
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/App1.AssemblyInfo.cs
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/App1.csproj.CoreCompileInputs.cache
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/App1.dll
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/ref/App1.dll
+/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/obj/Debug/netstandard2.0/App1.pdb
