@@ -1,27 +1,29 @@
 ﻿<Properties StartupConfiguration="{71C1355A-DF88-4C06-94BB-6047EB327576}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="App1/App1/MainPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="App1/App1/Languages/English.cs">
     <Files>
       <File FileName="App1/App1/Prayer/ThePrayer.cs" Line="249" Column="43" />
-      <File FileName="App1/App1/Prayer/PrayerObject.cs" Line="11" Column="55" />
-      <File FileName="App1/App1/Languages/English.cs" Line="268" Column="137" />
-      <File FileName="App1/App1/Languages/Swedish.cs" Line="278" Column="134" />
-      <File FileName="App1/App1/Languages/Language.cs" Line="70" Column="1" />
-      <File FileName="App1/App1/ViewModels/MainPageViewModel.cs" Line="491" Column="22" />
-      <File FileName="App1/App1.iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="App1/App1/Languages/StringReplacer.cs" Line="34" Column="43" />
-      <File FileName="App1/App1/MainPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="App1/App1/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="App1/App1/Prayer/PrayerObject.cs" />
+      <File FileName="App1/App1/Languages/English.cs" Line="7" Column="2" />
+      <File FileName="App1/App1/Languages/Swedish.cs" />
+      <File FileName="App1/App1/Languages/Language.cs" />
+      <File FileName="App1/App1/ViewModels/MainPageViewModel.cs" />
+      <File FileName="App1/App1.iOS/Main.cs" />
+      <File FileName="App1/App1/Languages/StringReplacer.cs" />
+      <File FileName="App1/App1/MainPage.xaml.cs" />
+      <File FileName="App1/App1/MainPage.xaml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="App1" expanded="True">
             <Node name="App1" expanded="True">
-              <Node name="Languages" expanded="True" />
+              <Node name="Languages" expanded="True">
+                <Node name="English.cs" selected="True" />
+              </Node>
               <Node name="Prayer" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="App.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True" selected="True" />
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
             <Node name="App1.iOS" expanded="True" />
           </Node>

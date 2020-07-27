@@ -32,5 +32,6 @@ namespace App1.Languages
         public static string Event_Emoji => "Fairy_Tale_Event_Emoji";
 
         public static string PrayerObject3 => "Prayer_Object_3";
+        public static string PrayerObject4 => "Prayer_Object_4";
     }
 }

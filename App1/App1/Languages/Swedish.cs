@@ -276,7 +276,7 @@ namespace App1.Languages
         public string All => "alla";
         public string TodayHeThinks => "Idag tänker han särskilt mycket på";
         public string GodWantsAll => "Gud vill att " + StringReplacer.PrayerObject3 + " ska ha ett bra liv med många fina upplevelser";
-
+        public string DoYouThink => "tänker du särskilt på idag?";
 
         public List<string> GodCareVerb => new List<string>()
         {
@@ -287,16 +287,20 @@ namespace App1.Languages
 
         public List<PrayerObject> PrayerObjects => new List<PrayerObject>()
         {
-            {new PrayerObject("på jorden","\U0001F30D","vår jord", "alla på jorden" ) },
-            {new PrayerObject("som är som dig", "\U0001FA90" , "dig", "du")},
-            {new PrayerObject("dina vänner", "\U0001F306" , "en vän", "alla dina vänner")},
-            {new PrayerObject("i din familj", "\U0001F304" , "en i din familj", "alla i din familj")},
-            {new PrayerObject("djuren", "\U0001F3DE" , "ett djur", "alla djur")},
-            {new PrayerObject("växterna", "\U0001F3D8" , "en växt", "alla växter")},
-            {new PrayerObject("hela världen", "\U0001F30D" , "vår värld", "alla i hela världen")},
-            {new PrayerObject("haven", "\U0001F30D" , "ett hav", "alla hav")},
-            {new PrayerObject("sjöarna", "\U0001F30D" , "en sjö", "alla sjöar")},
-            {new PrayerObject("träden", "\U0001F30D" , "ett träd", "alla träd")},
+            {new PrayerObject("människor","\U0001F30D","en människa", "alla människor", "Vilken människa" ) },
+            {new PrayerObject("på jorden","\U0001F30D","vår jord", "alla på jorden", "Vad på jorden" ) },
+            {new PrayerObject("som är som dig", "\U0001FA90" , "dig", "du", "Vad")},
+            {new PrayerObject("dina vänner", "\U0001F306" , "en vän", "alla dina vänner", "Vilken vän")},
+            {new PrayerObject("i din familj", "\U0001F304" , "en i din familj", "alla i din familj", "Vem")},
+            {new PrayerObject("djuren", "\U0001F3DE" , "ett djur", "alla djur", "Vilket djur")},
+            {new PrayerObject("växterna", "\U0001F3D8" , "en växt", "alla växter", "Vilken växt")},
+            {new PrayerObject("hela världen", "\U0001F30D" , "vår värld", "alla i hela världen", "Vad i världen")},
+            {new PrayerObject("haven", "\U0001F30D" , "ett hav", "alla hav", "Vilket hav")},
+            {new PrayerObject("sjöarna", "\U0001F30D" , "en sjö", "alla sjöar", "Vilken sjö")},
+            {new PrayerObject("träden", "\U0001F30D" , "ett träd", "alla träd", "Vilket träd")},
         };
+
+        public string LoveEmoji => "\U0001F60D";
+
     }
 }

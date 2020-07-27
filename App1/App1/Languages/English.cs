@@ -266,8 +266,7 @@ namespace App1.Languages
         public string All => "all";
         public string TodayHeThinks => "Today he thinks especially of";
         public string GodWantsAll => "God wants " + StringReplacer.PrayerObject3 + " to have a good life with many wonderful experiences";
-
-
+        public string DoYouThink => "do you think about today?";
 
         public List<string> GodCareVerb => new List<string>()
         {
@@ -278,17 +277,23 @@ namespace App1.Languages
 
         public List<PrayerObject> PrayerObjects => new List<PrayerObject>()
         {
-            {new PrayerObject("the earth","\U0001F30D","the earth", "all of the earth" ) },
-            {new PrayerObject("of you", "\U0001FA90" , "you", "you")},
-            {new PrayerObject("your friends", "\U0001F306" , "one friend", "all of your friends")},
-            {new PrayerObject("your family", "\U0001F304" , "someone in your family", "all of your family")},
-            {new PrayerObject("the animals", "\U0001F3DE" , "one animal", "all animals")},
-            {new PrayerObject("the plants", "\U0001F3D8" , "one plant", "all plants")},
-            {new PrayerObject("the world", "\U0001F30D" , "our world", "all of the world")},
-            {new PrayerObject("the sea", "\U0001F30D" , "the sea", "all of the sea")},
-            {new PrayerObject("the lakes", "\U0001F30D" , "one lake", "all lakes")},
-            {new PrayerObject("the trees", "\U0001F30D" , "one tree", "all trees")},
+            {new PrayerObject("all the humans","\U0001F30D","one human", "all of the humans", "What human" ) },
+            {new PrayerObject("the earth","\U0001F30D","the earth", "all of the earth", "What on earth" ) },
+            {new PrayerObject("of you", "\U0001FA90" , "you", "you", "What")},
+            {new PrayerObject("your friends", "\U0001F306" , "one friend", "all of your friends", "What friend")},
+            {new PrayerObject("your family", "\U0001F304" , "someone in your family", "all of your family", "Who")},
+            {new PrayerObject("the animals", "\U0001F3DE" , "one animal", "all animals", "What animal")},
+            {new PrayerObject("the plants", "\U0001F3D8" , "one plant", "all plants", "What plant")},
+            {new PrayerObject("the world", "\U0001F30D" , "our world", "all of the world", "What in the world")},
+            {new PrayerObject("the sea", "\U0001F30D" , "the sea", "all of the sea", "What sea")},
+            {new PrayerObject("the lakes", "\U0001F30D" , "one lake", "all lakes", "What lake")},
+            {new PrayerObject("the trees", "\U0001F30D" , "one tree", "all trees", "What tree")},
         };
 
-    }
+        public string LoveEmoji => "\U0001F60D";
+
+
+
+
+}
 }

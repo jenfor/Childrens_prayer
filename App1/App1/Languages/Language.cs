@@ -70,6 +70,9 @@ namespace App1.Languages
         List<string> GodCareVerb { get; }
         string All { get; }
         List<PrayerObject> PrayerObjects { get; }
+        string DoYouThink { get; }
+
+        string LoveEmoji { get; }
 
 
     }
