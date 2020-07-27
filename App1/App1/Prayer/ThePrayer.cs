@@ -41,6 +41,8 @@ namespace App1.Prayer
 
             pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr+1, 1));
 
+            pageList.Add(CreatePage(ThirdPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 2, 1));
+
             //fairyTalePalce = GetFairyTalePlace(language);
             //fairyTaleEvent = GetFairyTaleEvent(language);
 
@@ -80,13 +82,14 @@ namespace App1.Prayer
         {
             if (PageNr >= pageList.Count)
             {
-               // var s = GetRandomFairyTaleEmojis(language).Split(',');
+                // var s = GetRandomFairyTaleEmojis(language).Split(',');
 
-               /* pageList.Add(CreatePage(string.Empty, s[0], s[1],
-                    language.ExchangeString.Replace(StringReplacer.Character1_Animal, fairyTaleCharacter1.Animal)
-                    .Replace(StringReplacer.Character1_Name, fairyTaleCharacter1.Name)
-                    .Replace(StringReplacer.Character2_Animal, fairyTaleCharacter2.Animal)
-                    .Replace(StringReplacer.Character2_Name, fairyTaleCharacter2.Name), PageNr, 2));*/
+                /* pageList.Add(CreatePage(string.Empty, s[0], s[1],
+                     language.ExchangeString.Replace(StringReplacer.Character1_Animal, fairyTaleCharacter1.Animal)
+                     .Replace(StringReplacer.Character1_Name, fairyTaleCharacter1.Name)
+                     .Replace(StringReplacer.Character2_Animal, fairyTaleCharacter2.Animal)
+                     .Replace(StringReplacer.Character2_Name, fairyTaleCharacter2.Name), PageNr, 2));*/
+                return;
             }
 
             PresentPage = pageList[PageNr];
@@ -148,10 +151,9 @@ namespace App1.Prayer
 
         public PrayerObject GetPrayerObject(Language language)
         {
-            var objects = new List<string>(language.Loves_MeetsList.Keys);
-            var o = GetWords(objects);
-            var imageInfo = language.Loves_MeetsList[o].Split(',');
-            return new PrayerObject(o, imageInfo[0], imageInfo[1]);
+            var random = new Random();
+            var prayerObject = language.PrayerObjects[random.Next(language.PrayerObjects.Count)];
+            return prayerObject;
         }
 
         /*public string GetRandomFairyTaleEmojis(Language language)
@@ -237,6 +239,15 @@ namespace App1.Prayer
             sb.Append(language.TodayHeThinks + language.Space +
                 PrayerObject.ObjectSecondForm + language.Dot
                 );
+
+            return sb.ToString();
+        }
+
+        public string ThirdPrayerPage(Language language)
+        {
+            var sb = new StringBuilder();
+            sb.Append(language.GodWantsAll + language.Dot
+                ).Replace(StringReplacer.PrayerObject3, PrayerObject.ObjectThirdForm);
 
             return sb.ToString();
         }

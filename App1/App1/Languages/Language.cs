@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using App1.Prayer;
 
 namespace App1.Languages
 {
@@ -65,9 +66,10 @@ namespace App1.Languages
         // Addition A childs prayer
         string God { get; }
         string TodayHeThinks { get; }
+        string GodWantsAll { get; }
         List<string> GodCareVerb { get; }
         string All { get; }
-        Dictionary<string, string> Loves_MeetsList { get; }
+        List<PrayerObject> PrayerObjects { get; }
 
 
     }

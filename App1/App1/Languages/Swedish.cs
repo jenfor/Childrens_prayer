@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using App1.Prayer;
 
 namespace App1.Languages
 {
     public class Swedish : Language
     {
         public string BackToStart => "Tillbaka till start";
-        public string ShareFairyTale => "Dela sagan";
+        public string ShareFairyTale => "Dela bönen";
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
-        public string ViewFairyTale => "Visa/Dela sagan";
+        public string ViewFairyTale => "Visa/Dela hela bönen";
         public string NewImage => "Byt bild";
 
         public string VersionOption => "Vilken sorts saga vill du skriva?";
@@ -274,6 +275,7 @@ namespace App1.Languages
         public string God => "Gud";
         public string All => "alla";
         public string TodayHeThinks => "Idag tänker han särskilt mycket på";
+        public string GodWantsAll => "Gud vill att " + StringReplacer.PrayerObject3 + " ska ha ett bra liv med många fina upplevelser";
 
 
         public List<string> GodCareVerb => new List<string>()
@@ -283,18 +285,18 @@ namespace App1.Languages
             "bryr sig om"
         };
 
-        public Dictionary<string, string> Loves_MeetsList => new Dictionary<string, string>()
+        public List<PrayerObject> PrayerObjects => new List<PrayerObject>()
         {
-            {"på jorden", "\U0001F30D" + ",vår jord"},
-            {"som är som dig", "\U0001FA90" + ",dig"},
-            {"dina vänner", "\U0001F306" + ",en vän"},
-            {"i din familj", "\U0001F304" + ",en i din familj"},
-            {"djuren", "\U0001F3DE" + ",ett djur"},
-            {"växterna", "\U0001F3D8" + ",en växt"},
-            {"hela världen", "\U0001F30D" + ",vår värld"},
-            {"haven", "\U0001F30D" + ",ett hav"},
-            {"sjöarna", "\U0001F30D" + ",en sjö"},
-            {"träden", "\U0001F30D" + ",ett träd"},
+            {new PrayerObject("på jorden","\U0001F30D","vår jord", "alla på jorden" ) },
+            {new PrayerObject("som är som dig", "\U0001FA90" , "dig", "du")},
+            {new PrayerObject("dina vänner", "\U0001F306" , "en vän", "alla dina vänner")},
+            {new PrayerObject("i din familj", "\U0001F304" , "en i din familj", "alla i din familj")},
+            {new PrayerObject("djuren", "\U0001F3DE" , "ett djur", "alla djur")},
+            {new PrayerObject("växterna", "\U0001F3D8" , "en växt", "alla växter")},
+            {new PrayerObject("hela världen", "\U0001F30D" , "vår värld", "alla i hela världen")},
+            {new PrayerObject("haven", "\U0001F30D" , "ett hav", "alla hav")},
+            {new PrayerObject("sjöarna", "\U0001F30D" , "en sjö", "alla sjöar")},
+            {new PrayerObject("träden", "\U0001F30D" , "ett träd", "alla träd")},
         };
     }
 }

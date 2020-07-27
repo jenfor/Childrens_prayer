@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using App1.Prayer;
 
 namespace App1.Languages
 {
@@ -264,6 +265,8 @@ namespace App1.Languages
         public string God => "God";
         public string All => "all";
         public string TodayHeThinks => "Today he thinks especially of";
+        public string GodWantsAll => "God wants " + StringReplacer.PrayerObject3 + " to have a good life with many wonderful experiences";
+
 
 
         public List<string> GodCareVerb => new List<string>()
@@ -273,18 +276,19 @@ namespace App1.Languages
             "cares about"
         };
 
-        public Dictionary<string, string> Loves_MeetsList => new Dictionary<string, string>()
+        public List<PrayerObject> PrayerObjects => new List<PrayerObject>()
         {
-            {"the earth", "\U0001F30D" + ",the earth"},
-            {"of you", "\U0001FA90" + ",you"},
-            {"your friends", "\U0001F306" + ",a friend"},
-            {"your family", "\U0001F304" + ",someone in your family"},
-            {"the animals", "\U0001F3DE" + ",an animal"},
-            {"the plants", "\U0001F3D8" + ",a plant"},
-            {"the world", "\U0001F30D" + ",our world"},
-            {"the sea", "\U0001F30D" + ",a sea"},
-            {"the lakes", "\U0001F30D" + ",a lake"},
-            {"the trees", "\U0001F30D" + ",a tree"},
+            {new PrayerObject("the earth","\U0001F30D","the earth", "all of the earth" ) },
+            {new PrayerObject("of you", "\U0001FA90" , "you", "you")},
+            {new PrayerObject("your friends", "\U0001F306" , "one friend", "all of your friends")},
+            {new PrayerObject("your family", "\U0001F304" , "someone in your family", "all of your family")},
+            {new PrayerObject("the animals", "\U0001F3DE" , "one animal", "all animals")},
+            {new PrayerObject("the plants", "\U0001F3D8" , "one plant", "all plants")},
+            {new PrayerObject("the world", "\U0001F30D" , "our world", "all of the world")},
+            {new PrayerObject("the sea", "\U0001F30D" , "the sea", "all of the sea")},
+            {new PrayerObject("the lakes", "\U0001F30D" , "one lake", "all lakes")},
+            {new PrayerObject("the trees", "\U0001F30D" , "one tree", "all trees")},
         };
-    } 
+
+    }
 }

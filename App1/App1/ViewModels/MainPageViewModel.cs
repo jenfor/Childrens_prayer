@@ -218,6 +218,19 @@ namespace App1.ViewModels
             }
         }
 
+        private bool _continueButtonVisibility = false;
+        public bool ContinueButtonVisibility
+        {
+            get => _continueButtonVisibility;
+            set
+            {
+                _continueButtonVisibility = value;
+
+                var args = new PropertyChangedEventArgs(nameof(ContinueButtonVisibility));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
         private bool _startButtonVisibility = true;
         public bool StartButtonVisibility
         {
@@ -298,6 +311,7 @@ namespace App1.ViewModels
 
         public MainPageViewModel()
         {
+            ContinueButtonVisibility = MainPageVisibility;
             SwedishFairyTale = new Command(() =>
            {
                language = new Swedish();
@@ -322,10 +336,11 @@ namespace App1.ViewModels
 
             ContinueFairyTale = new Command(/*async*/ () =>
             {
-                if (prayer.PageNr == prayer.LastComputerPreperdPage)
+                /*if (prayer.PageNr == prayer.LastComputerPreperdPage)
                 {
                     //await UserTimeToWrite(language);
-                }
+                    ContinueButtonVisibility = false;
+                }*/
 
                 prayer.PresentPage.Text = Text;
                 prayer.ViewNextPage(language);
@@ -445,6 +460,7 @@ namespace App1.ViewModels
                 FairyTaleColumnWidth3 = new GridLength(0);
                 NewImageButtonWidth = new GridLength(0);
                 MainPageVisibility = false;
+                ContinueButtonVisibility = MainPageVisibility;
 
                 StartButtonVisibility = true;
             }
@@ -484,6 +500,14 @@ namespace App1.ViewModels
             NewImage = language.NewImage;
             StartButtonVisibility = false;
             MainPageVisibility = true;
+            if (prayer.PageNr -1 == prayer.LastComputerPreperdPage)
+            {
+                ContinueButtonVisibility = false;
+            }
+            else
+            {
+                ContinueButtonVisibility = MainPageVisibility;
+            }
 
             NewImageButtonVisibility();
         }

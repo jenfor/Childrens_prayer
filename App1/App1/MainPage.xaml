@@ -64,7 +64,7 @@
         </Grid>
 
         <Button  Command="{Binding Back}" Grid.Row="3" Grid.Column="1" Text="{Binding BackFairytale}" BackgroundColor="LightBlue" IsVisible="{Binding MainPageVisibility}" Margin="5, 20, 10, 20"></Button>
-        <Button Command="{Binding ContinueFairyTale}" Grid.Row="3"  Grid.Column="2" Text="{Binding ContinueFairytale}" BackgroundColor="LightBlue" IsVisible="{Binding MainPageVisibility}" Margin="10, 20, 5, 20"></Button>
+        <Button Command="{Binding ContinueFairyTale}" Grid.Row="3"  Grid.Column="2" Text="{Binding ContinueFairytale}" BackgroundColor="LightBlue" IsVisible="{Binding ContinueButtonVisibility}" Margin="10, 20, 5, 20"></Button>
 
         <ScrollView Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="3" Margin="5">
             <Label  Text="{Binding Summary}" FontSize="20" IsEnabled="False" TextColor="Black" Margin="10"></Label>
