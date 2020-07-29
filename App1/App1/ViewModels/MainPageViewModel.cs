@@ -468,9 +468,10 @@ namespace App1.ViewModels
 
         public async Task UserTimeToWrite(Language language)
         {
-            await App.Current.MainPage.DisplayAlert(language.Information, language.InformationExchangeString.Replace(StringReplacer.Character1_Name, prayer.PrayerObject.ObjectFirstForm)
+            /*await App.Current.MainPage.DisplayAlert(language.Information, language.InformationExchangeString.Replace(StringReplacer.Character1_Name, prayer.PrayerObject.ObjectFirstForm)
                      .Replace(StringReplacer.Character2_Name, prayer.PrayerObject.ObjectFirstForm)
                      .Replace(StringReplacer.Character1_Name, prayer.PrayerObject.ObjectSecondForm), "OK");
+            */
         }
 
         private void ShowNewFairyTale(Language language)
@@ -479,7 +480,6 @@ namespace App1.ViewModels
 
             Text = prayer.PresentPage.Text;
             Image = prayer.PresentPage.Emoji;
-            //ImageDescription = fairyTale.PresentPage.ImageDescription;
             Placeholder = prayer.PresentPage.Palceholder;
 
             SetVisibilitys();

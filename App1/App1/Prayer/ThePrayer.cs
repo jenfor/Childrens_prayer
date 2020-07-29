@@ -36,17 +36,17 @@ namespace App1.Prayer
                 case 0:
                     PrayerObject = GetPrayerObject(language.Prayer1Objects);
 
-                    pageList.Add(CreatePage(PrayerStart(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr, 1));
-                    pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 1, 1));
-                    pageList.Add(CreatePage(ThirdPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 2, 1));
+                    pageList.Add(CreatePage(PrayerStart(language), PrayerObject.GetEmoij(), PrayerObject.ImageDescription, string.Empty, PageNr, 1));
+                    pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.GetEmoij(), PrayerObject.ImageDescription, string.Empty, PageNr + 1, 1));
+                    pageList.Add(CreatePage(ThirdPrayerPage(language), PrayerObject.GetEmoij(), PrayerObject.ImageDescription, string.Empty, PageNr + 2, 1));
                     pageList.Add(CreatePage(FourthPrayerPage(language), language.LoveEmoji, PrayerObject.ImageDescription, string.Empty, PageNr + 3, 1));
                     break;
                 case 1:
                     PrayerObject = GetPrayerObject(language.Prayer2Objects);
                     HideEmoji = GetEmoji(language.Hides);
 
-                    pageList.Add(CreatePage(PrayerStart(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr, 1));
-                    pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 1, 1));
+                    pageList.Add(CreatePage(PrayerStart(language), PrayerObject.GetEmoij(), PrayerObject.ImageDescription, string.Empty, PageNr, 1));
+                    pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.GetEmoij(), PrayerObject.ImageDescription, string.Empty, PageNr + 1, 1));
                     pageList.Add(CreatePage(ThirdPrayerPage(language), HideEmoji.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 2, 1));
                     pageList.Add(CreatePage(FourthPrayerPage(language), language.LoveEmoji, PrayerObject.ImageDescription, string.Empty, PageNr + 3, 1));
                     break;
@@ -91,7 +91,7 @@ namespace App1.Prayer
         public string GetRandomEmojis(Language language)
         {            
             var allEmojis = new List<EmojiObject>();
-            allEmojis.AddRange(new List<EmojiObject>(language.Animal));
+            allEmojis.AddRange(new List<EmojiObject>(language.Animals));
             allEmojis.AddRange(new List<EmojiObject>(language.Hides));
 
             var emoji1 = CreateAndSkipEqualEmojis(null, allEmojis);
@@ -196,7 +196,8 @@ namespace App1.Prayer
             {
                 case 0:
                     sb.Append(language.GodWantsAll + language.Dot
-                ).Replace(StringReplacer.PrayerObject3, PrayerObject.ObjectThirdForm);
+                ).Replace(StringReplacer.PrayerObject3, PrayerObject.ObjectThirdForm)
+                .Replace(StringReplacer.PrayerObject5, PrayerObject.ObjectFifthForm);
                     break;
                 case 1:
                     sb.Append(language.GodHides

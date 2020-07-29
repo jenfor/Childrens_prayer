@@ -60,7 +60,7 @@ namespace App1.Languages
         List<PrayerObject> Prayer1Objects { get; }
         List<PrayerObject> Prayer2Objects { get; }
         List<EmojiObject> Hides { get; }
-        List<EmojiObject> Animal { get; }
+        List<EmojiObject> Animals { get; }
 
         string LoveEmoji { get; }
 
