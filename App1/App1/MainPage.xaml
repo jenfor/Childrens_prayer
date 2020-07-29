@@ -30,7 +30,7 @@
         <!--Start page-->
 
         <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical" VerticalOptions="Start" Margin="25,30,25,0" >
-            <Button Text="A childs prayer" Command="{Binding EnglishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
+            <Button Text="A child's prayer" Command="{Binding EnglishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
             <Button Text="En barnbön" Command="{Binding SwedishFairyTale}" BackgroundColor="LightBlue" IsVisible="{Binding StartButtonVisibility}"></Button>
             <Label Grid.Column="0"  Grid.Row="1"   Text="{Binding StartImage}" HorizontalTextAlignment="Center" Margin="0,50,0,0" IsVisible="{Binding StartButtonVisibility}"
                VerticalTextAlignment="Center" FontSize="110" Grid.RowSpan="2"></Label>
@@ -40,7 +40,7 @@
         <Button Grid.Column="2" Grid.Row="0" Text="{Binding ViewFairytale}" Command="{Binding ViewFairyTale}" BackgroundColor="LightBlue" Margin="5, 35, 10, 10"/>
 
         <!--Main page-->
-        <Editor Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" BackgroundColor="White"  x:Name="txtText" AutoSize="TextChanges"  Text="{Binding Text}" Placeholder="{Binding Placeholder}"  FontSize="20" Margin="10" IsSpellCheckEnabled="False"></Editor>
+        <Label Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" BackgroundColor="White"  x:Name="txtText"  Text="{Binding Text}"  FontSize="20" Margin="10" ></Label>
 
         <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" >
              <Grid.RowDefinitions>

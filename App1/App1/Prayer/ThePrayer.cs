@@ -13,14 +13,9 @@ namespace App1.Prayer
         public int LastComputerPreperdPage = 4;
         private List<AChildsPrayerPage> pageList = new List<AChildsPrayerPage>();
 
+        private int prayerVersion = 0;
         public PrayerObject PrayerObject = null;
-        
-        //public FairyTaleCharacter fairyTaleCharacter1 = null;
-        //public FairyTaleCharacter fairyTaleCharacter2 = null;
-        //public FairyTalePlace fairyTalePalce = null;
-        //public FairyTaleEvent fairyTaleEvent = null;
-
-        private List<String> thisPrayerEmojis = new List<string>();
+        public EmojiObject HideEmoji = null;
 
         public ThePrayer(Language language)
         {
@@ -32,15 +27,30 @@ namespace App1.Prayer
         {
             PageNr = 0;
             pageList.Clear();
-            thisPrayerEmojis.Clear();
 
-            PrayerObject = GetPrayerObject(language);
+            var random = new Random();
+            prayerVersion = random.Next(2);
 
-            pageList.Add(CreatePage(PrayerStart(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr, 1));
-            thisPrayerEmojis.Add(PrayerObject.Emoji + "," + PrayerObject.ImageDescription);
-            pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr+1, 1));
-            pageList.Add(CreatePage(ThirdPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 2, 1));
-            pageList.Add(CreatePage(FourthPrayerPage(language), language.LoveEmoji, PrayerObject.ImageDescription, string.Empty, PageNr + 3, 1));
+            switch (prayerVersion)
+            {
+                case 0:
+                    PrayerObject = GetPrayerObject(language.Prayer1Objects);
+
+                    pageList.Add(CreatePage(PrayerStart(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr, 1));
+                    pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 1, 1));
+                    pageList.Add(CreatePage(ThirdPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 2, 1));
+                    pageList.Add(CreatePage(FourthPrayerPage(language), language.LoveEmoji, PrayerObject.ImageDescription, string.Empty, PageNr + 3, 1));
+                    break;
+                case 1:
+                    PrayerObject = GetPrayerObject(language.Prayer2Objects);
+                    HideEmoji = GetEmoji(language.Hides);
+
+                    pageList.Add(CreatePage(PrayerStart(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr, 1));
+                    pageList.Add(CreatePage(SecondPrayerPage(language), PrayerObject.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 1, 1));
+                    pageList.Add(CreatePage(ThirdPrayerPage(language), HideEmoji.Emoji, PrayerObject.ImageDescription, string.Empty, PageNr + 2, 1));
+                    pageList.Add(CreatePage(FourthPrayerPage(language), language.LoveEmoji, PrayerObject.ImageDescription, string.Empty, PageNr + 3, 1));
+                    break;
+            }
 
             LastComputerPreperdPage = pageList.Count -1;
         }
@@ -71,28 +81,27 @@ namespace App1.Prayer
             PageNr++;
         }
 
-        public PrayerObject GetPrayerObject(Language language)
+        public PrayerObject GetPrayerObject(List<PrayerObject> prayer1Objects)
         {
             var random = new Random();
-            var prayerObject = language.PrayerObjects[random.Next(language.PrayerObjects.Count)];
+            var prayerObject = prayer1Objects[random.Next(prayer1Objects.Count)];
             return prayerObject;
         }
 
         public string GetRandomEmojis(Language language)
         {            
-            var allEmojis = new List<String>();
-            allEmojis.AddRange(new List<string>(language.Animals.Values));
-            allEmojis.AddRange(new List<string>(language.Places.Values));
-            allEmojis.AddRange(new List<string>(language.Events.Values));
+            var allEmojis = new List<EmojiObject>();
+            allEmojis.AddRange(new List<EmojiObject>(language.Animal));
+            allEmojis.AddRange(new List<EmojiObject>(language.Hides));
 
             var emoji1 = CreateAndSkipEqualEmojis(null, allEmojis);
             var emoji2 = CreateAndSkipEqualEmojis(emoji1, allEmojis); 
             var emoji3 = CreateAndSkipEqualEmojis(emoji2, allEmojis);
 
-            return emoji1.Split(',')[0] + emoji2.Split(',')[0] + emoji3.Split(',')[0];
+            return emoji1 + emoji2 + emoji3;
         } 
 
-        private string CreateAndSkipEqualEmojis(string emoji1, List<String> allEmojis)
+        private string CreateAndSkipEqualEmojis(string emoji1, List<EmojiObject> allEmojis)
         {
             var random = new Random();
             var emoji2 = allEmojis[random.Next(allEmojis.Count)];
@@ -102,7 +111,7 @@ namespace App1.Prayer
                 emoji2 = allEmojis[random.Next(allEmojis.Count)];
             }
 
-            return emoji2;
+            return emoji2.Emoji;
         }
 
         public AChildsPrayerPage CreatePage(string text, string emoji, string imageDescription, string placeholder, int pageNr, int nrOfEmoji)
@@ -138,11 +147,22 @@ namespace App1.Prayer
         public string PrayerStart(Language language)
         {
             var sb = new StringBuilder();
-            sb.Append(language.God + language.Space +
+            switch (prayerVersion)
+            {
+                case 0:
+                    sb.Append(language.God + language.Space +
                 GetWords(language.GodCareVerb) + language.Space
                 + language.All + language.Space
                 + PrayerObject.ObjectFirstForm + language.Dot
                 );
+                    break;
+                case 1:
+                    sb.Append(language.GodLoves + language.Space
+                        + PrayerObject.ObjectFirstForm + language.Dot
+                    );
+
+                    break;
+            }
 
             return sb.ToString();
         }
@@ -150,9 +170,21 @@ namespace App1.Prayer
         public string SecondPrayerPage(Language language)
         {
             var sb = new StringBuilder();
-            sb.Append(language.TodayHeThinks + language.Space +
-                PrayerObject.ObjectSecondForm + language.Dot
-                );
+            switch (prayerVersion)
+            {
+                case 0:
+                    sb.Append(language.TodayHeThinks + language.Space +
+                        PrayerObject.ObjectSecondForm + language.Dot
+                    );
+                    break;
+                case 1:
+                    sb.Append(language.WhenGodMeets
+                        .Replace(StringReplacer.PrayerObject2, PrayerObject.ObjectSecondForm)
+                        .Replace(StringReplacer.PrayerObject3, PrayerObject.ObjectThirdForm)
+                        .Replace(StringReplacer.PrayerObject4, PrayerObject.ObjectFourthForm)
+                        + language.Dot);
+                    break;
+            }
 
             return sb.ToString();
         }
@@ -160,18 +192,43 @@ namespace App1.Prayer
         public string ThirdPrayerPage(Language language)
         {
             var sb = new StringBuilder();
-            sb.Append(language.GodWantsAll + language.Dot
+            switch (prayerVersion)
+            {
+                case 0:
+                    sb.Append(language.GodWantsAll + language.Dot
                 ).Replace(StringReplacer.PrayerObject3, PrayerObject.ObjectThirdForm);
-
+                    break;
+                case 1:
+                    sb.Append(language.GodHides
+                        .Replace(StringReplacer.Hide, HideEmoji.ImageDescription)
+                        .Replace(StringReplacer.PrayerObject2, PrayerObject.ObjectSecondForm)
+                        + language.Dot);
+                    break;
+            }
             return sb.ToString();
         }
 
         public string FourthPrayerPage(Language language)
         {
             var sb = new StringBuilder();
-            sb.Append(PrayerObject.ObjectFourthForm +language.Space + language.DoYouThink);
-
+            switch (prayerVersion)
+            {
+                case 0:
+                    sb.Append(PrayerObject.ObjectFourthForm +language.Space + language.DoYouThink);
+                    break;
+                case 1:
+                    sb.Append(language.GodIs + language.Dot
+                        );
+                    break;
+            }
             return sb.ToString();
+        }
+
+        public EmojiObject GetEmoji(List<EmojiObject> emojiList)
+        {
+            var random = new Random();
+            var emoji = emojiList[random.Next(emojiList.Count)];
+            return emoji;
         }
 
         public string GetWords(List<string> wordList)

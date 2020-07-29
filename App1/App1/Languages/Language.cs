@@ -46,31 +46,21 @@ namespace App1.Languages
         string Comma { get; }
         string NewLine { get; }
 
-        Dictionary<string, string> Animals { get; }
-        Dictionary<string, string> Places { get; }
-        Dictionary<string, string> Events { get; }
-
-        List<string> FairyTaleStarts { get; }
-        List<string> Relationships { get; }
-        List<string> BadRelationships { get; }
-        List<string> CharacterAdjectives { get; }
-        List<string> BadRelationshipsAdjectives { get; }
-        List<string> Verb1 { get; }
-        List<string> PlaceAdjectives { get; }
-        List<string> Verb2 { get; }
-        List<string> Circumstances { get; }
-        List<string> Gender { get; }
-        List<string> Actions { get; }
-        List<string> Continuations { get; }
-
-        // Addition A childs prayer
         string God { get; }
         string TodayHeThinks { get; }
         string GodWantsAll { get; }
-        List<string> GodCareVerb { get; }
         string All { get; }
-        List<PrayerObject> PrayerObjects { get; }
         string DoYouThink { get; }
+        string GodLoves { get; }
+        string WhenGodMeets { get; }
+        string GodHides { get; }
+        string GodIs { get; }
+
+        List<string> GodCareVerb { get; }
+        List<PrayerObject> Prayer1Objects { get; }
+        List<PrayerObject> Prayer2Objects { get; }
+        List<EmojiObject> Hides { get; }
+        List<EmojiObject> Animal { get; }
 
         string LoveEmoji { get; }
 

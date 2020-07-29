@@ -53,220 +53,17 @@ namespace App1.Languages
         public String Comma => ", ";
         public String NewLine => "\n";
 
-        public Dictionary<string, string> Animals => new Dictionary<string, string>()
-        {
-            { "squirrel", "\U0001F43F" },
-            {"hedgehog", "\U0001F994"},
-            {"bat", "\U0001F987"},
-            //{"skunk", "\U0001F9A8"}, // Todo: find better emoji
-            //{"badger", "\U0001F9A1"}, // Todo: find better emoji
-            {"dove", "\U0001F54A"},
-            //{"eagle", "\U0001F985"},// Todo: needs an instead of a
-            {"duck", "\U0001F986"},
-            //{"swan", "\U0001F9A2"}, // Todo: find better emoji
-            //{"peacock", "\U0001F99A"}, // Todo: find better emoji
-            //{"parrot", "\U0001F99C"}, // Todo: find better emoji
-            //{"owl", "\U0001F989"}, // Todo: needs an instead of a
-            {"spider", "\U0001F577"},
-            {"scorpion", "\U0001F982"},
-            {"larva", "\U0001F41B"},
-            {"snake", "\U0001F40D"},
-            {"hamster", "\U0001F439"},
-            {"turtle", "\U0001F422"},
-            {"cat", "\U0001F431"},
-            {"snail", "\U0001F40C"},
-            {"frog", "\U0001F438"},
-            {"ladybug", "\U0001F41E"},
-            {"bird", "\U0001F426"},
-            //{"ant", "\U0001F41C"}, // Todo: needs an instead of a
-            {"shrew", "\U0001F42D"},
-            {"chicken", "\U0001F425"},
-            {"penguin", "\U0001F427"},
-            {"koala", "\U0001F428"},
-            //{"hen", "\U0001F414"}, // Todo: find better emoji
-            {"monkey", "\U0001F412"},
-            {"dog", "\U0001F436"},
-            {"panda", "\U0001F43C"},
-            {"rabbit", "\U0001F407"},
-            {"rat", "\U0001F401"},
-            {"goat", "\U0001F410"},
-            {"honeybee", "\U0001F41D"},
-            {"cricket", "\U0001F997"},
-            {"butterfly", "\U0001F98B"},
-        };
-
-        public Dictionary<string, string> Places => new Dictionary<string, string>()
-        {
-            {"on earth", "\U0001F30D" + ", earth"},
-            {"on their planet", "\U0001FA90" + ",their planet"}, // ToDo: Fix this emoji
-            {"in their city", "\U0001F306" + ",their city"},
-            {"in their country", "\U0001F304" + ",a picture from their country"},
-            {"in their hometown", "\U0001F3DE" + ",a view from their home"},
-            {"in their village", "\U0001F3D8" + ",their village"},
-            {"in their forest", "\U0001F333" + ",a tree in their forest"}
-        };
-
-        public Dictionary<string, string> Events => new Dictionary<string, string>()
-        {
-            {"had decided to organize a big party where everyone should be invited",
-                "\U0001F382"  + ",a cake"},
-            {"wanted it to look like " + StringReplacer.Character1_Gender+ " was going for a long journey. That's why " + StringReplacer.Character1_Gender + " started to pack a bag",
-                "\U0001F45C" + ",a bag"},
-            {"started by telling everyone that this was a very important day",
-                "\U0001F338" + ",a flower"},
-            {"said: \n- Let's build a space ship together",
-                "\U0001F6F8" + ",a space ship"},
-            {"thought it was easy to build a new car",
-                "\U0001F698" + ",a car"},
-            {"thought it was possible to build a citiy on the seabed",
-                "\U0001F30A" + ",a wave"},
-            {"wanted to start a new sort of candy factory",
-                "\U0001F36C" + "\U0001F36D" + ",the candy"},
-            {"said " + StringReplacer.Character1_Gender + " was big enough to start school",
-                "\U0001F3EB" + ",the school"}, 
-            {"wanted to put sails on everyone's backs",
-                "\U0001F32C" + ",the wind"},
-            {"had decided to invent wings that could make everyone and everything fly",
-                "\U0001F4B8"  + ",money with wings"},
-            {"wanted to arrange a flight course for everyone",
-                "\U0001F6E9" + ",an airplane"},
-            //{"planned to dress up as a good fairy and hand out three wishes", "\U0001FA84" + ",a wand"},// ToDo: Fix this emoji
-            {"thought it was easy to build a large castle out of sand",
-                "\U0001F3F0" + ",a large castle"},
-            {"wanted to prove that the dragons still were alive",
-                "\U0001F409" + ",a dragon"},
-            //{"had found a lamp in where it might be a genie", "\U0001FA94" + ", a magic lamp"},// ToDo: Fix this emoji
-            {"thought " + StringReplacer.Character1_Gender + " had found a new way to the moon",
-                "\U0001F314" + ",the moon"}, 
-            {"had found the place where the rainbow starts",
-                "\U0001F308" + ",the rainbow"}
-        };
-
-        public List<string> FairyTaleStarts => new List<string>()
-        {
-            "Once upon a time there was a",
-            "Some don't think this is true, but once upon a time there was a",
-            "Far, far from here, there once was a",
-            "In an enchanted world there once lived a",
-            "In a another time there once lived a",
-            "In a world where no human yet has taken a single step, there once lived a",
-            "Without any human knowledge there once lived a",
-            "Far away from all kind of attention there once was a",
-            "In a very odd world there once lived a",
-            "Behind a secret door, in a forgotten house, a whole world is hidden. In there, there once lived a",
-            "In an imaginable world there once lived a",
-            "Not far from here, there once lived a",
-            "Right under your bed there is a small hole. "
-                + "No human eye has seen it, but inside there is a whole world."
-                + "In there, there once lived a"
-        };
-
-        public List<string> Relationships => new List<string>()
-        {
-            "friend",
-            "enemy",
-            "buddy"
-        };
-
-        public List<string> BadRelationships => new List<string>()
-        {
-            "enemy",
-        };
-
-        public List<string> CharacterAdjectives => new List<string>()
-        {
-            "happy",
-            "nice",
-            "funny",
-            "worried",
-            "smart",
-            "nervous",
-            "clever",
-            "curious",
-            "wandering",
-            "popular",
-            "cheerful",
-            "healthy",
-        };
-
-        public List<string> BadRelationshipsAdjectives => new List<string>()
-        {
-            "stupid",
-            //"angry", //ToDo: needs an
-            "mean",
-        };
-
-        public List<string> Verb1 => new List<string>()
-        {
-            "pretend",
-            "fool everyone",
-            "tell eachother",
-            "say"
-        };
-
-        public List<string> PlaceAdjectives => new List<string>()
-        {
-            "lovely",
-            "wonderful",
-            "terrible",
-        };
-
-        public List<string> Verb2 => new List<string>()
-        {
-            "used to",
-            "seemed to",
-            "liked to",
-            "tried to",
-            "wanted to"
-
-        };
-
-        public List<string> Circumstances => new List<string>()
-        {
-           // "Right now life actually happend to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place,
-           // "Right now life seemed to be " + StringReplacer.Place_Condition + " " + StringReplacer.Place +", but for some it was hard to believe",
-           // "But right now life certainly wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place,
-           // "But right now life wasn't " + StringReplacer.Place_Condition  + " " + StringReplacer.Place + ", reality was far from it",
-
-            "It could be " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " in many different ways",
-            "But it wasn't " + StringReplacer.Place_Condition + " " + StringReplacer.Place + " today",
-        };
-
-        public List<string> Gender => new List<string>()
-        {
-            "He",
-            "She"
-        };
-
-        public List<string> Actions => new List<string>()
-        {
-            "Today " + StringReplacer.Character1_Name + " wanted to try something new",
-            StringReplacer.Character1_Name + " had new plans",
-            StringReplacer.Character1_Name + " had come up with something new",
-            "Today " + StringReplacer.Character1_Name + " had got a fun idea",
-            StringReplacer.Character1_Name + " had got an exciting idea",
-            "Today " + StringReplacer.Character1_Name + " wanted to try something new",
-            StringReplacer.Character1_Name + " wanted to try a new idea",
-            StringReplacer.Character1_Name + " wanted to make a big change",
-            "Today " + StringReplacer.Character1_Name + " wanted to give everyone a big surprise",
-        };
-
-        public List<string> Continuations => new List<string>()
-        {
-            "It turned out to be",
-            "It started with",
-            StringReplacer.Character1_Gender + " said that", 
-            StringReplacer.Character1_Gender + " wanted to let",
-            StringReplacer.Character1_Gender + " refused to let",
-            "But"
-        };
-
-        // Addition A childs prayer
         public string God => "God";
         public string All => "all";
         public string TodayHeThinks => "Today he thinks especially of";
         public string GodWantsAll => "God wants " + StringReplacer.PrayerObject3 + " to have a good life with many wonderful experiences";
         public string DoYouThink => "do you think about today?";
+        public string GodLoves => "God loves";
+        public string WhenGodMeets => "When God meets with " + StringReplacer.PrayerObject2
+                                        + " he wants " + StringReplacer.PrayerObject3
+                                        + " to understand how " + StringReplacer.PrayerObject4;
+        public string GodHides => "Sometimes God hides behind " + StringReplacer.Hide + " and playes hide and seek with " + StringReplacer.PrayerObject2;
+        public string GodIs => "God is everywhere";
 
         public List<string> GodCareVerb => new List<string>()
         {
@@ -275,25 +72,80 @@ namespace App1.Languages
             "cares about"
         };
 
-        public List<PrayerObject> PrayerObjects => new List<PrayerObject>()
+        public List<PrayerObject> Prayer1Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("all the humans","\U0001F30D","one human", "all of the humans", "What human" ) },
+            {new PrayerObject("all the humans","\U0001F9CD" + "\U0001F6B6" /* U+200D U+2640 U+FE0F*/ ,"one human", "all of the humans", "What human" ) },
             {new PrayerObject("the earth","\U0001F30D","the earth", "all of the earth", "What on earth" ) },
-            {new PrayerObject("of you", "\U0001FA90" , "you", "you", "What")},
-            {new PrayerObject("your friends", "\U0001F306" , "one friend", "all of your friends", "What friend")},
-            {new PrayerObject("your family", "\U0001F304" , "someone in your family", "all of your family", "Who")},
-            {new PrayerObject("the animals", "\U0001F3DE" , "one animal", "all animals", "What animal")},
-            {new PrayerObject("the plants", "\U0001F3D8" , "one plant", "all plants", "What plant")},
-            {new PrayerObject("the world", "\U0001F30D" , "our world", "all of the world", "What in the world")},
-            {new PrayerObject("the sea", "\U0001F30D" , "the sea", "all of the sea", "What sea")},
-            {new PrayerObject("the lakes", "\U0001F30D" , "one lake", "all lakes", "What lake")},
-            {new PrayerObject("the trees", "\U0001F30D" , "one tree", "all trees", "What tree")},
+            {new PrayerObject("of you", "\U0001F9CE"/* U+200D U+2640 U+FE0F"*/ , "you", "you", "What")},
+            {new PrayerObject("your friends", "\U0001F6B6" + "\U0001F9CE"  /* U+200D U+2640 U+FE0F*/  , "one friend", "all of your friends", "What friend")},
+            {new PrayerObject("your family", "\U0001F468"/* U+200D U+1F469 U+200D U+1F467 U+200D U+1F466"*/ , "someone in your family", "all of your family", "Who")},
+            {new PrayerObject("the animals", "\U0001F404" , "one animal", "all animals", "What animal")},
+            {new PrayerObject("the plants", "\U0001F940" , "one plant", "all plants", "What plant")},
+            {new PrayerObject("the world", "\U0001F30D" , "our world", "all of our world", "What in the world")},
+            {new PrayerObject("the sea", "\U0001F30A" , "the sea", "all of the sea", "What sea")},
+            {new PrayerObject("the lakes", "\U0001F4A6" , "one lake", "all lakes", "What lake")},
+            {new PrayerObject("the trees", "\U0001F333" , "one tree", "all trees", "What tree")},
+        };
+
+        public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()
+        {
+            {new PrayerObject("you", "\U0001F9CE"/* U+200D U+2640 U+FE0F"*/ , "you", "you", "wonderful you are")},
+            {new PrayerObject("all your friends", "\U0001F6B6" + "\U0001F9CE"  /* U+200D U+2640 U+FE0F*/  , "your friends", "them", "wonderful they are")},// ToDo: slumpa fram han eller hon
+            {new PrayerObject("your family", "\U0001F468"/* U+200D U+1F469 U+200D U+1F467 U+200D U+1F466"*/ , "your family", "you", "wonderful you are")},
+        };
+
+        public List<EmojiObject> Animal => new List<EmojiObject>
+        {
+            {new EmojiObject( "a squirrel", "\U0001F43F") },
+            {new EmojiObject("a hedgehog", "\U0001F994")},
+            {new EmojiObject("a dove", "\U0001F54A")},
+            {new EmojiObject("a swan", "\U0001F9A2")},
+            {new EmojiObject("a peacock", "\U0001F99A")},
+            {new EmojiObject("an owl", "\U0001F989")},
+            {new EmojiObject("a larva", "\U0001F41B")},
+            {new EmojiObject("a snake", "\U0001F40D")},
+            {new EmojiObject("a hamster", "\U0001F439")},
+            {new EmojiObject("a turtle", "\U0001F422")},
+            {new EmojiObject("a cat", "\U0001F431")},
+            {new EmojiObject("a snail", "\U0001F40C")},
+            {new EmojiObject("a frog", "\U0001F438")},
+            {new EmojiObject("a ladybug", "\U0001F41E")},
+            {new EmojiObject("an ant", "\U0001F41C")},
+            {new EmojiObject("a chicken", "\U0001F425")},
+            {new EmojiObject("a koala", "\U0001F428")},
+            {new EmojiObject("a monkey", "\U0001F412")},
+            {new EmojiObject("a rabbit", "\U0001F407")},
+            {new EmojiObject("a rat", "\U0001F401")},
+            {new EmojiObject("a honeybee", "\U0001F41D")},
+            {new EmojiObject("a butterfly", "\U0001F98B")},
+        };
+
+        public List<EmojiObject> Hides => new List<EmojiObject>
+        {
+            {new EmojiObject( "a squirrel", "\U0001F43F") },
+            {new EmojiObject("a hedgehog", "\U0001F994")},
+            {new EmojiObject("a dove", "\U0001F54A")},
+            {new EmojiObject("a swan", "\U0001F9A2")},
+            {new EmojiObject("a peacock", "\U0001F99A")},
+            {new EmojiObject("an owl", "\U0001F989")},
+            {new EmojiObject("a larva", "\U0001F41B")},
+            {new EmojiObject("a hamster", "\U0001F439")},
+            {new EmojiObject("a turtle", "\U0001F422")},
+            {new EmojiObject("a cat", "\U0001F431")},
+            {new EmojiObject("a snail", "\U0001F40C")},
+            {new EmojiObject("a frog", "\U0001F438")},
+            {new EmojiObject("a ladybug", "\U0001F41E")},
+            {new EmojiObject("an ant", "\U0001F41C")},
+            {new EmojiObject("a chicken", "\U0001F425")},
+            {new EmojiObject("a koala", "\U0001F428")},
+            {new EmojiObject("a monkey", "\U0001F412")},
+            {new EmojiObject("a rabbit", "\U0001F407")},
+            {new EmojiObject("a rat", "\U0001F401")},
+            {new EmojiObject("a honeybee", "\U0001F41D")},
+            {new EmojiObject("a butterfly", "\U0001F98B")},
         };
 
         public string LoveEmoji => "\U0001F60D";
 
-
-
-
-}
+    }
 }
