@@ -56,7 +56,7 @@ namespace App1.Languages
         public string God => "God";
         public string All => "all";
         public string TodayHeThinks => "Today he thinks especially of";
-        public string GodWantsAll => "God wants " + StringReplacer.PrayerObject3 + " to " + StringReplacer.PrayerObject5 + " a good life with many wonderful experiences";
+        public string GodWantsAll => "God wants " + StringReplacer.PrayerObject3 + " to have "/*a good life"*/ + StringReplacer.PrayerObject5 + " many wonderful experiences";
         public string DoYouThink => "do you think about today?";
         public string GodLoves => "God loves";
         public string WhenGodMeets => "When God meets with " + StringReplacer.PrayerObject2
@@ -68,23 +68,23 @@ namespace App1.Languages
         public List<string> GodCareVerb => new List<string>()
         {
             "loves",
-            "meets",
+            "meets with",
             "cares about"
         };
 
         public List<PrayerObject> Prayer1Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("all the humans", Humans ,"a human", "all of the humans", "What human", "have" ) },
-            {new PrayerObject("the earth",Earth,"the earth", "all of the earth", "What on earth", "have")},
-            {new PrayerObject("of you", Children, "you", "you", "What", "have")},
-            {new PrayerObject("your friends", Children , "a friend", "all of your friends", "What friend", "have")},
-            {new PrayerObject("your family", Families , "your family", "all of your family", "Who", "have")},
-            {new PrayerObject("the animals", Animals, "a animal", "all animals", "What animal", "have")},
-            {new PrayerObject("the plants", Plants , "a plant", "all plants", "What plant", "give")},
-            {new PrayerObject("the world", Earth , "our world", "all of our world", "What in the world", "have")},
-            {new PrayerObject("the sea", Seas , "the sea", "all of the sea", "What sea", "give")},
-            {new PrayerObject("the lakes", Lakes , "a lake", "all lakes", "What lake", "give")},
-            {new PrayerObject("the trees", Trees , "a tree", "all trees", "What tree", "give")},
+            {new PrayerObject("the humans", Humans ,"us", "all of us", "Who", "good lives with" ) },
+            {new PrayerObject("the earth",Earth,"our earth", "everyone on earth", "What", "good lives with")},
+            {new PrayerObject("of you", Children, "you", "you", "What", "a good life with")},
+            {new PrayerObject("of your friends", Children , "a friend", "all of your friends", "Who", "good lives with")},
+            {new PrayerObject("your family", Families , "your family", "all of your family", "Who", "a good life with")},
+            {new PrayerObject("the animals", Animals, "an animal", "all animals", "What animal", "good lives with")},
+            {new PrayerObject("the plants", Plants , "a plant", "all plants", "What plant", "good lives and give")},
+            {new PrayerObject("the world", Earth , "our world", "everyone in our world", "What", "good lives with")},
+            {new PrayerObject("the sea", Seas , "the sea", "all of the sea", "What sea", "good life and give")},
+            {new PrayerObject("the lakes", Lakes , "a lake", "all lakes", "What lake", "good lives and give")},
+            {new PrayerObject("the trees", Trees , "a tree", "all trees", "What tree", "good lives and give")},
         };
 
         public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()
@@ -103,10 +103,8 @@ namespace App1.Languages
             {new EmojiObject("a peacock", "\U0001F99A")},
             {new EmojiObject("an owl", "\U0001F989")},
             {new EmojiObject("a larva", "\U0001F41B")},
-            {new EmojiObject("a snake", "\U0001F40D")},
             {new EmojiObject("a hamster", "\U0001F439")},
             {new EmojiObject("a turtle", "\U0001F422")},
-            {new EmojiObject("a cat", "\U0001F431")},
             {new EmojiObject("a snail", "\U0001F40C")},
             {new EmojiObject("a frog", "\U0001F438")},
             {new EmojiObject("a ladybug", "\U0001F41E")},

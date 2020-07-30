@@ -57,12 +57,12 @@ namespace App1.Languages
         public string God => "Gud";
         public string All => "alla";
         public string TodayHeThinks => "Idag tänker han särskilt mycket på";
-        public string GodWantsAll => "Gud vill att " + StringReplacer.PrayerObject3 + " ska " + StringReplacer.PrayerObject5 + " ett bra liv med många fina upplevelser";
+        public string GodWantsAll => "Gud vill att " + StringReplacer.PrayerObject3 + " ska ha "/*ett bra liv "*/ + StringReplacer.PrayerObject5 + " många fina upplevelser";
         public string DoYouThink => "tänker du särskilt på idag?";
         public string GodLoves => "Gud älskar";
         public string WhenGodMeets => "När Gud möter " + StringReplacer.PrayerObject2
                                 + " vill han att " + StringReplacer.PrayerObject3
-                                + " ska förstår hur " + StringReplacer.PrayerObject4;
+                                + " ska förstå hur " + StringReplacer.PrayerObject4;
         public string GodHides => "Ibland gömmer sig Gud bakom " + StringReplacer.Hide + " och leker kurragömma med " + StringReplacer.PrayerObject2;
         public string GodIs => "Gud finns överallt";
 
@@ -77,17 +77,17 @@ namespace App1.Languages
 
         public List<PrayerObject> Prayer1Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("människor",Humans,"en människa", "alla människor", "Vilken människa" , "ha") },
-            {new PrayerObject("på jorden",Earth,"vår jord", "alla på jorden", "Vad på jorden" , "ha") },
-            {new PrayerObject("som är som dig", Children, "dig", "du", "Vad", "ha")},
-            {new PrayerObject("dina vänner", Humans ,"en vän", "alla dina vänner", "Vilken vän", "ha")},
-            {new PrayerObject("i din familj", Families , "din familj", "alla i din familj", "Vem", "ha")},
-            {new PrayerObject("djuren", Animals , "ett djur", "alla djur", "Vilket djur", "ha")},
-            {new PrayerObject("växterna", Plants , "en växt", "alla växter", "Vilken växt", "ge")},
-            {new PrayerObject("hela världen", Earth , "vår värld", "alla i hela världen", "Vad i världen", "ha")},
-            {new PrayerObject("haven", Seas, "ett hav", "alla hav", "Vilket hav", "ge")},
-            {new PrayerObject("sjöarna", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "ge")},
-            {new PrayerObject("träden", Trees, "ett träd", "alla träd", "Vilket träd", "ge")},
+            {new PrayerObject("människor",Humans,"oss människor", "alla människor", "Vilken människa" , "bra liv med") },
+            {new PrayerObject("på jorden",Earth,"vår jord", "alla på jorden", "Vad på jorden" , "bra liv med") },
+            {new PrayerObject("som är som dig", Children, "dig", "du", "Vad", "ett bra live med")},
+            {new PrayerObject("dina vänner", Humans ,"en vän", "alla dina vänner", "Vilken vän", "bra liv med")},
+            {new PrayerObject("i din familj", Families , "din familj", "alla i din familj", "Vem", "ett bra liv med")},
+            {new PrayerObject("djur", Animals , "ett djur", "alla djur", "Vilket djur", "bra liv med")},
+            {new PrayerObject("växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge")},
+            {new PrayerObject("hela världen", Earth , "vår värld", "alla i hela världen", "Vad i världen", "bra liv med")},
+            {new PrayerObject("hav", Seas, "ett hav", "alla hav", "Vilket hav", "bra liv som kan ge")},
+            {new PrayerObject("sjöar", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "bra liv som kan ge")},
+            {new PrayerObject("träd", Trees, "ett träd", "alla träd", "Vilket träd", "bra liv som kan ge")},
         };
 
         public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()
@@ -107,10 +107,8 @@ namespace App1.Languages
             {new EmojiObject("en påfågel", "\U0001F99A")},
             {new EmojiObject("en uggla", "\U0001F989")},
             {new EmojiObject(" en larv", "\U0001F41B")},
-            {new EmojiObject("en orm", "\U0001F40D")},
             {new EmojiObject("en hamnster", "\U0001F439")},
             {new EmojiObject("en sköldpadda", "\U0001F422")},
-            {new EmojiObject("en katt", "\U0001F431")},
             {new EmojiObject("en snigel", "\U0001F40C")},
             {new EmojiObject("en groda", "\U0001F438")},
             {new EmojiObject("en nyckelpiga", "\U0001F41E")},

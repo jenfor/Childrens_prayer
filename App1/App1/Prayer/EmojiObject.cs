@@ -10,6 +10,7 @@ namespace App1.Prayer
         {
             Emoji = emoji;
             ImageDescription = imageDescription;
+
         }
     }
 }
