@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hmLelMjr0K4LsZtPx2Pxnc1BK1uKL/JCe7OeoPeXPmns6BVofdtnK6H97zg5JtSX8MQ7waFyRP/pWgVtFk/ApA==",
+  "dgSpecHash": "NuXOlmVcI1xWRlNVoKvEYqTlMv3/cbSxkDUMGjFMyRmgS4TE4Bqwq2ps3qC92TVNFqxh5vtBazrmI23ZDL5InA==",
   "success": true,
-  "projectFilePath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.iOS/App1.iOS.csproj",
+  "projectFilePath": "C:\\Users\\jenny\\Desktop\\A Child's prayer\\Childrens_prayer\\App1\\App1.iOS\\App1.iOS.csproj",
   "expectedPackageFiles": [
-    "/Users/jennyforsberg/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
-    "/Users/jennyforsberg/.nuget/packages/xamarin.essentials/1.3.1/xamarin.essentials.1.3.1.nupkg.sha512",
-    "/Users/jennyforsberg/.nuget/packages/xamarin.forms/4.3.0.908675/xamarin.forms.4.3.0.908675.nupkg.sha512"
+    "C:\\Users\\jenny\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\jenny\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
   ],
   "logs": []
 }

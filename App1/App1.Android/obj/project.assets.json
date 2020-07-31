@@ -1932,32 +1932,40 @@
     ]
   },
   "packageFolders": {
-    "/Users/jennyforsberg/.nuget/packages/": {}
+    "C:\\Users\\jenny\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.Android/App1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\jenny\\Desktop\\A Child's prayer\\Childrens_prayer\\App1\\App1.Android\\App1.Android.csproj",
       "projectName": "App1.Android",
-      "projectPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.Android/App1.Android.csproj",
-      "packagesPath": "/Users/jennyforsberg/.nuget/packages/",
-      "outputPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1.Android/obj/",
+      "projectPath": "C:\\Users\\jenny\\Desktop\\A Child's prayer\\Childrens_prayer\\App1\\App1.Android\\App1.Android.csproj",
+      "packagesPath": "C:\\Users\\jenny\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jenny\\Desktop\\A Child's prayer\\Childrens_prayer\\App1\\App1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/jennyforsberg/.config/NuGet/NuGet.Config"
+        "C:\\Users\\jenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://api.nuget.org/v3/index.json": {},
+        "http://packagesource": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj": {
-              "projectPath": "/Users/jennyforsberg/Projects/The children's prayer/Childrens_prayer/App1/App1/App1.csproj"
+            "C:\\Users\\jenny\\Desktop\\A Child's prayer\\Childrens_prayer\\App1\\App1\\App1.csproj": {
+              "projectPath": "C:\\Users\\jenny\\Desktop\\A Child's prayer\\Childrens_prayer\\App1\\App1\\App1.csproj"
             }
           }
         }

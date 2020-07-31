@@ -11,7 +11,7 @@ namespace App1.Languages
         public string ShareFairyTale => "Share the prayer";
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
-        public string ViewFairyTale => "View/Share";
+        public string ViewFairyTale => "View full prayer";
         public string NewImage => "Change";
 
         public string VersionOption => "What kind of fairy tale do you want to write?";
@@ -99,7 +99,7 @@ namespace App1.Languages
             {new EmojiObject( "a squirrel", "\U0001F43F") },
             {new EmojiObject("a hedgehog", "\U0001F994")},
             {new EmojiObject("a dove", "\U0001F54A")},
-            {new EmojiObject("a swan", "\U0001F9A2")},
+            //{new EmojiObject("a swan", "\U0001F9A2")},
             {new EmojiObject("a peacock", "\U0001F99A")},
             {new EmojiObject("an owl", "\U0001F989")},
             {new EmojiObject("a larva", "\U0001F41B")},
@@ -174,12 +174,12 @@ namespace App1.Languages
 
         public List<EmojiObject> Children => new List<EmojiObject>
         {
-            {new EmojiObject( "a girl", "🧎🏻‍♀️") },
-            {new EmojiObject( "a girl", "🧎🏼‍♀️") },
-            {new EmojiObject( "a girl", "🧎🏽‍♀️") },
-            {new EmojiObject( "a girl", "🧎🏾‍♀️") },
-            {new EmojiObject( "a girl", "🧎🏿‍♀️") },
-            {new EmojiObject( "a girl", "🧎‍♂️") },
+            //{new EmojiObject( "a girl", "🧎🏻‍♀️ 1") },
+            //{new EmojiObject( "a girl", "🧎🏼‍♀️" ) },
+            //{new EmojiObject( "a girl", "🧎🏽‍♀️") },
+            //{new EmojiObject( "a girl", "🧎🏾‍♀️") },
+            //{new EmojiObject( "a girl", "🧎🏿‍♀️") },
+            //{new EmojiObject( "a girl", "🧎‍♂️") },
 
             {new EmojiObject( "a boy", "🧎🏻") },
             {new EmojiObject( "a boy", "🧎🏼") },
@@ -188,19 +188,19 @@ namespace App1.Languages
             {new EmojiObject( "a boy", "🧎🏾") },
             {new EmojiObject( "a boy", "🧎🏿") },
 
-            {new EmojiObject( "a boy", "🚶‍♂️") },
-            {new EmojiObject( "a boy", "🚶🏻‍♂️") },
-            {new EmojiObject( "a boy", "🚶🏼‍♂️") },
-            {new EmojiObject( "a boy", "🚶🏽‍♂️") },
-            {new EmojiObject( "a boy", "🚶🏾‍♂️") },
-            {new EmojiObject( "a boy", "🚶🏿‍♂️") },
+            //{new EmojiObject( "a boy", "🚶‍♂️") },
+            //{new EmojiObject( "a boy", "🚶🏻‍♂️") },
+            //{new EmojiObject( "a boy", "🚶🏼‍♂️") },
+            //{new EmojiObject( "a boy", "🚶🏽‍♂️") },
+            //{new EmojiObject( "a boy", "🚶🏾‍♂️") },
+            //{new EmojiObject( "a boy", "🚶🏿‍♂️") },
 
-            {new EmojiObject( "a girl", "🚶‍♀️") },
-            {new EmojiObject( "a girl", "🚶🏻‍♀️") },
-            {new EmojiObject( "a girl", "🚶🏼‍♀️") },
-            {new EmojiObject( "a girl", "🚶🏽‍♀️") },
-            {new EmojiObject( "a girl", "🚶🏾‍♀️") },
-            {new EmojiObject( "a girl", "🚶🏿‍♀️") },
+            //{new EmojiObject( "a girl", "🚶‍♀️") },
+            //{new EmojiObject( "a girl", "🚶🏻‍♀️") },
+            //{new EmojiObject( "a girl", "🚶🏼‍♀️") },
+            //{new EmojiObject( "a girl", "🚶🏽‍♀️") },
+            //{new EmojiObject( "a girl", "🚶🏾‍♀️") },
+            //{new EmojiObject( "a girl", "🚶🏿‍♀️") },
 
             {new EmojiObject( "a boy", "🧍") },
             {new EmojiObject( "a boy", "🧍🏻") },

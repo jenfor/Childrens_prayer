@@ -12,7 +12,7 @@ namespace App1.Languages
         public string ShareFairyTale => "Dela bönen";
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
-        public string ViewFairyTale => "Visa/Dela hela bönen";
+        public string ViewFairyTale => "Visa hela bönen";
         public string NewImage => "Byt bild";
 
         public string VersionOption => "Vilken sorts saga vill du skriva?";
@@ -84,7 +84,7 @@ namespace App1.Languages
             {new PrayerObject("i din familj", Families , "din familj", "alla i din familj", "Vem", "ett bra liv med")},
             {new PrayerObject("djur", Animals , "ett djur", "alla djur", "Vilket djur", "bra liv med")},
             {new PrayerObject("växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge")},
-            {new PrayerObject("hela världen", Earth , "vår värld", "alla i hela världen", "Vad i världen", "bra liv med")},
+            {new PrayerObject("i hela världen", Earth , "vår värld", "alla i hela världen", "Vad i världen", "bra liv med")},
             {new PrayerObject("hav", Seas, "ett hav", "alla hav", "Vilket hav", "bra liv som kan ge")},
             {new PrayerObject("sjöar", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "bra liv som kan ge")},
             {new PrayerObject("träd", Trees, "ett träd", "alla träd", "Vilket träd", "bra liv som kan ge")},
@@ -103,8 +103,7 @@ namespace App1.Languages
             {new EmojiObject( "en ekorre", "\U0001F43F") },
             {new EmojiObject("en igelkott", "\U0001F994")},
             {new EmojiObject("en duva", "\U0001F54A")},
-            {new EmojiObject("en svan", "\U0001F9A2")},
-            {new EmojiObject("en påfågel", "\U0001F99A")},
+            //{new EmojiObject("en påfågel", "\U0001F99A")},
             {new EmojiObject("en uggla", "\U0001F989")},
             {new EmojiObject(" en larv", "\U0001F41B")},
             {new EmojiObject("en hamnster", "\U0001F439")},
@@ -135,7 +134,7 @@ namespace App1.Languages
             {new EmojiObject("ett djur", "\U0001F408")},
             {new EmojiObject("en grönsak", "\U0001F955")},
             {new EmojiObject("en glass", "\U0001F366")},
-            {new EmojiObject("en pusselbit", "\U0001F9E9")},
+            {new EmojiObject("en pusselbit", "\U0001F9E9")},//Problem android
         };
 
         public List<EmojiObject> Plants => new List<EmojiObject>
@@ -190,47 +189,47 @@ namespace App1.Languages
 
         public List<EmojiObject> Children => new List<EmojiObject>
         {
-            {new EmojiObject( "en flicka", "🧎🏻‍♀️") },
-            {new EmojiObject( "en flicka", "🧎🏼‍♀️") },
-            {new EmojiObject( "en flicka", "🧎🏽‍♀️") },
-            {new EmojiObject( "en flicka", "🧎🏾‍♀️") },
-            {new EmojiObject( "en flicka", "🧎🏿‍♀️") },
-            {new EmojiObject( "en flicka", "🧎‍♂️") },
+            //{new EmojiObject( "en flicka", "🧎🏻‍♀️ 1") },
+            //{new EmojiObject( "en flicka", "🧎🏼‍♀️ 2") },
+           //{new EmojiObject( "en flicka", "🧎🏽‍♀️ 3" ) },
+            //{new EmojiObject( "en flicka", "🧎🏾‍♀️ 4") },
+            //{new EmojiObject( "en flicka", "🧎🏿‍♀️ 5") },
+            //{new EmojiObject( "en flicka", "🧎‍♂️ 6") },
 
-            {new EmojiObject( "en pojke", "🧎🏻") },
-            {new EmojiObject( "en pojke", "🧎🏼") },
-            {new EmojiObject( "en pojke", "🧎🏽") },
-            {new EmojiObject( "en pojke", "🧎🏽") },
-            {new EmojiObject( "en pojke", "🧎🏾") },
-            {new EmojiObject( "en pojke", "🧎🏿") },
+            //{new EmojiObject( "en pojke", "🧎🏻 1") },
+            //{new EmojiObject( "en pojke", "🧎🏼 2") },
+            //{new EmojiObject( "en pojke", "🧎🏽 3") },
+            //{new EmojiObject( "en pojke", "🧎🏽 4") },
+            //{new EmojiObject( "en pojke", "🧎🏾 5") },
+            //{new EmojiObject( "en pojke", "🧎🏿 6") },
 
-            {new EmojiObject( "aen pojke", "🚶‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏻‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏼‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏽‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏾‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏿‍♂️") },
+            {new EmojiObject( "en pojke", "🚶‍♂️ 7") }, // Funkar!!
+            {new EmojiObject( "en pojke", "🚶🏻‍♂️ 8") },
+            {new EmojiObject( "en pojke", "🚶🏼‍♂️ 9") },// funkar!!
+            {new EmojiObject( "en pojke", "🚶🏽‍♂️ 10") }, // Funkar!!
+            {new EmojiObject( "en pojke", "🚶🏾‍♂️ 11") }, // Funkar!!
+            {new EmojiObject( "en pojke", "🚶🏿‍♂️ 12") },
 
-            {new EmojiObject( "en flicka", "🚶‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏻‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏼‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏽‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏾‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏿‍♀️") },
+            {new EmojiObject( "en flicka", "🚶‍♀️ 13") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏻‍♀️ 14") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏼‍♀️ 15") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏽‍♀️ 16") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏾‍♀️ 17") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏿‍♀️ 18") },
 
-            {new EmojiObject( "en pojke", "🧍") },
-            {new EmojiObject( "en pojke", "🧍🏻") },
-            {new EmojiObject( "en pojke", "🧍🏼") },
-            {new EmojiObject( "en pojke", "🧍🏽") },
-            {new EmojiObject( "en pojke", "🧍🏾") },
-            {new EmojiObject( "en pojke", "🧍🏿") },
+           // {new EmojiObject( "en pojke", "🧍 7") },
+           // {new EmojiObject( "en pojke", "🧍🏻 8") },
+           // {new EmojiObject( "en pojke", "🧍🏼 9") },
+            //{new EmojiObject( "en pojke", "🧍🏽 10") },
+           // {new EmojiObject( "en pojke", "🧍🏾 11") },
+            //{new EmojiObject( "en pojke", "🧍🏿 12") },
 
-            {new EmojiObject( "en flicka", "🧍‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏻‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏼‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏽‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏾‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏿‍♀️") },
+           // {new EmojiObject( "en flicka", "🧍‍♀️ 13") },
+           // {new EmojiObject( "en flicka", "🧍🏻‍♀️ 14" ) },
+            //{new EmojiObject( "en flicka", "🧍🏼‍♀️ 15") },
+            //{new EmojiObject( "en flicka", "🧍🏽‍♀️ 16") },
+            //{new EmojiObject( "en flicka", "🧍🏾‍♀️ 17") },
+           // {new EmojiObject( "en flicka", "🧍🏿‍♀️ 18") },
         };
 
         public List<EmojiObject> Seas => new List<EmojiObject>
@@ -257,47 +256,47 @@ namespace App1.Languages
             {new EmojiObject( "en kvinna och en man som håller varandra i handen", "👩🏻‍🤝‍👨🏿") },
             {new EmojiObject( "en kvinna och en man som håller varandra i handen", "👩🏽‍🤝‍👨🏼") },
 
-            {new EmojiObject( "en flicka", "🧎🏻‍♀️") },
-            {new EmojiObject( "en flicka", "🧎🏼‍♀️") },
-            {new EmojiObject( "en flicka", "🧎🏽‍♀️") },
-            {new EmojiObject( "en flicka", "🧎🏾‍♀️") },
-            {new EmojiObject( "en flicka", "🧎🏿‍♀️") },
-            {new EmojiObject( "en flicka", "🧎‍♂️") },
+           // {new EmojiObject( "en flicka", "🧎🏻‍♀️") },
+            //{new EmojiObject( "en flicka", "🧎🏼‍♀️") },
+           // {new EmojiObject( "en flicka", "🧎🏽‍♀️") },
+           // {new EmojiObject( "en flicka", "🧎🏾‍♀️") },
+            //{new EmojiObject( "en flicka", "🧎🏿‍♀️") },
+            //{new EmojiObject( "en flicka", "🧎‍♂️") },
 
-            {new EmojiObject( "en pojke", "🧎🏻") },
-            {new EmojiObject( "en pojke", "🧎🏼") },
-            {new EmojiObject( "en pojke", "🧎🏽") },
-            {new EmojiObject( "en pojke", "🧎🏽") },
-            {new EmojiObject( "en pojke", "🧎🏾") },
-            {new EmojiObject( "en pojke", "🧎🏿") },
+            //{new EmojiObject( "en pojke", "🧎🏻") },
+            //{new EmojiObject( "en pojke", "🧎🏼") },
+            //{new EmojiObject( "en pojke", "🧎🏽") },
+            //{new EmojiObject( "en pojke", "🧎🏽") },
+            //{new EmojiObject( "en pojke", "🧎🏾") },
+            //{new EmojiObject( "en pojke", "🧎🏿") },
 
-            {new EmojiObject( "aen pojke", "🚶‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏻‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏼‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏽‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏾‍♂️") },
-            {new EmojiObject( "en pojke", "🚶🏿‍♂️") },
+            //{new EmojiObject( "aen pojke", "🚶‍♂️") },
+            //{new EmojiObject( "en pojke", "🚶🏻‍♂️") },
+            //{new EmojiObject( "en pojke", "🚶🏼‍♂️") },
+            //{new EmojiObject( "en pojke", "🚶🏽‍♂️") },
+            //{new EmojiObject( "en pojke", "🚶🏾‍♂️") },
+            //{new EmojiObject( "en pojke", "🚶🏿‍♂️") },
 
-            {new EmojiObject( "en flicka", "🚶‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏻‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏼‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏽‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏾‍♀️") },
-            {new EmojiObject( "en flicka", "🚶🏿‍♀️") },
+            //{new EmojiObject( "en flicka", "🚶‍♀️") },
+            //{new EmojiObject( "en flicka", "🚶🏻‍♀️") },
+            //{new EmojiObject( "en flicka", "🚶🏼‍♀️") },
+            //{new EmojiObject( "en flicka", "🚶🏽‍♀️") },
+            //{new EmojiObject( "en flicka", "🚶🏾‍♀️") },
+            //{new EmojiObject( "en flicka", "🚶🏿‍♀️") },
 
-            {new EmojiObject( "en pojke", "🧍") },
-            {new EmojiObject( "en pojke", "🧍🏻") },
-            {new EmojiObject( "en pojke", "🧍🏼") },
-            {new EmojiObject( "en pojke", "🧍🏽") },
-            {new EmojiObject( "en pojke", "🧍🏾") },
-            {new EmojiObject( "en pojke", "🧍🏿") },
+            //{new EmojiObject( "en pojke", "🧍") },
+            //{new EmojiObject( "en pojke", "🧍🏻") },
+            //{new EmojiObject( "en pojke", "🧍🏼") },
+            //{new EmojiObject( "en pojke", "🧍🏽") },
+            //{new EmojiObject( "en pojke", "🧍🏾") },
+            //{new EmojiObject( "en pojke", "🧍🏿") },
 
-            {new EmojiObject( "en flicka", "🧍‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏻‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏼‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏽‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏾‍♀️") },
-            {new EmojiObject( "en flicka", "🧍🏿‍♀️") },
+            //{new EmojiObject( "en flicka", "🧍‍♀️") },
+            //{new EmojiObject( "en flicka", "🧍🏻‍♀️") },
+            //{new EmojiObject( "en flicka", "🧍🏼‍♀️") },
+            //{new EmojiObject( "en flicka", "🧍🏽‍♀️") },
+            //{new EmojiObject( "en flicka", "🧍🏾‍♀️") },
+            //{new EmojiObject( "en flicka", "🧍🏿‍♀️") },
         };
 
         public List<EmojiObject> Earth => new List<EmojiObject>
@@ -309,8 +308,8 @@ namespace App1.Languages
 
         public List<EmojiObject> Toys => new List<EmojiObject>
         {
-            { new EmojiObject( "en leksak","\U0001FA81")},
-            { new EmojiObject( "en leksak","\U0001F9F8")},
+           { new EmojiObject( "en leksak","\U0001FA81")}, // TYvärr verkar ingen leksak fungera i android
+            //{ new EmojiObject( "en leksak","\U0001F9F8")},
         };
 
         public List<EmojiObject> Flower => new List<EmojiObject>
