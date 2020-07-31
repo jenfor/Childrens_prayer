@@ -80,7 +80,7 @@ namespace App1.Languages
             {new PrayerObject("människor",Humans,"oss människor", "alla människor", "Vilken människa" , "bra liv med", 1) },
             {new PrayerObject("på jorden",Earth,"vår jord", "alla på jorden", "Vad på jorden" , "bra liv med",1) },
             {new PrayerObject("som är som dig", Children, "dig", "du", "Vad", "ett bra live med",2)},
-            {new PrayerObject("dina vänner", Humans ,"en vän", "alla dina vänner", "Vilken vän", "bra liv med", 1)},
+            {new PrayerObject("dina vänner", Children ,"en vän", "alla dina vänner", "Vilken vän", "bra liv med", 2)},
             {new PrayerObject("i din familj", Families , "din familj", "alla i din familj", "Vem", "ett bra liv med", 1)},
             {new PrayerObject("djur", Animals , "ett djur", "alla djur", "Vilket djur", "bra liv med", 1)},
             {new PrayerObject("växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge", 1)},
@@ -92,9 +92,9 @@ namespace App1.Languages
 
         public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("alla människor", Humans ,"en männska", "hon", "underbar hon är", String.Empty, 2) },
+            {new PrayerObject("alla människor", Humans ,"en männska", "hon", "underbar hon är", String.Empty, 1) },
             {new PrayerObject("dig", Children, "dig", "du", "underbar du är", String.Empty, 1)},
-            {new PrayerObject("alla dina vänner", Humans , "dina vänner", "de", "underbara de är", String.Empty, 2)},
+            {new PrayerObject("alla dina vänner", Humans , "dina vänner", "de", "underbara de är", String.Empty, 1)},
             {new PrayerObject("din familj", Families , "din familj", "ni", "underbara ni är", String.Empty, 1)},
         };
 
