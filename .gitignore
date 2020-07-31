@@ -1,1 +1,7 @@
 .vs
+App1/App1.Android/bin
+App1/App1.Android/obj
+App1/App1.iOS/bin
+App1/App1.iOS/obj
+App1/App1/bin
+App1/App1/obj
