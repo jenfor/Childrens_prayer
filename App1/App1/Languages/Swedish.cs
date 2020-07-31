@@ -77,25 +77,25 @@ namespace App1.Languages
 
         public List<PrayerObject> Prayer1Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("människor",Humans,"oss människor", "alla människor", "Vilken människa" , "bra liv med") },
-            {new PrayerObject("på jorden",Earth,"vår jord", "alla på jorden", "Vad på jorden" , "bra liv med") },
-            {new PrayerObject("som är som dig", Children, "dig", "du", "Vad", "ett bra live med")},
-            {new PrayerObject("dina vänner", Humans ,"en vän", "alla dina vänner", "Vilken vän", "bra liv med")},
-            {new PrayerObject("i din familj", Families , "din familj", "alla i din familj", "Vem", "ett bra liv med")},
-            {new PrayerObject("djur", Animals , "ett djur", "alla djur", "Vilket djur", "bra liv med")},
-            {new PrayerObject("växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge")},
-            {new PrayerObject("i hela världen", Earth , "vår värld", "alla i hela världen", "Vad i världen", "bra liv med")},
-            {new PrayerObject("hav", Seas, "ett hav", "alla hav", "Vilket hav", "bra liv som kan ge")},
-            {new PrayerObject("sjöar", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "bra liv som kan ge")},
-            {new PrayerObject("träd", Trees, "ett träd", "alla träd", "Vilket träd", "bra liv som kan ge")},
+            {new PrayerObject("människor",Humans,"oss människor", "alla människor", "Vilken människa" , "bra liv med", 1) },
+            {new PrayerObject("på jorden",Earth,"vår jord", "alla på jorden", "Vad på jorden" , "bra liv med",1) },
+            {new PrayerObject("som är som dig", Children, "dig", "du", "Vad", "ett bra live med",2)},
+            {new PrayerObject("dina vänner", Humans ,"en vän", "alla dina vänner", "Vilken vän", "bra liv med", 1)},
+            {new PrayerObject("i din familj", Families , "din familj", "alla i din familj", "Vem", "ett bra liv med", 1)},
+            {new PrayerObject("djur", Animals , "ett djur", "alla djur", "Vilket djur", "bra liv med", 1)},
+            {new PrayerObject("växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge", 1)},
+            {new PrayerObject("i hela världen", Earth , "vår värld", "alla i hela världen", "Vad i världen", "bra liv med", 1)},
+            {new PrayerObject("hav", Seas, "ett hav", "alla hav", "Vilket hav", "bra liv som kan ge", 1)},
+            {new PrayerObject("sjöar", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "bra liv som kan ge",1)},
+            {new PrayerObject("träd", Trees, "ett träd", "alla träd", "Vilket träd", "bra liv som kan ge", 1)},
         };
 
         public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("alla människor", Humans ,"en männska", "hon", "underbar hon är", String.Empty) },
-            {new PrayerObject("dig", Children, "dig", "du", "underbar du är", String.Empty)},
-            {new PrayerObject("alla dina vänner", Humans , "dina vänner", "de", "underbara de är", String.Empty)},
-            {new PrayerObject("din familj", Families , "din familj", "ni", "underbara ni är", String.Empty)},
+            {new PrayerObject("alla människor", Humans ,"en männska", "hon", "underbar hon är", String.Empty, 2) },
+            {new PrayerObject("dig", Children, "dig", "du", "underbar du är", String.Empty, 1)},
+            {new PrayerObject("alla dina vänner", Humans , "dina vänner", "de", "underbara de är", String.Empty, 2)},
+            {new PrayerObject("din familj", Families , "din familj", "ni", "underbara ni är", String.Empty, 1)},
         };
 
         public List<EmojiObject> Animals => new List<EmojiObject>
@@ -203,19 +203,19 @@ namespace App1.Languages
             //{new EmojiObject( "en pojke", "🧎🏾 5") },
             //{new EmojiObject( "en pojke", "🧎🏿 6") },
 
-            {new EmojiObject( "en pojke", "🚶‍♂️ 7") }, // Funkar!!
-            {new EmojiObject( "en pojke", "🚶🏻‍♂️ 8") },
-            {new EmojiObject( "en pojke", "🚶🏼‍♂️ 9") },// funkar!!
-            {new EmojiObject( "en pojke", "🚶🏽‍♂️ 10") }, // Funkar!!
-            {new EmojiObject( "en pojke", "🚶🏾‍♂️ 11") }, // Funkar!!
-            {new EmojiObject( "en pojke", "🚶🏿‍♂️ 12") },
+            {new EmojiObject( "en pojke", "🚶‍♂️") }, // Funkar!!
+            {new EmojiObject( "en pojke", "🚶🏻‍♂️") },
+            {new EmojiObject( "en pojke", "🚶🏼‍♂️") },// funkar!!
+            {new EmojiObject( "en pojke", "🚶🏽‍♂️") }, // Funkar!!
+            {new EmojiObject( "en pojke", "🚶🏾‍♂️") }, // Funkar!!
+            {new EmojiObject( "en pojke", "🚶🏿‍♂️") },
 
-            {new EmojiObject( "en flicka", "🚶‍♀️ 13") }, // Funkar!!
-            {new EmojiObject( "en flicka", "🚶🏻‍♀️ 14") }, // Funkar!!
-            {new EmojiObject( "en flicka", "🚶🏼‍♀️ 15") }, // Funkar!!
-            {new EmojiObject( "en flicka", "🚶🏽‍♀️ 16") }, // Funkar!!
-            {new EmojiObject( "en flicka", "🚶🏾‍♀️ 17") }, // Funkar!!
-            {new EmojiObject( "en flicka", "🚶🏿‍♀️ 18") },
+            {new EmojiObject( "en flicka", "🚶‍♀") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏻‍♀️") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏼‍♀️") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏽‍♀️") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏾‍♀️") }, // Funkar!!
+            {new EmojiObject( "en flicka", "🚶🏿‍♀️") },
 
            // {new EmojiObject( "en pojke", "🧍 7") },
            // {new EmojiObject( "en pojke", "🧍🏻 8") },
@@ -270,7 +270,7 @@ namespace App1.Languages
             //{new EmojiObject( "en pojke", "🧎🏾") },
             //{new EmojiObject( "en pojke", "🧎🏿") },
 
-            //{new EmojiObject( "aen pojke", "🚶‍♂️") },
+            //{new EmojiObject( "en pojke", "🚶‍♂️") },
             //{new EmojiObject( "en pojke", "🚶🏻‍♂️") },
             //{new EmojiObject( "en pojke", "🚶🏼‍♂️") },
             //{new EmojiObject( "en pojke", "🚶🏽‍♂️") },
