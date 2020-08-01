@@ -77,17 +77,17 @@ namespace App1.Languages
 
         public List<PrayerObject> Prayer1Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("människor",Humans,"oss människor", "alla människor", "Vilken människa" , "bra liv med", 1) },
-            {new PrayerObject("på jorden",Earth,"vår jord", "alla på jorden", "Vad på jorden" , "bra liv med",1) },
-            {new PrayerObject("som är som dig", Children, "dig", "du", "Vad", "ett bra live med",2)},
+            {new PrayerObject("människor",Children,"oss människor", "alla människor", "Vilken människa" , "bra liv med", 2) },
+            {new PrayerObject("på jorden",Earth,"vår jord", "alla på jorden", "Vad" , "bra liv med",1) },
+            {new PrayerObject("som är som dig", Children, "dig", "du", "Vad", "ett bra live med",1)},
             {new PrayerObject("dina vänner", Children ,"en vän", "alla dina vänner", "Vilken vän", "bra liv med", 2)},
             {new PrayerObject("i din familj", Families , "din familj", "alla i din familj", "Vem", "ett bra liv med", 1)},
             {new PrayerObject("djur", Animals , "ett djur", "alla djur", "Vilket djur", "bra liv med", 1)},
-            {new PrayerObject("växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge", 1)},
-            {new PrayerObject("i hela världen", Earth , "vår värld", "alla i hela världen", "Vad i världen", "bra liv med", 1)},
-            {new PrayerObject("hav", Seas, "ett hav", "alla hav", "Vilket hav", "bra liv som kan ge", 1)},
-            {new PrayerObject("sjöar", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "bra liv som kan ge",1)},
-            {new PrayerObject("träd", Trees, "ett träd", "alla träd", "Vilket träd", "bra liv som kan ge", 1)},
+            {new PrayerObject("växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge oss", 1)},
+            {new PrayerObject("i hela världen", Earth , "vår värld", "alla i hela världen", "Vad", "bra liv med", 1)},
+            {new PrayerObject("hav", Seas, "ett hav", "alla hav", "Vilket hav", "bra liv som kan ge oss", 1)},
+            {new PrayerObject("sjöar", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "bra liv som kan ge oss",1)},
+            {new PrayerObject("träd", Trees, "ett träd", "alla träd", "Vilket träd", "bra liv som kan ge oss", 1)},
         };
 
         public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()

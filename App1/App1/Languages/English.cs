@@ -74,17 +74,17 @@ namespace App1.Languages
 
         public List<PrayerObject> Prayer1Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("the humans", Humans ,"us", "all of us", "Who", "good lives with", 1 ) },
+            {new PrayerObject("the humans", Children ,"us", "all of us", "Who", "good lives with", 2 ) },
             {new PrayerObject("the earth",Earth,"our earth", "everyone on earth", "What", "good lives with",1)},
             {new PrayerObject("of you", Children, "you", "you", "What", "a good life with",1)},
             {new PrayerObject("of your friends", Children , "a friend", "all of your friends", "Who", "good lives with",2)},
             {new PrayerObject("your family", Families , "your family", "all of your family", "Who", "a good life with",1 )},
             {new PrayerObject("the animals", Animals, "an animal", "all animals", "What animal", "good lives with",1)},
-            {new PrayerObject("the plants", Plants , "a plant", "all plants", "What plant", "good lives and be able to give",1)},
+            {new PrayerObject("the plants", Plants , "a plant", "all plants", "What plant", "good lives and be able to give us",1)},
             {new PrayerObject("the world", Earth , "our world", "everyone in our world", "What", "good lives with",1)},
-            {new PrayerObject("the sea", Seas , "the sea", "all of the sea", "What sea", "a good life and be able to give",1 )},
-            {new PrayerObject("the lakes", Lakes , "a lake", "all lakes", "What lake", "good lives and be able to give",1)},
-            {new PrayerObject("the trees", Trees , "a tree", "all trees", "What tree", "good lives and be alble to give",1)},
+            {new PrayerObject("the sea", Seas , "the sea", "all of the sea", "What sea", "a good life and be able to give us",1 )},
+            {new PrayerObject("the lakes", Lakes , "a lake", "all lakes", "What lake", "good lives and be able to give us",1)},
+            {new PrayerObject("the trees", Trees , "a tree", "all trees", "What tree", "good lives and be able to give us",1)},
         };
 
         public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()
