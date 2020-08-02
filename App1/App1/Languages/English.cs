@@ -75,7 +75,7 @@ namespace App1.Languages
         public List<PrayerObject> Prayer1Objects => new List<PrayerObject>()
         {
             {new PrayerObject("the humans", Children ,"us", "all of us", "Who", "good lives with", 2 ) },
-            {new PrayerObject("the earth",Earth,"our earth", "everyone on earth", "What", "good lives with",1)},
+            {new PrayerObject("the earth",Earth,"our earth", "everyone on earth", "What", "a good lives with",1)},
             {new PrayerObject("of you", Children, "you", "you", "What", "a good life with",1)},
             {new PrayerObject("of your friends", Children , "a friend", "all of your friends", "Who", "good lives with",2)},
             {new PrayerObject("your family", Families , "your family", "all of your family", "Who", "a good life with",1 )},

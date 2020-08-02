@@ -86,18 +86,40 @@ namespace App1.Prayer
             return prayerObject;
         }
 
-        public string GetRandomEmojis(Language language)
-        {            
+        public string GetRandomEmojis(Language language, int nrEmojis)
+        {
             var allEmojis = new List<EmojiObject>();
             allEmojis.AddRange(new List<EmojiObject>(language.Animals));
             allEmojis.AddRange(new List<EmojiObject>(language.Hides));
+            /*
+                       var emoji1 = CreateAndSkipEqualEmojis(null, allEmojis);
+                       var emoji2 = CreateAndSkipEqualEmojis(emoji1, allEmojis); 
+                       var emoji3 = CreateAndSkipEqualEmojis(emoji2, allEmojis);
 
-            var emoji1 = CreateAndSkipEqualEmojis(null, allEmojis);
-            var emoji2 = CreateAndSkipEqualEmojis(emoji1, allEmojis); 
-            var emoji3 = CreateAndSkipEqualEmojis(emoji2, allEmojis);
+                       return emoji1 + emoji2 + emoji3;*/
 
-            return emoji1 + emoji2 + emoji3;
-        } 
+            var random = new Random();
+            string emojis = String.Empty;
+            for (int i = 0; i < nrEmojis; i++)
+            {
+                var newEmoij = allEmojis[random.Next(allEmojis.Count)].Emoji;
+                if (emojis == String.Empty)
+                {
+                    emojis += newEmoij;
+                }
+                else
+                {
+                    while (emojis.Contains(newEmoij))
+                    {
+                        newEmoij = allEmojis[random.Next(allEmojis.Count)].Emoji;
+                    }
+
+                    emojis += newEmoij;
+                }
+            }
+            return emojis;
+
+        }
 
         private string CreateAndSkipEqualEmojis(string emoji1, List<EmojiObject> allEmojis)
         {

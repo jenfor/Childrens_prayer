@@ -201,7 +201,7 @@ namespace App1.ViewModels
         {
             get
             {
-                return prayer.GetRandomEmojis(language);
+                return prayer.GetRandomEmojis(language, 3);
             }
         }
 
