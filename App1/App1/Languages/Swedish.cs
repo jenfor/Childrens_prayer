@@ -8,12 +8,11 @@ namespace App1.Languages
 {
     public class Swedish : Language
     {
-        public string BackToStart => "Tillbaka till start";
+        public string BackToStart => "Till start";
         public string ShareFairyTale => "Dela bönen";
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
-        public string ViewFairyTale => "Visa hela bönen";
-        public string NewImage => "Byt bild";
+        public string ViewFairyTale => "Hela bönen";
 
         public string VersionOption => "Vilken sorts saga vill du skriva?";
 
@@ -32,13 +31,8 @@ namespace App1.Languages
         public string TapHere => "Tryck här och skriv!";
 
         public string InformationExchangeString => "Nu är det din tur att skriva mer om ";
-                    //+ StringReplacer.Character1_Name + " och "
-                   // + StringReplacer.Character2_Name + "." + NewLine + NewLine
-                    //+ "Tryck på sagotexten på den här sidan och börja skriv!";
 
         public string ExchangeString => "Tryck här och skriv om ";
-                    //+ StringReplacer.Character1_Name + " och "
-                    //+ StringReplacer.Character2_Name + Dot;
 
         public string WasNamed => "som hette ";
         public string HadA => " hade en ";
@@ -57,7 +51,7 @@ namespace App1.Languages
         public string God => "Gud";
         public string All => "alla";
         public string TodayHeThinks => "Idag tänker han särskilt mycket på";
-        public string GodWantsAll => "Gud vill att " + StringReplacer.PrayerObject3 + " ska ha "/*ett bra liv "*/ + StringReplacer.PrayerObject5 + " många fina upplevelser";
+        public string GodWantsAll => "Gud vill att " + StringReplacer.PrayerObject3 + " ska ha "+ StringReplacer.PrayerObject5 + " många fina upplevelser";
         public string DoYouThink => "tänker du särskilt på idag?";
         public string GodLoves => "Gud älskar";
         public string WhenGodMeets => "När Gud möter " + StringReplacer.PrayerObject2
@@ -77,17 +71,17 @@ namespace App1.Languages
 
         public List<PrayerObject> Prayer1Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("människor",Children,"oss människor", "alla människor", "Vilken människa" , "bra liv med", 2) },
-            {new PrayerObject("på jorden",Earth,"vår jord", "alla på jorden", "Vad" , "bra liv med",1) },
-            {new PrayerObject("som är som dig", Children, "dig", "du", "Vad", "ett bra live med",1)},
-            {new PrayerObject("dina vänner", Children ,"en vän", "alla dina vänner", "Vilken vän", "bra liv med", 2)},
-            {new PrayerObject("i din familj", Families , "din familj", "alla i din familj", "Vem", "ett bra liv med", 1)},
-            {new PrayerObject("djur", Animals , "ett djur", "alla djur", "Vilket djur", "bra liv med", 1)},
-            {new PrayerObject("växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge oss", 1)},
-            {new PrayerObject("i hela världen", Earth , "vår värld", "alla i hela världen", "Vad", "bra liv med", 1)},
-            {new PrayerObject("hav", Seas, "ett hav", "alla hav", "Vilket hav", "bra liv som kan ge oss", 1)},
-            {new PrayerObject("sjöar", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "bra liv som kan ge oss",1)},
-            {new PrayerObject("träd", Trees, "ett träd", "alla träd", "Vilket träd", "bra liv som kan ge oss", 1)},
+            {new PrayerObject("alla människor",Children,"oss människor", "alla människor", "Vilken människa" , "bra liv med", 2) },
+            {new PrayerObject("alla på jorden",Earth,"vår jord", "alla på jorden", "Vad" , "bra liv med",1) },
+            {new PrayerObject("dig", Children, "dig", "du", "Vad", "ett bra liv med",1)},
+            {new PrayerObject("alla dina vänner", Children ,"en vän", "alla dina vänner", "Vilken vän", "bra liv med", 2)},
+            {new PrayerObject("din familj", Families , "din familj", "alla i din familj", "Vem", "ett bra liv med", 1)},
+            {new PrayerObject("alla djur", Animals , "ett djur", "alla djur", "Vilket djur", "bra liv med", 1)},
+            {new PrayerObject("alla växter", Plants , "en växt", "alla växter", "Vilken växt", "bra liv som kan ge oss", 1)},
+            {new PrayerObject("hela världen", Earth , "vår värld", "alla i hela världen", "Vad", "bra liv med", 1)},
+            {new PrayerObject("alla hav", Seas, "ett hav", "alla hav", "Vilket hav", "bra liv som kan ge oss", 1)},
+            {new PrayerObject("alla sjöar", Lakes , "en sjö", "alla sjöar", "Vilken sjö", "bra liv som kan ge oss",1)},
+            {new PrayerObject("alla träd", Trees, "ett träd", "alla träd", "Vilket träd", "bra liv som kan ge oss", 1)},
         };
 
         public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()

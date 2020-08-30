@@ -91,12 +91,6 @@ namespace App1.Prayer
             var allEmojis = new List<EmojiObject>();
             allEmojis.AddRange(new List<EmojiObject>(language.Animals));
             allEmojis.AddRange(new List<EmojiObject>(language.Hides));
-            /*
-                       var emoji1 = CreateAndSkipEqualEmojis(null, allEmojis);
-                       var emoji2 = CreateAndSkipEqualEmojis(emoji1, allEmojis); 
-                       var emoji3 = CreateAndSkipEqualEmojis(emoji2, allEmojis);
-
-                       return emoji1 + emoji2 + emoji3;*/
 
             var random = new Random();
             string emojis = String.Empty;
@@ -171,7 +165,7 @@ namespace App1.Prayer
                 case 0:
                     sb.Append(language.God + language.Space +
                 GetWords(language.GodCareVerb) + language.Space
-                + language.All + language.Space
+                /*+ language.All*/
                 + PrayerObject.ObjectFirstForm + language.Dot
                 );
                     break;

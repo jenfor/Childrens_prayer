@@ -55,9 +55,13 @@
             </Grid.ColumnDefinitions>
 
             <StackLayout Grid.RowSpan="3" Grid.ColumnSpan="{Binding ImageColumnSpan}" Orientation="Vertical" IsVisible="{Binding MainPageVisibility}" >
-                <Label Text="{Binding Image}" HorizontalTextAlignment="Center" TextColor="Black"
-                    VerticalTextAlignment="Center" FontSize="{Binding ImageFontSize}" ></Label>
-                <Label Text="{Binding ImageDescription}" HorizontalTextAlignment="Center" IsVisible="{Binding MainPageVisibility}"> </Label>
+                <ScrollView>
+                    <Label Text="{Binding Image}" HorizontalTextAlignment="Center" TextColor="Black"
+                        VerticalTextAlignment="Center" FontSize="{Binding ImageFontSize}" ></Label>
+                </ScrollView>
+                <ScrollView>
+                    <Label Text="{Binding ImageDescription}" HorizontalTextAlignment="Center" IsVisible="{Binding MainPageVisibility}"> </Label>
+                </ScrollView>
             </StackLayout>
             <Button Grid.Row="0" Grid.Column="1" Text="{Binding NewImage}" Padding="0" Command="{Binding ChangeImage}" BackgroundColor="LightBlue" Margin="1" IsVisible="{Binding MainPageVisibility}" ></Button>
 

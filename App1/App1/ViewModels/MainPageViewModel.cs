@@ -334,14 +334,8 @@ namespace App1.ViewModels
                 SetVisibilitys();
             });
 
-            ContinueFairyTale = new Command(/*async*/ () =>
+            ContinueFairyTale = new Command(() =>
             {
-                /*if (prayer.PageNr == prayer.LastComputerPreperdPage)
-                {
-                    //await UserTimeToWrite(language);
-                    ContinueButtonVisibility = false;
-                }*/
-
                 prayer.PresentPage.Text = Text;
                 prayer.ViewNextPage(language);
                 Text = prayer.PresentPage.Text;
@@ -417,33 +411,17 @@ namespace App1.ViewModels
 
         }
 
-        public /*async Task*/ void SwedishVersion()
+        public void SwedishVersion()
         {
-            /*var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
-            if (action)
-            {
-                language = new ShortSwedish();
-            }
-            else
-            {*/
             language = new Swedish();
-            //}
-
+            
             ShowNewFairyTale(language);
             SetVisibilitys();
         }
 
-        public /*async Task*/ void EnglishVersion()
+        public void EnglishVersion()
         {
-            /* var action = await App.Current.MainPage.DisplayAlert(language.Question, language.VersionOption, language.Short, language.Long);
-             if (action)
-             {
-                 language = new ShortEnglish();
-             }
-             else
-             {*/
             language = new English();
-            //}
 
             ShowNewFairyTale(language);
             SetVisibilitys();
@@ -464,14 +442,6 @@ namespace App1.ViewModels
 
                 StartButtonVisibility = true;
             }
-        }
-
-        public async Task UserTimeToWrite(Language language)
-        {
-            /*await App.Current.MainPage.DisplayAlert(language.Information, language.InformationExchangeString.Replace(StringReplacer.Character1_Name, prayer.PrayerObject.ObjectFirstForm)
-                     .Replace(StringReplacer.Character2_Name, prayer.PrayerObject.ObjectFirstForm)
-                     .Replace(StringReplacer.Character1_Name, prayer.PrayerObject.ObjectSecondForm), "OK");
-            */
         }
 
         private void ShowNewFairyTale(Language language)
@@ -497,7 +467,7 @@ namespace App1.ViewModels
             BackFairytale = language.BackFairyTale;
             ContinueFairytale = language.ContinueFairyTale;
             ViewFairytale = language.ViewFairyTale;
-            NewImage = language.NewImage;
+            //NewImage = language.NewImage;
             StartButtonVisibility = false;
             MainPageVisibility = true;
             if (prayer.PageNr -1 == prayer.LastComputerPreperdPage)
