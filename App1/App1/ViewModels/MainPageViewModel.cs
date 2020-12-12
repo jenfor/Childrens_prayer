@@ -75,16 +75,10 @@ namespace App1.ViewModels
             get => _image;
             set
             {
-                /*EmojiVisibility = true;
-                ScreenShotVisibility = false;*/
                 _image = value;
 
                 var args = new PropertyChangedEventArgs(nameof(Image));
                 PropertyChanged?.Invoke(this, args);
-                /*Thread.Sleep(10);
-                ScreenShot = DependencyService.Get<IScreenshotService>().Capture();
-                EmojiVisibility = false;
-                ScreenShotVisibility = true;*/
             }
         }
 
@@ -100,6 +94,7 @@ namespace App1.ViewModels
                 PropertyChanged?.Invoke(this, args);
             }
         }
+
         private string _imageDescription = prayer.PresentPage.ImageDescription;
         public string ImageDescription
         {
@@ -148,6 +143,19 @@ namespace App1.ViewModels
                 _backToStart = value;
 
                 var args = new PropertyChangedEventArgs(nameof(BackTostart));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private string _read = language.Read;
+        public string Read
+        {
+            get => _read;
+            set
+            {
+                _read = value;
+
+                var args = new PropertyChangedEventArgs(nameof(Read));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -529,6 +537,7 @@ namespace App1.ViewModels
             BackFairytale = language.BackFairyTale;
             ContinueFairytale = language.ContinueFairyTale;
             ViewFairytale = language.ViewFairyTale;
+            Read = language.Read;
             //NewImage = language.NewImage;
             StartButtonVisibility = false;
             MainPageVisibility = true;

@@ -12,6 +12,7 @@ namespace App1.Languages
         public string BackFairyTale => "Back";
         public string ContinueFairyTale => "Continue";
         public string ViewFairyTale => "View prayer";
+        public string Read => "Read";
 
         public string VersionOption => "What kind of fairy tale do you want to write?";
 

@@ -45,8 +45,10 @@
         <Button Grid.Column="2" Grid.Row="0" Text="{Binding ViewFairytale}" Command="{Binding ViewFairyTale}" BackgroundColor="LightBlue" Margin="5, 35, 10, 10"/>
         <Label Grid.Row="3" Text="Text: Ellinor Wikman" TextColor="Black" FontSize="12" HorizontalOptions="Center" ></Label>
         <!--Main page-->
-        <Label Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" BackgroundColor="White"  x:Name="txtText"  Text="{Binding Text}"  FontSize="20" Margin="10" TextColor="Black"></Label>
-
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" >
+            <Label BackgroundColor="White"  x:Name="txtText"  Text="{Binding Text}"  FontSize="20" Margin="10" TextColor="Black"></Label>
+        <Button Text="{Binding Read}" Clicked="Read_Clicked" x:Name="readButton" IsVisible="false"></Button>
+        </StackLayout>
         <!--<Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="White" IsVisible="{Binding EmojiVisibility}">
              <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>

@@ -9,6 +9,9 @@ using System.IO;
 using TouchTracking;
 using System.Reflection;
 using App1.ViewModels;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
+using System.Linq;
 
 namespace App1
 {
@@ -19,6 +22,7 @@ namespace App1
         private List<SKPath> _completedPaths = new List<SKPath>();
         private SKBitmap _saveBitmap;
         private MainPageViewModel _vm;
+        private Locale _locale;
 
         public SKPaint paint = new SKPaint
         {
@@ -33,7 +37,6 @@ namespace App1
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-
             BindingContext = _vm = new MainPageViewModel();
         }
 
@@ -189,6 +192,7 @@ namespace App1
 
         void NewPage_Clicked(System.Object sender, System.EventArgs e)
         {
+            SetLocale();
             if (_saveBitmap != null)
             {
                 _completedPaths.Clear();
@@ -219,6 +223,39 @@ namespace App1
                         }
                     }
                 }
+            }
+        }
+
+        private async void SetLocale()
+        {
+            var locales = await TextToSpeech.GetLocalesAsync();
+            _locale = locales.FirstOrDefault(x => x.Language.Equals("en-US"));
+
+            if (_vm.Read.Equals("Läs"))
+            {
+                _locale = locales.FirstOrDefault(x => x.Language.Equals("sv-SE"));
+            }
+
+            if(_locale == null)
+            {
+                readButton.IsVisible = false;
+            }
+            else
+            {
+                readButton.IsVisible = true;
+            }
+        }
+
+        async void Read_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (_locale != null)
+            {
+                var settings = new SpeechOptions()
+                {
+                    Locale = _locale
+                };
+
+                await TextToSpeech.SpeakAsync(_vm.Text, settings);
             }
         }
     }

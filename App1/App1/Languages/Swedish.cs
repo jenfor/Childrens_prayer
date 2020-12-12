@@ -13,6 +13,7 @@ namespace App1.Languages
         public string BackFairyTale => "Tillbaka";
         public string ContinueFairyTale => "Fortsätt";
         public string ViewFairyTale => "Hela bönen";
+        public string Read => "Läs";
 
         public string VersionOption => "Vilken sorts saga vill du skriva?";
 
@@ -86,7 +87,7 @@ namespace App1.Languages
 
         public List<PrayerObject> Prayer2Objects => new List<PrayerObject>()
         {
-            {new PrayerObject("alla människor", Humans ,"en männska", "hon", "underbar hon är", String.Empty, 1) },
+            {new PrayerObject("alla människor", Humans ,"en människa", "hon", "underbar hon är", String.Empty, 1) },
             {new PrayerObject("dig", Children, "dig", "du", "underbar du är", String.Empty, 1)},
             {new PrayerObject("alla dina vänner", Humans , "dina vänner", "de", "underbara de är", String.Empty, 1)},
             {new PrayerObject("din familj", Families , "din familj", "ni", "underbara ni är", String.Empty, 1)},

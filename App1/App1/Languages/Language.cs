@@ -12,6 +12,7 @@ namespace App1.Languages
         string ViewFairyTale { get; }
         string BackFairyTale { get; }
         string ContinueFairyTale { get; }
+        string Read { get; }
 
         string VersionOption { get; }
 
