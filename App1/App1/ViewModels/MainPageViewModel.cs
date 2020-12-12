@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using App1.Prayer;
 using App1.Languages;
+using App1.Interfaces;
+using System.Threading;
 
 namespace App1.ViewModels
 {
@@ -29,6 +31,18 @@ namespace App1.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private byte[] _screenShoot;
+        public byte[] ScreenShot
+        {
+            get => _screenShoot;
+            set
+            {
+                _screenShoot = value;
+
+                var args = new PropertyChangedEventArgs(nameof(ScreenShot));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
         private string _text = String.Empty;
         public string Text
         {
@@ -61,10 +75,16 @@ namespace App1.ViewModels
             get => _image;
             set
             {
+                /*EmojiVisibility = true;
+                ScreenShotVisibility = false;*/
                 _image = value;
 
                 var args = new PropertyChangedEventArgs(nameof(Image));
                 PropertyChanged?.Invoke(this, args);
+                /*Thread.Sleep(10);
+                ScreenShot = DependencyService.Get<IScreenshotService>().Capture();
+                EmojiVisibility = false;
+                ScreenShotVisibility = true;*/
             }
         }
 
@@ -218,6 +238,32 @@ namespace App1.ViewModels
             }
         }
 
+        private bool _emojiVisibility = false;
+        public bool EmojiVisibility
+        {
+            get => _emojiVisibility;
+            set
+            {
+                _emojiVisibility = value;
+
+                var args = new PropertyChangedEventArgs(nameof(EmojiVisibility));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
+        private bool _screenShotVisibility = false;
+        public bool ScreenShotVisibility
+        {
+            get => _screenShotVisibility;
+            set
+            {
+                _screenShotVisibility = value;
+
+                var args = new PropertyChangedEventArgs(nameof(ScreenShotVisibility));
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
+
         private bool _continueButtonVisibility = false;
         public bool ContinueButtonVisibility
         {
@@ -336,12 +382,17 @@ namespace App1.ViewModels
 
             ContinueFairyTale = new Command(() =>
             {
+                EmojiVisibility = true;
+                ScreenShotVisibility = false;
                 prayer.PresentPage.Text = Text;
                 prayer.ViewNextPage(language);
                 Text = prayer.PresentPage.Text;
                 Image = prayer.PresentPage.Emoji;
                 ImageDescription = prayer.PresentPage.ImageDescription;
                 Placeholder = prayer.PresentPage.Palceholder;
+                ScreenShot = DependencyService.Get<IScreenshotService>().Capture();
+                EmojiVisibility = false;
+                ScreenShotVisibility = true;
 
                 if (prayer.PresentPage.NrOfEmoji == 1)
                 {
@@ -386,6 +437,10 @@ namespace App1.ViewModels
                     }
 
                     SetVisibilitys();
+                    ScreenShot = DependencyService.Get<IScreenshotService>().Capture();
+                    EmojiVisibility = false;
+                    ScreenShotVisibility = true;
+
                 }
                 else
                 {
@@ -446,6 +501,8 @@ namespace App1.ViewModels
 
         private void ShowNewFairyTale(Language language)
         {
+            EmojiVisibility = true;
+            ScreenShotVisibility = false;
             prayer = new ThePrayer(language);
 
             Text = prayer.PresentPage.Text;
@@ -453,10 +510,15 @@ namespace App1.ViewModels
             Placeholder = prayer.PresentPage.Palceholder;
 
             SetVisibilitys();
+            ScreenShot = DependencyService.Get<IScreenshotService>().Capture();
+            EmojiVisibility = true;
+            ScreenShotVisibility = true;
         }
 
         private void SetVisibilitys()
         {
+            //EmojiVisibility = true;
+            //ScreenShotVisibility = false;
             StartColumnWidth = new GridLength(0);
             FairyTaleColumnWidth1 = new GridLength(1, GridUnitType.Star);
             FairyTaleColumnWidth2 = new GridLength(1, GridUnitType.Star);
@@ -480,6 +542,9 @@ namespace App1.ViewModels
             }
 
             NewImageButtonVisibility();
+            //ScreenShot = DependencyService.Get<IScreenshotService>().Capture();
+            //EmojiVisibility = false;
+            //ScreenShotVisibility = true;
         }
 
         private void NewImageButtonVisibility()
