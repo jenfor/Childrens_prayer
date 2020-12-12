@@ -390,7 +390,7 @@ namespace App1.ViewModels
                 Image = prayer.PresentPage.Emoji;
                 ImageDescription = prayer.PresentPage.ImageDescription;
                 Placeholder = prayer.PresentPage.Palceholder;
-                ScreenShot = DependencyService.Get<IScreenshotService>().Capture();
+                //ScreenShot = DependencyService.Get<IScreenshotService>().Capture();
                 EmojiVisibility = false;
                 ScreenShotVisibility = true;
 

@@ -113,7 +113,6 @@ namespace App1
             SKImageInfo info = args.Info;
             SKSurface surface = args.Surface;
             SKCanvas canvas = surface.Canvas;
-
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
            if (_saveBitmap == null)
@@ -124,33 +123,31 @@ namespace App1
             SKBitmap bitmap = new SKBitmap(Math.Max(_saveBitmap.Width, info.Width),
                         Math.Max(_saveBitmap.Height, info.Height));
 
+            float x = info.Width  / 3;
+            float y = info.Height / 3;
 
-            if (_vm.ScreenShot != null)
+            using (SKCanvas c = new SKCanvas(bitmap))
             {
-                using (Stream stream = new MemoryStream((byte[])_vm.ScreenShot))
+                foreach (SKPath p in _completedPaths)
                 {
-                    bitmap = SKBitmap.Decode(stream);
+                    c.DrawPath(p, paint);
                 }
 
-                float x = (info.Width - bitmap.Width) / 2;
-                float y = (info.Height - bitmap.Height) / 2;
-                SKRect bitmapRect = new SKRect(x, y, x + bitmap.Width, y + bitmap.Height);
-
-                using (SKCanvas c = new SKCanvas(bitmap))
+                foreach (SKPath p in _inProgressPaths.Values)
                 {
-                    foreach (SKPath p in _completedPaths)
-                    {
-                        c.DrawPath(p, paint);
-                    }
-
-                    foreach (SKPath p in _inProgressPaths.Values)
-                    {
-                        c.DrawPath(p, paint);
-                    }
+                    c.DrawPath(p, paint);
                 }
-
-                canvas.DrawBitmap(bitmap, bitmapRect);
             }
+
+            canvas.Clear();
+            canvas.DrawBitmap(bitmap, 0, 0);
+
+            var grinningFaceEmoji = _vm.Image;
+            int exEmoji = 0x1f600;
+
+            paint.Typeface = SKFontManager.CreateDefault().MatchCharacter(exEmoji);
+            paint.TextSize = 210.0f;
+            canvas.DrawText(grinningFaceEmoji, x, y, paint);
         }
 
         public void OnClearButtonClicked(object sender, EventArgs args)
