@@ -167,7 +167,7 @@ namespace App1.Languages
         {
             {new EmojiObject( "a family", "👨‍👩‍👦‍👦") },
             {new EmojiObject( "a family", "👩‍👦‍👦") },
-            {new EmojiObject( "a family", " 👨‍👦‍👦") },
+            {new EmojiObject( "a family", "👨‍👦‍👦") },
         };
 
         public List<EmojiObject> Children => new List<EmojiObject>

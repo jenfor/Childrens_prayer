@@ -177,7 +177,7 @@ namespace App1.Languages
         {
             {new EmojiObject( "en familj", "👨‍👩‍👦‍👦") },
             {new EmojiObject( "en familj", "👩‍👦‍👦") },
-            {new EmojiObject( "en familj", " 👨‍👦‍👦") },
+            {new EmojiObject( "en familj", "👨‍👦‍👦") },
 
         };
 

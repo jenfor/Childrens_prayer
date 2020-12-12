@@ -1,4 +1,5 @@
 ﻿using SkiaSharp;
+using SkiaSharp.HarfBuzz;
 using SkiaSharp.Views.Forms;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,6 @@ namespace App1
         private Dictionary<long, SKPath> _inProgressPaths = new Dictionary<long, SKPath>();
         private List<SKPath> _completedPaths = new List<SKPath>();
         private SKBitmap _saveBitmap;
-        private SKBitmap _monkeyBitmap;
         private MainPageViewModel _vm;
 
         public SKPaint paint = new SKPaint
@@ -110,44 +110,51 @@ namespace App1
 
         public void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
-            SKImageInfo info = args.Info;
-            SKSurface surface = args.Surface;
-            SKCanvas canvas = surface.Canvas;
-            Assembly assembly = GetType().GetTypeInfo().Assembly;
-
-           if (_saveBitmap == null)
+            try
             {
-                _saveBitmap = new SKBitmap(info.Width, info.Height);
-            }
+                SKImageInfo info = args.Info;
+                SKSurface surface = args.Surface;
+                SKCanvas canvas = surface.Canvas;
+                Assembly assembly = GetType().GetTypeInfo().Assembly;
 
-            SKBitmap bitmap = new SKBitmap(Math.Max(_saveBitmap.Width, info.Width),
-                        Math.Max(_saveBitmap.Height, info.Height));
-
-            float x = info.Width  / 3;
-            float y = info.Height / 3;
-
-            using (SKCanvas c = new SKCanvas(bitmap))
-            {
-                foreach (SKPath p in _completedPaths)
+                if (_saveBitmap == null)
                 {
-                    c.DrawPath(p, paint);
+                    _saveBitmap = new SKBitmap(info.Width, info.Height);
                 }
 
-                foreach (SKPath p in _inProgressPaths.Values)
+                SKBitmap bitmap = new SKBitmap(Math.Max(_saveBitmap.Width, info.Width),
+                            Math.Max(_saveBitmap.Height, info.Height));
+
+                float x = info.Width / 3;
+                float y = (float)(info.Height / 1.5);
+
+                using (SKCanvas c = new SKCanvas(bitmap))
                 {
-                    c.DrawPath(p, paint);
+                    foreach (SKPath p in _completedPaths)
+                    {
+                        c.DrawPath(p, paint);
+                    }
+
+                    foreach (SKPath p in _inProgressPaths.Values)
+                    {
+                        c.DrawPath(p, paint);
+                    }
                 }
+
+                canvas.Clear();
+                canvas.DrawBitmap(bitmap, 0, 0);
+
+                var emoji = _vm.Image;
+                int exEmoji = 0x1f600;
+
+                paint.Typeface = SKFontManager.CreateDefault().MatchCharacter(exEmoji);
+                paint.TextSize = 210.0f;
+
+                var tf = SKFontManager.CreateDefault().MatchCharacter(exEmoji);
+                var shaper = new SKShaper(tf);
+                canvas.DrawShapedText(shaper, emoji, x, y, paint);
             }
-
-            canvas.Clear();
-            canvas.DrawBitmap(bitmap, 0, 0);
-
-            var grinningFaceEmoji = _vm.Image;
-            int exEmoji = 0x1f600;
-
-            paint.Typeface = SKFontManager.CreateDefault().MatchCharacter(exEmoji);
-            paint.TextSize = 210.0f;
-            canvas.DrawText(grinningFaceEmoji, x, y, paint);
+            catch { }
         }
 
         public void OnClearButtonClicked(object sender, EventArgs args)

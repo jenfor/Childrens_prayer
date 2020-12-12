@@ -71,22 +71,13 @@
             <Button Grid.Row="0" Grid.Column="1" Text="{Binding NewImage}" Padding="0" Command="{Binding ChangeImage}" BackgroundColor="LightBlue" Margin="1" IsVisible="{Binding MainPageVisibility}" ></Button>
 
         </Grid>-->
-
         <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="White" IsVisible="{Binding ScreenShotVisibility}">
-
-            <!--testarea drawing-->
             <skia:SKCanvasView x:Name="canvasView"
-                                 PaintSurface="OnCanvasViewPaintSurface"/>
+                                    PaintSurface="OnCanvasViewPaintSurface"/>
             <Grid.Effects>
                 <tt:TouchEffect Capture="True" TouchAction="OnTouchEffectAction"/>
             </Grid.Effects>
-            <!-- end testarea drawing-->
-
         </Grid>
-        
-        <!--testarea screenshot
-        <Image Grid.Row="2" Grid.Column="1" Source="{Binding ScreenShot, Converter={StaticResource BytesToImage}}" Aspect="AspectFill" IsVisible="{Binding MainPageVisibility}"/>
-        end of testarea screenshot-->
 
         <Button  Command="{Binding Back}" Grid.Row="3" Grid.Column="1" Text="{Binding BackFairytale}" BackgroundColor="LightBlue" IsVisible="{Binding MainPageVisibility}" Margin="5, 20, 10, 20"  Clicked="NewPage_Clicked"></Button>
         <Button Command="{Binding ContinueFairyTale}" Grid.Row="3"  Grid.Column="2" Text="{Binding ContinueFairytale}" BackgroundColor="LightBlue" IsVisible="{Binding ContinueButtonVisibility}" Margin="10, 20, 5, 20" Clicked="NewPage_Clicked"></Button>
